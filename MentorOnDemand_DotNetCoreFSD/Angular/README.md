@@ -25,19 +25,3 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
-
-* register component contains registration for both user and mentor
-* login component contains registration for both user and mentor
-* activity component contains registration for both user and mentor
-
-// *** IMPLEMENTATION NOTES ----------------------------------------------- ***
-/*
- * Auth guard only check if there is an existing token, so the problem comes
- * when a student logged in tries to access mentor profile or admin profile.
- * Maybe this problem won't come due to the fact that user profile will try
- * to fetch the tokened data based on url, so if the user data does not exit,
- * link will be navigated to login page and local token will be deleted.
- * --- however better to avaoid such issues
- *
- *
-*/

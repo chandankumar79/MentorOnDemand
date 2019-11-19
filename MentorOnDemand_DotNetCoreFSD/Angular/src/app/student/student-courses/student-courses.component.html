@@ -1,0 +1,95 @@
+<section class="elementor-section">
+    <div class="elementor-container">
+        <div class="elementor-row">
+            <div class="elementor-column">
+                <div class="elementor-column-wrap">
+                    <div class="elementor-widget-wrap elementor-widget-center">
+                        <div class="elementor-widget">
+                            <div class="elementor-element shadow">
+                                <div class="table-top">
+                                    <h3>{{tableTitle}}</h3>
+                                </div>
+                                <mat-table class="elementor-table" [dataSource]="tableData" matSort>
+                                    <ng-container matColumnDef="courseId">
+                                        <mat-header-cell class="table-header" *matHeaderCellDef mat-sort-header [style.display]="'none'">Course Id</mat-header-cell>
+                                        <mat-cell *matCellDef="let element" class="table-data" [style.display]="'none'">{{element.courseId}}</mat-cell>
+                                    </ng-container>
+                                    <ng-container matColumnDef="name">
+                                        <mat-header-cell class="table-header" *matHeaderCellDef mat-sort-header>Course</mat-header-cell>
+                                        <mat-cell *matCellDef="let element" class="table-data">{{element.name}}</mat-cell>
+                                    </ng-container>
+                                    <ng-container matColumnDef="mentorName">
+                                        <mat-header-cell class="table-header" *matHeaderCellDef mat-sort-header>Mentor</mat-header-cell>
+                                        <mat-cell *matCellDef="let element" class="table-data">{{element.mentorName}}</mat-cell>
+                                    </ng-container>
+                                    <ng-container matColumnDef="startDate">
+                                        <mat-header-cell class="table-header" *matHeaderCellDef mat-sort-header>Start Date</mat-header-cell>
+                                        <mat-cell *matCellDef="let element" class="table-data">{{element.startDate | date: 'dd MMM yyyy'}}</mat-cell>
+                                    </ng-container>
+                                    <ng-container matColumnDef="endDate">
+                                        <mat-header-cell class="table-header" *matHeaderCellDef mat-sort-header>End Date</mat-header-cell>
+                                        <mat-cell *matCellDef="let element" class="table-data">{{element.endDate | date: 'dd MMM yyyy'}}</mat-cell>
+                                    </ng-container>
+                                    <ng-container matColumnDef="totalFee">
+                                        <mat-header-cell class="table-header" *matHeaderCellDef mat-sort-header>Total Fee</mat-header-cell>
+                                        <mat-cell *matCellDef="let element" class="table-data">{{element.totalFee}}</mat-cell>
+                                    </ng-container>
+                                    <ng-container matColumnDef="paymentStatus">
+                                        <mat-header-cell class="table-header" *matHeaderCellDef mat-sort-header>Payment Status</mat-header-cell>
+                                        <mat-cell *matCellDef="let element" class="table-data">{{element.paymentStatus? 'Completed' : 'Pending'}}</mat-cell>
+                                    </ng-container>
+                                    <ng-container matColumnDef="paymentId">
+                                        <mat-header-cell class="table-header" *matHeaderCellDef mat-sort-header>Payment Id</mat-header-cell>
+                                        <mat-cell *matCellDef="let element" class="table-data">{{element.paymentId == null ? 'null' : element.paymentId}}</mat-cell>
+                                    </ng-container>
+                                    <ng-container matColumnDef="rating">
+                                        <mat-header-cell class="table-header" *matHeaderCellDef mat-sort-header>Rating</mat-header-cell>
+                                        <mat-cell *matCellDef="let element" class="table-data">
+                                            {{element.rating > 5 ? 'Not Rated' : ''}}
+                                            <i class="fa fa-star" *ngIf="element.rating < 6 && element.rating > 0"></i>
+                                            <i class="fa fa-star" *ngIf="element.rating < 6 && element.rating > 1"></i>
+                                            <i class="fa fa-star" *ngIf="element.rating < 6 && element.rating > 2"></i>
+                                            <i class="fa fa-star" *ngIf="element.rating < 6 && element.rating > 3"></i>
+                                            <i class="fa fa-star" *ngIf="element.rating < 6 && element.rating > 4"></i>
+                                            <i class="fa fa-star-o" *ngIf="element.rating < 5"></i>
+                                            <i class="fa fa-star-o" *ngIf="element.rating < 4"></i>
+                                            <i class="fa fa-star-o" *ngIf="element.rating < 3"></i>
+                                            <i class="fa fa-star-o" *ngIf="element.rating < 2"></i>
+                                            <i class="fa fa-star-o" *ngIf="element.rating < 1"></i>
+                                        </mat-cell>
+                                    </ng-container>
+                                    <ng-container matColumnDef="progress">
+                                        <mat-header-cell class="table-header" *matHeaderCellDef mat-sort-header>Progress</mat-header-cell>
+                                        <mat-cell *matCellDef="let element" class="table-data">{{element.progress}}&nbsp;%&nbsp;</mat-cell>
+                                    </ng-container>
+                                    <ng-container matColumnDef="status">
+                                        <mat-header-cell class="table-header" *matHeaderCellDef mat-sort-header>Status</mat-header-cell>
+                                        <mat-cell *matCellDef="let element" class="table-data">{{getStatusText(element.status)}}</mat-cell>
+                                    </ng-container>
+                                    <ng-container matColumnDef="action">
+                                        <mat-header-cell class="table-header" *matHeaderCellDef>Action</mat-header-cell>
+                                        <mat-cell *matCellDef="let row; let element" class="table-data">
+                                            <button mat-raised-button class="btn-success" *ngIf="element.status == 2 || element.status == 8" (click)="onPay(row)" title="Complete Payment"><i class="fa fa-dollar fa-2x"></i></button>
+                                            <button mat-raised-button class="btn-warning" *ngIf="element.status == 4" (click)="setProgress(row)" title="Set Progress"><i class="fa fa-line-chart fa-2x"></i></button>
+                                            <button mat-raised-button class="btn-primary" *ngIf="element.status == 5 && element.rating > 5" (click)="onRate(row)" title="Rate Mentor"><i class="fa fa-star fa-2x"></i></button>
+                                            <button mat-raised-button class="btn-secondary" *ngIf="!(element.status == 5 || element.status == 6 || element.status == 7)" (click)="onCancel(row)" title="Cancel"><i class="fa fa-close fa-2x"></i></button>
+                                            <button mat-raised-button class="btn-dark" *ngIf="(element.status == 5 && element.rating <= 5) || element.status == 6 || element.status == 7">No Action</button>
+                                        </mat-cell>
+                                    </ng-container>
+                                    <ng-container matColumnDef="noData" class="text-center">
+                                        <mat-footer-cell *matFooterCellDef colspan="6">
+                                            You have not applied for any courses yet.
+                                        </mat-footer-cell>
+                                    </ng-container>
+                                    <mat-header-row *matHeaderRowDef="coursesList['tableHeader']"></mat-header-row>
+                                    <mat-row *matRowDef="let row; columns: coursesList['tableHeader']; "></mat-row>
+                                    <mat-footer-row *matFooterRowDef="[ 'noData'] " [ngClass]="{ 'hide': !(tableData != null && tableData.filteredData.length==0)} "></mat-footer-row>
+                                </mat-table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

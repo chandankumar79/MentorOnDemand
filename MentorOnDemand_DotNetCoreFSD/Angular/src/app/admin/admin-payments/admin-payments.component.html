@@ -1,0 +1,73 @@
+<section class="elementor-section">
+    <div class="elementor-container">
+        <div class="elementor-row">
+            <div class="elementor-column">
+                <div class="elementor-column-wrap">
+                    <div class="elementor-widget-wrap elementor-widget-center">
+                        <div class="elementor-widget">
+                            <div class="elementor-element shadow">
+                                <div class="table-top">
+                                    <h3>{{tableTitle}}</h3>
+                                </div>
+                                <table mat-table class="elementor-table" [dataSource]="tableData" matSort>
+                                    <!-- * hard coded table data -->
+                                    <ng-container matColumnDef="studentName">
+                                        <th mat-header-cell class="table-header col-w2" *matHeaderCellDef mat-sort-header>Student</th>
+                                        <td mat-cell *matCellDef="let element" class="table-data col-w2">{{element.studentName}}</td>
+                                    </ng-container>
+                                    <ng-container matColumnDef="studentEmail">
+                                        <th mat-header-cell class="table-header col-w2" *matHeaderCellDef mat-sort-header>Student's Email</th>
+                                        <td mat-cell *matCellDef="let element" class="table-data col-w2">{{element.studentEmail}}</td>
+                                    </ng-container>
+                                    <ng-container matColumnDef="mentorName">
+                                        <th mat-header-cell class="table-header col-w2" *matHeaderCellDef mat-sort-header>Mentor</th>
+                                        <td mat-cell *matCellDef="let element" class="table-data col-w2">{{element.mentorName}}</td>
+                                    </ng-container>
+                                    <ng-container matColumnDef="courseId">
+                                        <th mat-header-cell class="table-header col-w15" *matHeaderCellDef mat-sort-header>Course Id</th>
+                                        <td mat-cell *matCellDef="let element" class="table-data col-w15">{{element.courseId}}</td>
+                                    </ng-container>
+                                    <ng-container matColumnDef="courseStatus">
+                                        <th mat-header-cell class="table-header col-w15" *matHeaderCellDef mat-sort-header>Course Status</th>
+                                        <td mat-cell *matCellDef="let element" class="table-data col-w15">{{element.courseStatus}}</td>
+                                    </ng-container>
+                                    <ng-container matColumnDef="courseFee">
+                                        <th mat-header-cell class="table-header col-w1" *matHeaderCellDef mat-sort-header>Fee</th>
+                                        <td mat-cell *matCellDef="let element" class="table-data col-w1">{{element.courseFee}}</td>
+                                    </ng-container>
+                                    <ng-container matColumnDef="courseCommission">
+                                        <th mat-header-cell class="table-header col-w1" *matHeaderCellDef mat-sort-header>Commission</th>
+                                        <td mat-cell *matCellDef="let element" class="table-data col-w1">{{element.courseCommission}}</td>
+                                    </ng-container>
+                                    <ng-container matColumnDef="paymentStatus">
+                                        <th mat-header-cell class="table-header col-w1" *matHeaderCellDef mat-sort-header>Payment</th>
+                                        <td mat-cell *matCellDef="let element" class="table-data col-w1">{{element.paymentStatus}}</td>
+                                    </ng-container>
+                                    <ng-container matColumnDef="paymentId">
+                                        <th mat-header-cell class="table-header col-w15" *matHeaderCellDef mat-sort-header>Payment Id</th>
+                                        <td mat-cell *matCellDef="let element" class="table-data col-w15">{{element.paymentId}}</td>
+                                    </ng-container>
+                                    <!-- TODO: implement paginator -->
+                                    <!-- <ng-container matColumnDef="loading ">
+                                                    <mat-footer-cell *matFooterCellDef colspan="6 ">
+                                                        Loading data...
+                                                    </mat-footer-cell>
+                                                </ng-container> -->
+                                    <!-- <ng-container matColumnDef="noData ">
+                                                    <mat-footer-cell *matFooterCellDef colspan="6 ">
+                                                        No data found.
+                                                    </mat-footer-cell>
+                                                </ng-container> -->
+                                    <mat-header-row *matHeaderRowDef="studentList['tableHeader']"></mat-header-row>
+                                    <mat-row *matRowDef="let row; columns: studentList['tableHeader']; "></mat-row>
+                                    <!-- <mat-footer-row *matFooterRowDef="[ 'loading'] " [ngClass]="{ 'hide': tableData!=null} "></mat-footer-row> -->
+                                    <!-- <mat-footer-row *matFooterRowDef="[ 'noData'] " [ngClass]="{ 'hide': !(tableData!=null && tableData.length==0)} "></mat-footer-row> -->
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

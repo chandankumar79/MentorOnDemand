@@ -1,0 +1,128 @@
+<section class="elementor-section">
+    <div class="elementor-container">
+        <div class="elementor-row">
+            <div class="elementor-column">
+                <div class="elementor-column-wrap">
+                    <div class="elementor-widget-wrap elementor-widget-center">
+                        <div class="elementor-widget">
+                            <div class="elementor-element shadow">
+                                <div class="profile-heading">
+                                    <h4>{{pageTitle}}</h4>
+                                </div>
+                                <form class="" [formGroup]="skillForm">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="col-md-12">
+                                                <mat-form-field appearance="outline" class="col-md-12">
+                                                    <mat-label>Select Technologies</mat-label>
+                                                    <!-- TODO: implement readonly feature in case of edit case -->
+                                                    <mat-select formControlName="name" [ngClass]="{ 'is-invalid': submitted && skillFormControls.name.errors }">
+                                                        <!-- TODO: implement onClick to pass data -->
+                                                        <mat-option *ngFor="let course of courses" [value]="course.name" (click)="setSkillForm(course)">
+                                                            {{course.name}}
+                                                        </mat-option>
+                                                    </mat-select>
+                                                    <mat-hint *ngIf="submitted && skillFormControls.name.errors?.required"><i>* Technology is required.</i></mat-hint>
+                                                </mat-form-field>
+                                            </div>
+                                            <!-- <div class="col-md-12">
+                                                <mat-form-field appearance="outline" class="col-md-12">
+                                                    <mat-label>Course Id</mat-label>
+                                                    <input matInput type="text" placeholder="Course id" readonly formControlName="courseId">
+                                                    <mat-hint><i>* Course id is auto-generated.</i></mat-hint>
+                                                </mat-form-field>
+                                            </div> -->
+                                            <div class="col-md-12">
+                                                <mat-form-field appearance="outline" class="col-md-12">
+                                                    <mat-label>Course Duration (Days)</mat-label>
+                                                    <input matInput type="text" placeholder="Duration in days" readonly formControlName="duration">
+                                                    <mat-hint><i>* Course duration is auto-populated.</i></mat-hint>
+                                                </mat-form-field>
+                                            </div>
+
+                                            <div class="col-md-12">
+                                                <mat-form-field appearance="outline" class="col-md-12">
+                                                    <input matInput [matDatepicker]="startDate" [min]="startDateMin" placeholder="Choose the start date" (dateChange)="calculateCourseEndDate()" formControlName="startDate" [ngClass]="{ 'is-invalid': submitted && skillFormControls.startDate.errors }">
+                                                    <mat-datepicker-toggle matSuffix [for]="startDate"></mat-datepicker-toggle>
+                                                    <mat-datepicker #startDate></mat-datepicker>
+                                                    <mat-hint *ngIf="submitted && skillFormControls.startDate.errors?.required"><i>* Course start date is required.</i></mat-hint>
+                                                </mat-form-field>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <mat-form-field appearance="outline" class="col-md-12">
+                                                    <input matInput [matDatepicker]="endDate" [min]="endDateMin" placeholder="Choose an end date" formControlName="endDate" [ngClass]="{ 'is-invalid': submitted && skillFormControls.endDate.errors }" readonly>
+                                                    <mat-datepicker-toggle matSuffix [for]="endDate" [disabled]="'none'"></mat-datepicker-toggle>
+                                                    <mat-datepicker #endDate [disabled]="'none'"></mat-datepicker>
+                                                    <mat-hint *ngIf="submitted && skillFormControls.endDate.errors?.required"><i>* Course end date is required.</i></mat-hint>
+                                                </mat-form-field>
+                                            </div>
+
+                                        </div>
+                                        <div class="col-md-6">
+                                            <!-- <div class="col-md-12">
+                                                <mat-form-field appearance="outline" class="col-md-12">
+                                                    <mat-label>Experience</mat-label>
+                                                    <input matInput type="number" placeholder="Course experience in years" 
+                                                        formControlName="courseExperience" [ngClass]="{ 'is-invalid': submitted && skillFormControls.courseExperience.errors }">
+                                                    <mat-hint *ngIf="submitted && skillFormControls.courseExperience.errors?.required">
+                                                        <i>* Experience in years is required. Enter 0 if no experience.</i>
+                                                    </mat-hint>
+                                                </mat-form-field>
+                                            </div> -->
+                                            <div class="col-md-12">
+                                                <mat-form-field appearance="outline" class="col-md-12">
+                                                    <mat-label>Basic Fee</mat-label>
+                                                    <input matInput type="number" placeholder="Basic Fee" readonly formControlName="basicFee">
+                                                    <mat-hint><i>* Basic fee is auto-generated.</i></mat-hint>
+                                                </mat-form-field>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <mat-form-field appearance="outline" class="col-md-12">
+                                                    <mat-label>Commission</mat-label>
+                                                    <input matInput type="number" placeholder="Commission" readonly formControlName="commission">
+                                                    <mat-hint><i>* Commission is calculated as a percentage of basic fee.</i></mat-hint>
+                                                </mat-form-field>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <mat-form-field appearance="outline" class="col-md-12">
+                                                    <mat-label>Skill Surcharge</mat-label>
+                                                    <input matInput type="number" placeholder="Skill surcharge as a percentage of basic fee" formControlName="skillSurcharge" (change)="calculateTotalFee()" [ngClass]="{ 'is-invalid': submitted && skillFormControls.skillSurcharge.errors }">
+                                                    <mat-hint *ngIf="submitted && skillForm.controls.skillSurcharge.errors?.required">
+                                                        <i>* Mentor surcharge is a percentage of basic fee is required.</i>
+                                                    </mat-hint>
+                                                    <mat-hint *ngIf="submitted && (skillForm.controls.skillSurcharge.errors?.max || skillForm.controls.skillSurcharge.errors?.min)">
+                                                        <i>* Mentor surcharge is a percentage of basic fee must be a value between 0 and 100.</i>
+                                                    </mat-hint>
+
+                                                </mat-form-field>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <mat-form-field appearance="outline" class="col-md-12">
+                                                    <mat-label>Total Fee</mat-label>
+                                                    <input matInput type="number" placeholder="Total fee for course inclusive of all charges" readonly formControlName="totalFee">
+                                                    <mat-hint><i>* Total fee is auto-calculated.</i></mat-hint>
+                                                </mat-form-field>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <!-- Implement error display pannel in case of error response, display here or can also use snackbar -->
+                                                <button mat-raised-button color="primary" style="float: right;" (click)="onSubmit()" *ngIf="!editable">Submit</button>
+                                                <button mat-raised-button color="warn" style="float: right;" (click)="onUpdate()" *ngIf="editable">Update</button>
+                                                <button mat-raised-button style="float: right;" (click)="onCancel()">Cancel</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12" [hidden]="!message">
+                                        <div class="card bg-danger text-center text-white">
+                                            <p class="card-body">{{message}}</p>
+                                        </div>
+                                    </div>
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

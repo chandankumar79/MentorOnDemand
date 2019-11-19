@@ -1,0 +1,75 @@
+<section class="elementor-section">
+    <div class="elementor-container">
+        <div class="elementor-row">
+            <div class="elementor-column">
+                <div class="elementor-column-wrap">
+                    <div class="elementor-widget-wrap elementor-widget-center">
+                        <div class="elementor-widget">
+                            <div class="elementor-element">
+                                <form class="row" [formGroup]="profileForm">
+                                    <div class="col-md-4 profile-form shadow">
+                                        <div class="profile-heading">
+                                            <h4 *ngIf="editable">Edit Profile</h4>
+                                            <h4 *ngIf="!editable">Profile</h4>
+                                        </div>
+                                        <mat-form-field appearance="outline">
+                                            <mat-label>First Name</mat-label>
+                                            <input matInput type="text" placeholder="First Name" formControlName="firstName" [readonly]="!editable" [ngClass]="{ 'is-invalid': submitted && user.firstName.errors }">
+                                            <mat-hint *ngIf="submitted && user.firstName.errors && user.firstName.errors.required">First name is required</mat-hint>
+                                        </mat-form-field>
+                                        <mat-form-field appearance="outline">
+                                            <mat-label>Last Name</mat-label>
+                                            <input matInput type="text" placeholder="Last Name *" formControlName="lastName" [readonly]="!editable" [ngClass]="{ 'is-invalid': submitted && user.lastName.errors }">
+                                            <mat-hint *ngIf="submitted && user.lastName.errors && user.lastName.errors.required">Last name is required</mat-hint>
+                                        </mat-form-field>
+                                        <mat-form-field appearance="outline">
+                                            <mat-label>Contact Number</mat-label>
+                                            <!-- <span matPrefix>+91 &nbsp;</span> -->
+                                            <input matInput type="text" placeholder="Contact Number *" formControlName="phoneNumber" [readonly]="!editable" [ngClass]="{ 'is-invalid': submitted && user.phoneNumber.errors }">
+                                            <mat-hint *ngIf="submitted && user.phoneNumber.errors && user.phoneNumber.errors.required">Contact Number is required</mat-hint>
+                                            <mat-hint *ngIf="submitted && user.phoneNumber.errors && (user.phoneNumber.errors.minLength || user.phoneNumber.errors.maxLength)">Contact Number is invalid</mat-hint>
+                                        </mat-form-field>
+                                        <mat-form-field appearance="outline">
+                                            <mat-label>Date of Birth</mat-label>
+                                            <input matInput placeholder="Date of Birth" formControlName="dateOfBirth" [matDatepicker]="picker" [readonly]="!editable" [ngClass]="{ 'is-invalid': submitted && user.dateOfBirth.errors }">
+                                            <mat-datepicker-toggle matSuffix [for]="picker" [disabled]="!editable"></mat-datepicker-toggle>
+                                            <mat-datepicker #picker [disabled]="!editable"></mat-datepicker>
+                                            <mat-hint *ngIf="submitted && user.dateOfBirth.errors && user.dateOfBirth.errors.required">Date of Birth is required</mat-hint>
+                                        </mat-form-field>
+                                        <mat-form-field appearance="outline">
+                                            <mat-label>Email</mat-label>
+                                            <input matInput type="email" placeholder="Email *" formControlName="email" readonly [ngClass]="{ 'is-invalid': submitted && user.email.errors }" readonly/>
+                                            <mat-hint *ngIf="submitted && user.email.errors && user.email.errors.required">Email is required</mat-hint>
+                                            <mat-hint *ngIf="submitted && user.email.errors && user.email.errors.email">Entered email is invalid</mat-hint>
+                                        </mat-form-field>
+                                        <mat-form-field appearance="outline">
+                                            <mat-label>LinkedIn Profile</mat-label>
+                                            <input matInput type="text" placeholder="LinkedIn Id *" formControlName="linkedInProfile" [readonly]="!editable" [ngClass]="{ 'is-invalid': submitted && (userType == 'mentor') && user.linkedInProfile.errors }" />
+                                            <mat-hint *ngIf="submitted && (userType == 'mentor') && user.linkedInProfile.errors.required">LinkedIn Profile link is required</mat-hint>
+                                        </mat-form-field>
+                                        <mat-form-field appearance="outline" [hidden]="role != 'mentor'">
+                                            <mat-label>Experience [Years]</mat-label>
+                                            <input matInput type="number" placeholder="Experience *" formControlName="experience" [ngClass]="{ 'is-invalid': submitted && user.experience.errors }" />
+                                            <mat-hint *ngIf="submitted && user.experience.errors && user.experience.errors.required">Experience is required, enter 0 if not applicable.</mat-hint>
+                                        </mat-form-field>            
+                                        <div class="text-center">
+                                            <div class="list-group list-group-horizontal">
+                                                <a class="btn list-group-item {{gender == 1? 'active' : ''}}" (click)="selectGender(1);">Male</a>
+                                                <a class="btn list-group-item {{gender == 2? 'active' : ''}}" (click)="selectGender(2);">Female</a>
+                                            </div>            
+                                        </div>
+                                        <div class="elementor-btn-container">
+                                            <button mat-raised-button (click)="onCancel()" *ngIf="editable">Cancel</button>
+                                            <button mat-raised-button color="primary" (click)="onSave()" *ngIf="editable">Save</button>
+                                            <button mat-raised-button color="primary" (click)="onEdit()" *ngIf="!editable">Edit</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

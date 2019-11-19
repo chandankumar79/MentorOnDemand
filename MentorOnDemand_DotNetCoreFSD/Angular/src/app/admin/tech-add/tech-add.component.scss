@@ -1,0 +1,81 @@
+.elementor-section {
+    width: 100%;
+    position: relative;
+    display: block;
+    .elementor-container {
+        display: flex;
+        max-width: 900px;
+        position: relative;
+        margin-left: auto;
+        margin-right: auto;
+        .elementor-row {
+            width: 100%;
+            display: flex;
+            .elementor-column {
+                display: flex;
+                width: 100%;
+                position: relative;
+                min-height: 1px;
+                .elementor-column-wrap {
+                    display: flex;
+                    width: 100%;
+                    position: relative;
+                    align-items: center;
+                    .elementor-widget-start {
+                        align-content: flex-start;
+                    }
+                    .elementor-widget-end {
+                        align-content: flex-end;
+                    }
+                    .elementor-widget-center {
+                        align-content: center;
+                        align-items: center;
+                        flex-wrap: wrap;
+                    }
+                    .elementor-widget-wrap {
+                        position: relative;
+                        width: 100%;
+                        .elementor-widget {
+                            width: 100%;
+                            position: relative;
+                            display: flex;
+                            justify-content: center;
+                            // background: -webkit-linear-gradient(left, #3931af, #00c6ff);
+                            border-radius: 10px;
+                            .elementor-element {
+                                margin: 50px auto 20px auto;
+                                width: 100%;
+                                border-radius: 10px;
+                                background-color: white;
+                                .form-heading {
+                                    background: -webkit-linear-gradient(left, #3931af, #00c6ff);
+                                    border-radius: 10px 10px;
+                                    padding: 20px;
+                                    margin: -40px 0px 20px 0px;
+                                    left: 0;
+                                    right: 0;
+                                    width: 100%;
+                                    color: white;
+                                    display: flex;
+                                    align-content: center;
+                                }
+                                form {
+                                    padding: 20px 20px 20px 20px;
+                                    button {
+                                        margin: 15px 15px 25px 15px;
+                                        width: 150px;
+                                        height: 50px;
+                                        font-size: 16px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .elementor-element-populated {
+                    padding: 10px 10px 10px 10px;
+                }
+            }
+        }
+    }
+}

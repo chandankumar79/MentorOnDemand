@@ -1,0 +1,69 @@
+<section class="elementor-section">
+    <div class="elementor-container">
+        <div class="elementor-row">
+            <div class="elementor-column">
+                <div class="elementor-column-wrap">
+                    <div class="elementor-widget-wrap elementor-widget-center">
+                        <div class="elementor-widget">
+                            <div class="elementor-element shadow">
+                                <div class="table-top">
+                                    <h3>{{tableTitle}}</h3>
+                                </div>
+                                <mat-table class="elementor-table" [dataSource]="tableData" matSort>
+                                    <ng-container matColumnDef="courseName">
+                                        <mat-header-cell class="table-header" *matHeaderCellDef mat-sort-header>Course Name</mat-header-cell>
+                                        <mat-cell *matCellDef="let element" class="table-data">{{element.courseName}}</mat-cell>
+                                    </ng-container>
+                                    <ng-container matColumnDef="mentorName">
+                                        <mat-header-cell class="table-header" *matHeaderCellDef mat-sort-header>Mentor</mat-header-cell>
+                                        <mat-cell *matCellDef="let element" class="table-data">{{element.mentorName}}</mat-cell>
+                                    </ng-container>
+                                    <ng-container matColumnDef="courseDuration">
+                                        <mat-header-cell class="table-header" *matHeaderCellDef mat-sort-header>Duration</mat-header-cell>
+                                        <mat-cell *matCellDef="let element" class="table-data">{{element.courseDuration}} Days</mat-cell>
+                                    </ng-container>
+                                    <ng-container matColumnDef="courseTotalFee">
+                                        <mat-header-cell class="table-header" *matHeaderCellDef mat-sort-header>Fee</mat-header-cell>
+                                        <mat-cell *matCellDef="let element" class="table-data">{{element.courseTotalFee}}</mat-cell>
+                                    </ng-container>
+                                    <ng-container matColumnDef="courseStartDate">
+                                        <mat-header-cell class="table-header" *matHeaderCellDef mat-sort-header>Start Date</mat-header-cell>
+                                        <mat-cell *matCellDef="let element" class="table-data">{{element.courseStartDate | slice:0:10}}</mat-cell>
+                                    </ng-container>
+                                    <ng-container matColumnDef="courseEndDate">
+                                        <mat-header-cell class="table-header" *matHeaderCellDef mat-sort-header>End Date</mat-header-cell>
+                                        <mat-cell *matCellDef="let element" class="table-data">{{element.courseEndDate | slice:0:10}}</mat-cell>
+                                    </ng-container>
+                                    <ng-container matColumnDef="courseStatus">
+                                        <mat-header-cell class="table-header" *matHeaderCellDef mat-sort-header>Status</mat-header-cell>
+                                        <mat-cell *matCellDef="let element" class="table-data">{{element.courseStatus}}</mat-cell>
+                                    </ng-container>
+                                    <ng-container matColumnDef="courseProgress">
+                                        <mat-header-cell class="table-header" *matHeaderCellDef mat-sort-header>Progress</mat-header-cell>
+                                        <mat-cell *matCellDef="let element" class="table-data">{{element.courseProgress}}%</mat-cell>
+                                    </ng-container>
+                                    <ng-container matColumnDef="studentAction">
+                                        <mat-header-cell class="table-header" *matHeaderCellDef>Action</mat-header-cell>
+                                        <mat-cell *matCellDef="let row; let element" class="table-data">
+                                            <button mat-raised-button color="accent" *ngIf="element.courseStatus=='completed'" (click)="onRate(row)" title="Rate Course"><i class="fa fa-star fa-lg"></i></button>
+                                            <button mat-raised-button color="primary" *ngIf="element.courseStatus=='Approved'" (click)="onPay(row)" title="Proceed to Pay"><i class="fa fa-edit fa-lg"></i></button>
+                                            <button mat-raised-button color="primary" *ngIf="element.courseStatus=='Active'" (click)="setProgress(row)">Progress</button>
+                                        </mat-cell>
+                                    </ng-container>
+                                    <ng-container matColumnDef="noData" class="text-center">
+                                        <mat-footer-cell *matFooterCellDef colspan="6">
+                                            You have not applied for any courses yet.
+                                        </mat-footer-cell>
+                                    </ng-container>
+                                    <mat-header-row *matHeaderRowDef="coursesList['tableHeader']"></mat-header-row>
+                                    <mat-row *matRowDef="let row; columns: coursesList['tableHeader']; "></mat-row>
+                                    <mat-footer-row *matFooterRowDef="[ 'noData'] " [ngClass]="{ 'hide': !(tableData != null && tableData.filteredData.length==0)} "></mat-footer-row>
+                                </mat-table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

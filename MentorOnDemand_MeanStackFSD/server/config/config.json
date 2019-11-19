@@ -1,0 +1,14 @@
+{
+    "development": {
+        "PORT": 3000,
+        "MONGODB_URI_Local": "mongodb://localhost:27017/MentorOnDemand",
+        "JWT_SECRET": "#MentorOnDemand",
+        "JWT_EXP": "100m"
+    },
+    "production": {
+        "PORT": 80,
+        "MONGODB_URI": "mongodb+srv://xxxxx/DB_Name",
+        "JWT_SECRET": "#MentorOnDemand",
+        "JWT_EXP": "100m"
+    }
+}

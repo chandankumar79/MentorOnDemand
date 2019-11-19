@@ -1,0 +1,115 @@
+<section class="elementor-section">
+    <div class="elementor-container">
+        <div class="elementor-row">
+            <div class="elementor-column">
+                <div class="elementor-column-wrap">
+                    <div class="elementor-widget-wrap elementor-widget-center">
+                        <div class="elementor-widget">
+                            <div class="elementor-element shadow">
+                                <div class="profile-heading">
+                                    <h4>Add Skill</h4>
+                                </div>
+                                <form class="" [formGroup]="skillForm">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="col-md-12">
+                                                <mat-form-field appearance="outline" class="col-md-12">
+                                                    <mat-label>Select Course</mat-label>
+                                                    <!-- TODO: implement readonly feature in case of edit case -->
+                                                    <mat-select formControlName="courseName" [ngClass]="{ 'is-invalid': submitted && skillFormControls.courseName.errors }">
+                                                        <!-- TODO: implement onClick to pass data -->
+                                                        <mat-option *ngFor="let course of courses" [value]="course.courseName" (click)="setSkillForm(course)">
+                                                            {{course.courseName}}
+                                                        </mat-option>
+                                                    </mat-select>
+                                                    <mat-hint *ngIf="submitted && skillFormControls.courseName.errors?.required"><i>* Course name is required.</i></mat-hint>
+                                                </mat-form-field>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <mat-form-field appearance="outline" class="col-md-12">
+                                                    <mat-label>Course Id</mat-label>
+                                                    <input matInput type="text" placeholder="Course id" readonly formControlName="courseId">
+                                                    <mat-hint><i>* Course id is auto-generated.</i></mat-hint>
+                                                </mat-form-field>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <mat-form-field appearance="outline" class="col-md-12">
+                                                    <mat-label>Mentor Surcharge</mat-label>
+                                                    <input matInput type="number" placeholder="Course surcharge as a percentage of course fee" formControlName="courseMentorSurcharge" (change)="calculateTotalFee()" [ngClass]="{ 'is-invalid': submitted && skillFormControls.courseMentorSurcharge.errors }">
+                                                    <mat-hint *ngIf="submitted && skillFormControls.courseMentorSurcharge.errors?.required"><i>* Mentor surcharge as a percentage of course fee. Enter 0 if none.</i></mat-hint>
+                                                </mat-form-field>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <mat-form-field appearance="outline" class="col-md-12">
+                                                    <mat-label>Total Fee</mat-label>
+                                                    <input matInput type="number" placeholder="Total fee for course inclusive of all charges" readonly formControlName="courseTotalFee">
+                                                    <mat-hint><i>* Total fee is auto-calculated.</i></mat-hint>
+                                                </mat-form-field>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <mat-form-field appearance="outline" class="col-md-12">
+                                                    <input matInput [matDatepicker]="courseStartDate" [min]="courseStartDateMin" placeholder="Choose a date" formControlName="courseStartDate" (change)="calculateCourseEndDate()" [ngClass]="{ 'is-invalid': submitted && skillFormControls.courseStartDate.errors }">
+                                                    <mat-datepicker-toggle matSuffix [for]="courseStartDate"></mat-datepicker-toggle>
+                                                    <mat-datepicker #courseStartDate></mat-datepicker>
+                                                    <mat-hint *ngIf="submitted && skillFormControls.courseStartDate.errors?.required"><i>* Course start date is required.</i></mat-hint>
+                                                </mat-form-field>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="col-md-12">
+                                                <mat-form-field appearance="outline" class="col-md-12">
+                                                    <mat-label>Experience</mat-label>
+                                                    <input matInput type="number" placeholder="Course experience in years" formControlName="courseExperience" [ngClass]="{ 'is-invalid': submitted && skillFormControls.courseExperience.errors }">
+                                                    <mat-hint *ngIf="submitted && skillFormControls.courseExperience.errors?.required"><i>* Experience in years is required. Enter 0 if no experience.</i></mat-hint>
+                                                </mat-form-field>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <mat-form-field appearance="outline" class="col-md-12">
+                                                    <mat-label>Course Fee</mat-label>
+                                                    <input matInput type="number" placeholder="Course fee" readonly formControlName="courseFee">
+                                                    <mat-hint><i>* Course fee is auto-generated.</i></mat-hint>
+                                                </mat-form-field>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <mat-form-field appearance="outline" class="col-md-12">
+                                                    <mat-label>Commission</mat-label>
+                                                    <input matInput type="number" placeholder="Commission" readonly formControlName="courseCommission">
+                                                    <mat-hint><i>* Commission is calculated as a percentage of basic fee.</i></mat-hint>
+                                                </mat-form-field>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <mat-form-field appearance="outline" class="col-md-12">
+                                                    <mat-label>Course Duration (Days)</mat-label>
+                                                    <input matInput type="text" placeholder="Duration in days" readonly formControlName="courseDuration">
+                                                    <mat-hint><i>* Course duration is auto-populated.</i></mat-hint>
+                                                </mat-form-field>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <mat-form-field appearance="outline" class="col-md-12">
+                                                    <input matInput [matDatepicker]="courseEndDate" [min]="courseEndDateMin" placeholder="Choose a date" formControlName="courseEndDate" [ngClass]="{ 'is-invalid': submitted && skillFormControls.courseEndDate.errors }">
+                                                    <mat-datepicker-toggle matSuffix [for]="courseEndDate"></mat-datepicker-toggle>
+                                                    <mat-datepicker #courseEndDate></mat-datepicker>
+                                                    <mat-hint *ngIf="submitted && skillFormControls.courseEndDate.errors?.required"><i>* Course end date is required.</i></mat-hint>
+                                                </mat-form-field>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <button mat-raised-button color="primary" style="float: right;" (click)="onSubmit()">Submit</button>
+                                                <button mat-raised-button style="float: right;" (click)="onCancel()">Cancel</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12" [hidden]="!message">
+                                        <div class="card text-center">
+                                            <p class="card-body">{{message}}</p>
+                                        </div>
+                                    </div>
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,74 @@
+<section class="elementor-section">
+    <div class="elementor-container">
+        <div class="elementor-row">
+            <div class="elementor-column">
+                <div class="elementor-column-wrap">
+                    <div class="elementor-widget-wrap elementor-widget-center">
+                        <div class="elementor-widget">
+                            <div class="elementor-element shadow">
+                                <div class="table-top">
+                                    <h3>{{tableTitle}}</h3>
+                                </div>
+                                <mat-table class="elementor-table" [dataSource]="tableData" matSort>
+                                    <!-- * hard coded table data -->
+                                    <ng-container matColumnDef="courseId">
+                                        <mat-header-cell class="table-header" *matHeaderCellDef mat-sort-header>Course Id</mat-header-cell>
+                                        <mat-cell *matCellDef="let element" class="table-data">{{element.courseId}}</mat-cell>
+                                    </ng-container>
+                                    <ng-container matColumnDef="courseName">
+                                        <mat-header-cell class="table-header" *matHeaderCellDef mat-sort-header>Course Name</mat-header-cell>
+                                        <mat-cell *matCellDef="let element" class="table-data">{{element.courseName}}</mat-cell>
+                                    </ng-container>
+                                    <ng-container matColumnDef="courseFee">
+                                        <mat-header-cell class="table-header" *matHeaderCellDef mat-sort-header>Fee</mat-header-cell>
+                                        <mat-cell *matCellDef="let element" class="table-data">{{element.courseFee}}</mat-cell>
+                                    </ng-container>
+                                    <ng-container matColumnDef="courseCommission">
+                                        <mat-header-cell class="table-header" *matHeaderCellDef mat-sort-header>Commission</mat-header-cell>
+                                        <mat-cell *matCellDef="let element" class="table-data">{{element.courseCommission}}</mat-cell>
+                                    </ng-container>
+                                    <ng-container matColumnDef="courseStatus">
+                                        <mat-header-cell class="table-header" *matHeaderCellDef mat-sort-header>Status</mat-header-cell>
+                                        <mat-cell *matCellDef="let element" class="table-data">{{element.courseStatus ? 'Active' : 'Blocked'}}</mat-cell>
+                                    </ng-container>
+                                    <ng-container matColumnDef="courseStudents">
+                                        <mat-header-cell class="table-header" *matHeaderCellDef mat-sort-header>Active Students</mat-header-cell>
+                                        <mat-cell *matCellDef="let element" class="table-data">{{element.courseStudents.length}}</mat-cell>
+                                    </ng-container>
+                                    <ng-container matColumnDef="courseMentors">
+                                        <mat-header-cell class="table-header" *matHeaderCellDef mat-sort-header>Active Mentors</mat-header-cell>
+                                        <mat-cell *matCellDef="let element" class="table-data">{{element.courseMentors.length}}</mat-cell>
+                                    </ng-container>
+                                    <!-- * hard coded table data ends here -->
+
+                                    <ng-container matColumnDef="courseAction">
+                                        <mat-header-cell class="table-header" *matHeaderCellDef>Action</mat-header-cell>
+                                        <mat-cell *matCellDef="let row; let element" class="table-data">
+                                            <button mat-raised-button [color]="element.courseStatus ? 'warn' : 'accent'" (click)="onBlock(row)" [title]="element.courseStatus ? 'Block' : 'Activate'"><i class="fa fa-ban fa-lg"></i></button>
+                                            <button mat-raised-button color="primary" (click)="onEdit(row)" title="Edit Course"><i class="fa fa-edit fa-lg"></i></button>
+                                        </mat-cell>
+                                    </ng-container>
+                                    <!-- TODO: implement paginator -->
+                                    <!-- <ng-container matColumnDef="loading ">
+                                                <mat-footer-cell *matFooterCellDef colspan="6 ">
+                                                    Loading data...
+                                                </mat-footer-cell>
+                                            </ng-container> -->
+                                    <!-- <ng-container matColumnDef="noData ">
+                                                <mat-footer-cell *matFooterCellDef colspan="6 ">
+                                                    No data found.
+                                                </mat-footer-cell>
+                                            </ng-container> -->
+                                    <mat-header-row *matHeaderRowDef="tableItems['tableHeader']"></mat-header-row>
+                                    <mat-row *matRowDef="let row; columns: tableItems['tableHeader']; "></mat-row>
+                                    <!-- <mat-footer-row *matFooterRowDef="[ 'loading'] " [ngClass]="{ 'hide': tableData!=null} "></mat-footer-row> -->
+                                    <!-- <mat-footer-row *matFooterRowDef="[ 'noData'] " [ngClass]="{ 'hide': !(tableData!=null && tableData.length==0)} "></mat-footer-row> -->
+                                </mat-table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

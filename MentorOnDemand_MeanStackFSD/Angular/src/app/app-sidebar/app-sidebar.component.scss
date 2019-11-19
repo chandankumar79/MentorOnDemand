@@ -1,0 +1,82 @@
+.sidebar {
+    position: fixed;
+    top: 86px;
+    bottom: 0;
+    left: 0;
+    width: 260px;
+    display: block;
+    font-weight: 200;
+    // background-size: cover;
+    background-position: center;
+}
+
+.sidebar-user {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 180px;
+}
+
+.sidebar-menu {
+    position: relative;
+    top: 60px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.sidebar .sidebar-menu .ul-none,
+li {
+    list-style: none;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.profile-details {
+    margin-top: 10px;
+    margin-left: 40px;
+    height: 75px;
+    width: 175px;
+}
+
+.menu-item {
+    height: 50px;
+    width: 175px;
+    padding: 5% 10% 5% 10%;
+}
+
+.text-left {
+    text-align: left;
+}
+
+i {
+    width: 20px;
+    margin-right: 4px;
+}
+
+img {
+    vertical-align: middle;
+    border-style: none;
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    height: 120px;
+    width: 120px;
+    margin-top: 10px;
+}
+
+.name {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+.role {
+    text-align: center;
+    font-size: .9rem;
+    font-weight: 400;
+}

@@ -170,6 +170,7 @@ namespace ProjectAPI.Data
                                         Student = $"{course.User.FirstName} {course.User.LastName}",
                                         StartDate = skill.StartDate,
                                         EndDate = skill.EndDate,
+                                        Progress = course.Progress,
                                         Status = course.Status
                                     });
                 return notifications;

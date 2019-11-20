@@ -12,7 +12,7 @@ export class MentorPaymentsComponent implements OnInit {
   tableData: MatTableDataSource<any>;
   @ViewChild(MatSort, {static: true}) sort: MatSort;
 
-  coursesList = {
+  tableDataItems = {
     tableDisplayHeader: [ ],
     tableHeader: [ 'paymentId', 'dateOfTransaction', 'amount', 'transactionType' ],
     tableRow: []

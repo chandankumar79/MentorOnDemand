@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using ProjectAPI.Data;
@@ -12,6 +13,7 @@ namespace ProjectAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize(Roles = "Admin")]
     public class AdminController : ControllerBase
     {
         IAdminRepository repository;
@@ -19,6 +21,7 @@ namespace ProjectAPI.Controllers
         {
             this.repository = repository;
         }
+        
         // GET: api/Admin
         [HttpGet("getTechnologies")]
         public IActionResult Get()
@@ -33,7 +36,20 @@ namespace ProjectAPI.Controllers
                 throw;
             }
         }
-
+        
+        [HttpGet("getDashboardData")]
+        public IActionResult getDashboardData()
+        {
+            try
+            {
+                var dashboardData = repository.GetDashboard().Result;
+                return Ok(new { dashboardData });
+            }
+            catch (Exception e)
+            {
+                throw;
+            }
+        }
         // GET: api/Admin
         [HttpGet("getPayments")]
         public IActionResult GetPayments()
@@ -129,7 +145,7 @@ namespace ProjectAPI.Controllers
             try
             {
                 var users = await repository.GetMentors();
-                return Ok(new { users = users });
+                return Ok(new { mentors = users });
             }
             catch (Exception e)
             {
@@ -144,7 +160,7 @@ namespace ProjectAPI.Controllers
             try
             {
                 var users = await repository.GetStudents();
-                return Ok(new { users = users });
+                return Ok(new { students = users });
             }
             catch (Exception e)
             {

@@ -23,6 +23,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { StudentCoursesComponent } from './student/student-courses/student-courses.component';
 import { MentorDashboardComponent } from './mentor/mentor-dashboard/mentor-dashboard.component';
 import { StudentPaymentsComponent } from './student/student-payments/student-payments.component';
+import { AdminDashboardComponent } from './admin/admin-dashboard/admin-dashboard.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -31,13 +32,12 @@ const routes: Routes = [
   { path: 'contact-us', component: ContactUsComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'login', component: LoginComponent },
-  // { path: 'profile', component: ProfileComponent},
   {
     path: 'student',
     component: StudentComponent,
     canActivate: [AuthGuard],
     children: [
-      { path: '', redirectTo: 'student-courses', pathMatch: 'full' },
+      { path: '', redirectTo: 'student-profile', pathMatch: 'full' },
       { path: 'student-profile', component: ProfileComponent },
       { path: 'student-courses', component: StudentCoursesComponent },
       { path: 'student-payments', component: StudentPaymentsComponent },
@@ -61,6 +61,8 @@ const routes: Routes = [
     component: AdminComponent,
     canActivate: [AuthGuard],
     children: [
+      { path: '', redirectTo: 'admin-dashboard', pathMatch: 'full' },
+      { path: 'admin-dashboard', component: AdminDashboardComponent },
       { path: 'add-tech', component: TechAddComponent },
       { path: 'admin-mentors', component: AdminMentorsComponent },
       { path: 'admin-students', component: AdminUsersComponent },

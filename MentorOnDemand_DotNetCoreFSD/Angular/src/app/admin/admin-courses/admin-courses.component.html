@@ -26,14 +26,6 @@
                                         <mat-header-cell class="table-header" *matHeaderCellDef mat-sort-header>Commission</mat-header-cell>
                                         <mat-cell *matCellDef="let element" class="table-data">{{element.commission}}</mat-cell>
                                     </ng-container>
-                                    <ng-container matColumnDef="students">
-                                        <mat-header-cell class="table-header" *matHeaderCellDef mat-sort-header>Active Students</mat-header-cell>
-                                        <mat-cell *matCellDef="let element" class="table-data">{{element.students.length}}</mat-cell>
-                                    </ng-container>
-                                    <ng-container matColumnDef="mentors">
-                                        <mat-header-cell class="table-header" *matHeaderCellDef mat-sort-header>Active Mentors</mat-header-cell>
-                                        <mat-cell *matCellDef="let element" class="table-data">{{element.mentors.length}}</mat-cell>
-                                    </ng-container>
                                     <ng-container matColumnDef="duration">
                                         <mat-header-cell class="table-header" *matHeaderCellDef mat-sort-header>Duration</mat-header-cell>
                                         <mat-cell *matCellDef="let element" class="table-data">{{element.duration}} Days</mat-cell>

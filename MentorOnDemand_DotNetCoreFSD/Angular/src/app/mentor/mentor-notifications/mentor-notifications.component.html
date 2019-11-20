@@ -30,6 +30,10 @@
                                         <mat-header-cell class="table-header" *matHeaderCellDef mat-sort-header>End Date</mat-header-cell>
                                         <mat-cell *matCellDef="let element" class="table-data">{{element.endDate | date:'dd MMM yyyy'}}</mat-cell>
                                     </ng-container>
+                                    <ng-container matColumnDef="progress">
+                                        <mat-header-cell class="table-header" *matHeaderCellDef mat-sort-header>Status</mat-header-cell>
+                                        <mat-cell *matCellDef="let element" class="table-data">{{element.progress}} %</mat-cell>
+                                    </ng-container>
                                     <ng-container matColumnDef="status">
                                         <mat-header-cell class="table-header" *matHeaderCellDef mat-sort-header>Status</mat-header-cell>
                                         <mat-cell *matCellDef="let element" class="table-data">{{getStatusText(element.status)}}</mat-cell>

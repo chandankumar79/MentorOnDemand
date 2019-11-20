@@ -15,7 +15,7 @@ export class MentorCoursesComponent implements OnInit {
   @ViewChild(MatSort, {static: true}) sort: MatSort;
   // @ViewChild(MatPaginator, {static: false}) paginator: MatPaginator;
 
-  mentorList = {
+  tableDataItems = {
     tableDisplayHeader: [ ],
     tableHeader: ['name', 'basicFee', 'commission', 'skillSurcharge', 'totalFee', 'startDate', 'endDate', 'activeStudents', 'action'],
     tableRow: []

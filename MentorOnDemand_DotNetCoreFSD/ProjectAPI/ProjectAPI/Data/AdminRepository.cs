@@ -100,6 +100,30 @@ namespace ProjectAPI.Data
             }
         }
 
+       public async Task<AdminDashboardDTO> GetDashboard()
+        {
+            try
+            {
+                var students = await userManager.GetUsersInRoleAsync("Student");
+                var mentors = await userManager.GetUsersInRoleAsync("Mentors");
+                return new AdminDashboardDTO
+                {
+                    TechnologiesActive = context.Technologies.Where(tech => tech.Status == true).Count(),
+                    TechnologiesBlocked = context.Technologies.Where(tech => tech.Status == false).Count(),
+                    RegisteredSkills = context.MentorSkills.Count(),
+                    RegisteredCourses = context.StudentCourses.Count(),
+                    StudentsActive = students.Where(s => s.Status == true).Count(),
+                    StudentsBlocked = students.Where(s => s.Status == false).Count(),
+                    MentorsActive = students.Where(m => m.Status == true).Count(),
+                    MentorsBlocked = students.Where(m => m.Status == false).Count()
+                };
+            }
+            catch (Exception e)
+            {
+                throw;
+            }
+        }
+
         public IEnumerable<AdminGetPaymentsDTO> GetPayments()
         {
             try
@@ -124,19 +148,28 @@ namespace ProjectAPI.Data
             }
         }
 
-        public async Task<IEnumerable<UpdateUserDTO>> GetMentors()
+        public async Task<IEnumerable<AdminGetMentorsDTO>> GetMentors()
         {
             try
             {
-                //var users = await userManager.GetUsersInRoleAsync(
-                //    roleManager.Roles.SingleOrDefault(r => r.Id == roleId.ToString()).NormalizedName);
                 var users = await userManager.GetUsersInRoleAsync("Mentor");
-                var result = users.Select(u => new UpdateUserDTO
+                var result = users.Select(u => new AdminGetMentorsDTO
                 {
                     Name = $"{u.FirstName} {u.LastName}",
                     Email = u.Email,
+                    TotalRating = u.TotalRating,
+                    ActiveStudents = (from student in context.MODUsers
+                                     join courses in context.StudentCourses on student equals courses.User
+                                     join skill in context.MentorSkills on courses.SkillId equals skill.SkillId
+                                     join mentor in context.MODUsers on skill.User equals mentor
+                                     where courses.Status == 4 && mentor.Email == u.Email
+                                     select student).Count(),
+                    SkillsCount = (from mentor in context.MODUsers
+                                   join skill in context.MentorSkills on mentor equals skill.User
+                                   where mentor.Email == u.Email
+                                   select skill).Count(),
                     Status = u.Status
-                }); 
+                });
                 return result;
             }
             catch (Exception e)
@@ -145,15 +178,27 @@ namespace ProjectAPI.Data
             }
         }
 
-        public async Task<IEnumerable<UpdateStudentDTO>> GetStudents()
+        public async Task<IEnumerable<AdminGetStudents>> GetStudents()
         {
             try
             {
                 var users = await userManager.GetUsersInRoleAsync("Student");
-                var result = users.Select(u => new UpdateStudentDTO
+                var result = users.Select(u => new AdminGetStudents
                 {
                     Name = $"{u.FirstName} {u.LastName}",
                     Email = u.Email,
+                    ActiveCourses = (from student in context.MODUsers
+                                     join courses in context.StudentCourses on student equals courses.User
+                                     where student.Email == u.Email && courses.Status == 4
+                                     select courses).Count(),
+                    CompletedCourses = (from student in context.MODUsers
+                                        join courses in context.StudentCourses on student equals courses.User
+                                        where student.Email == u.Email && courses.Status == 5
+                                        select courses).Count(),
+                    TotalCourses = (from student in context.MODUsers
+                                    join courses in context.StudentCourses on student equals courses.User
+                                    where student.Email == u.Email
+                                    select courses).Count(),                    
                     Status = u.Status
                 });
                 return result;

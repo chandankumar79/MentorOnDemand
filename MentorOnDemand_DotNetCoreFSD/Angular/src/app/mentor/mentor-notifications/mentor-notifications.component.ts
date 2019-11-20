@@ -15,7 +15,7 @@ export class MentorNotificationsComponent implements OnInit {
 
   notificationsList = {
     tableDisplayHeader: [],
-    tableHeader: [ 'courseId', 'course', 'student', 'startDate', 'endDate', 'status', 'action'],
+    tableHeader: [ 'courseId', 'course', 'student', 'startDate', 'endDate', 'progress', 'status', 'action'],
     tableRow: [ ]
   };
 

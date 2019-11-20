@@ -60,6 +60,10 @@ export class DataService {
     return this.http.put(`${this.apiBaseUrl}/admin/updateUser`, user);
   }
 
+  getAdminDashboardData() {
+    return this.http.get(`${this.apiBaseUrl}/admin/getDashboardData`);
+  }
+
   // * ======== mentor actions ======= *
 
   // homepage request

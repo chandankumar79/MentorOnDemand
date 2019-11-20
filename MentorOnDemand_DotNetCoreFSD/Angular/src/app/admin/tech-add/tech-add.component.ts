@@ -37,8 +37,8 @@ export class TechAddComponent implements OnInit {
       techId: [{ value: '', disabled: true }],
       name: ['', Validators.required],
       description: ['', Validators.required],
-      imgSourceLink: ['', Validators.required], // TODO: implement url validator for image links only
-      basicFee: ['', Validators.required],
+      imgSourceLink: ['', [Validators.required, Validators.pattern('(https?://)?([\\da-z.-]+)\\.([a-z.]{2,6})[/\\w .-]*/?')]],
+      basicFee: ['', [Validators.required, Validators.min(0)]],
       duration: ['', Validators.required],
       commission: ['', [Validators.required, Validators.min(0), Validators.max(50)]],
     });

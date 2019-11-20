@@ -11,12 +11,13 @@ namespace ProjectAPI.Data
     {
         public Task<bool> AddTechAsync(TechnologyDTO technologyDTO);
         public IEnumerable<Technology> GetTechnologies();
+        public Task<AdminDashboardDTO> GetDashboard();
         public IEnumerable<AdminGetPaymentsDTO> GetPayments();
         public Task<Technology> GetTechById(int id);
         public bool UpdateTech(UpdateTechDTO updatedTechDTO);
         public Task<bool> DeleteTechAsync(Technology technology);
-        public Task<IEnumerable<UpdateUserDTO>> GetMentors();
-        public Task<IEnumerable<UpdateStudentDTO>> GetStudents();
+        public Task<IEnumerable<AdminGetMentorsDTO>> GetMentors();
+        public Task<IEnumerable<AdminGetStudents>> GetStudents();
         public Task<bool> UpdateUserStatus(UpdateUserStatusDTO updateUserStatus);
 
     }

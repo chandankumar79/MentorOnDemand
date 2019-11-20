@@ -47,19 +47,14 @@
                                             <button mat-raised-button color="primary" title="Edit"><i class="fa fa-edit fa-lg" (click)="onEdit(row)"></i></button>
                                         </mat-cell>
                                     </ng-container>
-                                    <!-- <ng-container matColumnDef="loading ">
-                                            <mat-footer-cell *matFooterCellDef colspan="6 ">
-                                                Loading data...
-                                            </mat-footer-cell>
-                                        </ng-container> -->
-                                    <!-- <ng-container matColumnDef="noData" class="text-center">
-                                            <mat-footer-cell *matFooterCellDef colspan="6">
-                                                You have not added any skills yet.
-                                            </mat-footer-cell>
-                                        </ng-container> -->
-                                    <mat-header-row *matHeaderRowDef="mentorList['tableHeader']"></mat-header-row>
-                                    <mat-row *matRowDef="let row; columns: mentorList['tableHeader']; "></mat-row>
-                                    <!-- <mat-footer-row *matFooterRowDef="noData" [ngClass]="{'hide': !(tableData != null && tableData.filteredData.length==0)} "></mat-footer-row> -->
+                                    <ng-container matColumnDef="noData">
+                                        <mat-footer-cell *matFooterCellDef colspan="6">
+                                            No Skills found.
+                                        </mat-footer-cell>
+                                    </ng-container>
+                                    <mat-header-row *matHeaderRowDef="tableDataItems['tableHeader']"></mat-header-row>
+                                    <mat-row *matRowDef="let row; columns: tableDataItems['tableHeader']; "></mat-row>
+                                    <mat-footer-row *matFooterRowDef="['noData']" [ngClass]="{ 'hide': !(tableData != null && tableData.filteredData.length==0)} "></mat-footer-row>                                
                                 </mat-table>
                             </div>
                         </div>

@@ -18,7 +18,7 @@ export class AdminMentorsComponent implements OnInit {
   tableDataItems = {
     tableDisplayHeader: ['Name', 'Email', 'Ratings', 'Total Courses',
                           'Payment Due', 'Payment Payment Completed', 'Status', 'Action'],
-    tableHeader: ['name', 'email', 'rating', 'skillsCount', 'status', 'action'],
+    tableHeader: ['name', 'email', 'totalRating', 'skillsCount', 'status', 'action'],
     tableRow: []
   };
 
@@ -29,27 +29,15 @@ export class AdminMentorsComponent implements OnInit {
     this.getMentorData();
   }
 
-  // ! data not getting updated in frontend
   getMentorData() {
     this.tableDataItems.tableRow = [];
     this.dataService.adminGetMentors().subscribe(
       res => {
-        console.log('AdminMentors | response: ' + JSON.stringify(res));
-        const mentors = res['users'];
-        mentors.forEach(mentor => {
-          let tempMentor = {
-            name: mentor.name,
-            email: mentor.email,
-            // rating: mentor.ratings,
-            rating: 0,
-            skillsCount: 0,
-            status: mentor.status
-          }
-          this.tableDataItems.tableRow.push(tempMentor);
-        });
-        this.tableData = new MatTableDataSource(this.tableDataItems.tableRow);
-        this.tableData.sort = this.sort;    
-        // console.log(this.mentorList.tableRow);
+        console.log(this.tableData);
+        const mentors = res['mentors'];
+        this.tableData = new MatTableDataSource(mentors);
+        this.tableData.sort = this.sort;
+        console.log(this.tableData);
       },
       err => {
         console.log('AdminMentors | error: ' + JSON.stringify(err));
@@ -57,16 +45,16 @@ export class AdminMentorsComponent implements OnInit {
     );
   }
 
-  onInfo(mentor) {
-    this.dataService.adminGetMentorProfile(mentor).subscribe(
-      res => {
-        console.log('onInfo: ' + JSON.stringify(res));
-      },
-      err => {
-        console.log(err);
-      }
-    )
-  }
+  // onInfo(mentor) {
+  //   this.dataService.adminGetMentorProfile(mentor).subscribe(
+  //     res => {
+  //       console.log('onInfo: ' + JSON.stringify(res));
+  //     },
+  //     err => {
+  //       console.log(err);
+  //     }
+  //   )
+  // }
 
   onBlock(mentor) {
     mentor.status = !mentor.status;    

@@ -27,7 +27,7 @@ export class AdminUsersComponent implements OnInit {
 
   tableDataItems = {
     tableDisplayHeader: [],
-    tableHeader: ['name', 'email', 'coursesActive', 'coursesCompleted', 'status', 'action'],
+    tableHeader: ['name', 'email', 'activeCourses', 'completedCourses', 'totalCourses', 'status', 'action'],
     tableRow: [ ]
   };
 
@@ -42,19 +42,8 @@ export class AdminUsersComponent implements OnInit {
     this.tableDataItems.tableRow = [];
     this.dataService.adminGetStudents().subscribe(
       res => {
-        const students = res['users'];
-        students.forEach(student => {         
-          let tempStudent = {
-            name: student.name,
-            email: student.email,
-            coursesActive: 0,
-            coursesCompleted: 0,
-            status: student.status            
-          }
-          
-          this.tableDataItems.tableRow.push(tempStudent);
-        });
-        this.tableData = new MatTableDataSource(this.tableDataItems.tableRow);
+        const students = res['students'];
+        this.tableData = new MatTableDataSource(students);
         this.tableData.sort = this.sort;    
       },
       err => {
@@ -63,16 +52,16 @@ export class AdminUsersComponent implements OnInit {
     )
   }
 
-  onInfo(student) {
-    this.dataService.adminGetStudentProfile(student).subscribe(
-      res => {
-        console.log('onInfo: ' + JSON.stringify(res));
-      },
-      err => {
-        console.log(err);
-      }
-    )
-  }
+  // onInfo(student) {
+  //   this.dataService.adminGetStudentProfile(student).subscribe(
+  //     res => {
+  //       console.log('onInfo: ' + JSON.stringify(res));
+  //     },
+  //     err => {
+  //       console.log(err);
+  //     }
+  //   )
+  // }
 
   onBlock(student) {
     student.status = !student.status;

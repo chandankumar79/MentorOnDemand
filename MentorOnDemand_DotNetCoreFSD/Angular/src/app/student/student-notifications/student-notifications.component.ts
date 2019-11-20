@@ -27,29 +27,15 @@ export class StudentNotificationsComponent implements OnInit {
   }
 
   getStudentNotifications() {
-    this.dataService.getStudentNotifications().subscribe(
-      res => {
-        this.tableData = new MatTableDataSource(res['notifications']);
-        this.tableData.sort = this.sort;
-      },
-      err => {
-        console.log(err);
-      }
-    );
-  }
-
-  onAccept(course) {
-    course.courseStatus = 'Active';
-    course.coursePaymentStatus = true;
-    course.paymentId = 'dwfesgrdhtfyjgklfsdghftjgyk';
-    this.dataService.mentorUpdateRequestStatus(course, ).subscribe(
-      res => {
-        console.log(res);
-      },
-      err => {
-        console.log(err);
-      }
-    );
+    // this.dataService.getStudentNotifications().subscribe(
+    //   res => {
+    //     this.tableData = new MatTableDataSource(res['notifications']);
+    //     this.tableData.sort = this.sort;
+    //   },
+    //   err => {
+    //     console.log(err);
+    //   }
+    // );
   }
 
 }

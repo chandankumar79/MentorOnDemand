@@ -17,7 +17,7 @@ export class AddCourseComponent implements OnInit {
   @ViewChild(MatSort, {static: true}) sort: MatSort;
   // @ViewChild(MatPaginator, {static: false}) paginator: MatPaginator;
 
-coursesList = {
+  tableDataItems = {
     tableDisplayHeader: ['Mentor', 'Experience', 'Rating', 'Start Date', 'End Date', 'Course Fee', 'Action'],
     tableHeader: ['skillId', 'mentorName', 'experience', 'totalRating', 'ratingsCount', 'startDate', 'endDate', 'totalFee', 'action'],
     tableRow: [ ]
@@ -51,7 +51,7 @@ coursesList = {
   }
 
   getCourseMentors(course) {
-    console.log(course);
+    // console.log(course);
     this.dataService.studentGetCourseMentors(course.techId).subscribe(
       res => {
         this.mentors = res['mentors'];

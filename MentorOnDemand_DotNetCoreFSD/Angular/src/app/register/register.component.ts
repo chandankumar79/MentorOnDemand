@@ -34,11 +34,11 @@ export class RegisterComponent implements OnInit {
       lastName: ['', Validators.required],
       phoneNumber: ['', [Validators.required, Validators.minLength(10), Validators.maxLength(10)]],
       email: ['', [Validators.required, Validators.email]],
-      linkedInProfile: ['', Validators.required],
+      linkedInProfile: [''],
       dateOfBirth: ['', [Validators.required]],
       password: ['', [Validators.required, Validators.minLength(6)]],
       passwordConfirm: ['', [Validators.required, Validators.minLength(6)]],
-      experience: [0, this.role == 2 ? [Validators.required] : []]
+      experience: [0, [Validators.required, Validators.min(0)]]
     }, {
       validator: MustMatch('password', 'passwordConfirm')
     });

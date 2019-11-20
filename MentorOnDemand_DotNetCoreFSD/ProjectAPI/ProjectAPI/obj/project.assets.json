@@ -8659,11 +8659,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\hp\\Documents\\Dot NET Solution\\EMS\\EMS_Core\\ProjectAPI\\ProjectAPI\\ProjectAPI.csproj",
+      "projectUniqueName": "C:\\Users\\hp\\Documents\\GitHub\\MentorOnDemand\\MentorOnDemand_DotNetCoreFSD\\ProjectAPI\\ProjectAPI\\ProjectAPI.csproj",
       "projectName": "ProjectAPI",
-      "projectPath": "C:\\Users\\hp\\Documents\\Dot NET Solution\\EMS\\EMS_Core\\ProjectAPI\\ProjectAPI\\ProjectAPI.csproj",
+      "projectPath": "C:\\Users\\hp\\Documents\\GitHub\\MentorOnDemand\\MentorOnDemand_DotNetCoreFSD\\ProjectAPI\\ProjectAPI\\ProjectAPI.csproj",
       "packagesPath": "C:\\Users\\hp\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\hp\\Documents\\Dot NET Solution\\EMS\\EMS_Core\\ProjectAPI\\ProjectAPI\\obj\\",
+      "outputPath": "C:\\Users\\hp\\Documents\\GitHub\\MentorOnDemand\\MentorOnDemand_DotNetCoreFSD\\ProjectAPI\\ProjectAPI\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"

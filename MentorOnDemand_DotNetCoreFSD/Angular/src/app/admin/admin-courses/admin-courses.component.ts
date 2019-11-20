@@ -16,7 +16,7 @@ export class AdminCoursesComponent implements OnInit {
 
   tableItems = {
     tableDisplayHeader: ['Tech Id', 'Name', 'Fee', 'Commission', 'Status', 'Active Students', 'Active Mentors', 'Action'],
-    tableHeader: ['techId', 'name', 'basicFee', 'commission', 'students', 'mentors', 'duration', 'status', 'action'],
+    tableHeader: ['techId', 'name', 'basicFee', 'commission', 'duration', 'status', 'action'],
     tableRow: [ ]
   };
 
@@ -30,12 +30,6 @@ export class AdminCoursesComponent implements OnInit {
   getTableData() {
     this.dataService.adminGetTechnologies().subscribe(res => {
       const data = res['courses'];
-      // TODO: remember to fetch the students and mentors registered for this technology
-      for (let i = 0; i<data.length; i++) {
-        data[i].students = [];
-        data[i].mentors = [];
-      }
-      console.log(data);
       this.tableData = new MatTableDataSource(data);
       this.tableData.sort = this.sort;
     });

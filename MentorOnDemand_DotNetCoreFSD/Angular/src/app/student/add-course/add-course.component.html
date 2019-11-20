@@ -75,9 +75,8 @@
                                             No mentors available for the selected course.
                                         </mat-footer-cell>
                                     </ng-container>
-                                    <mat-header-row *matHeaderRowDef="coursesList['tableHeader']"></mat-header-row>
-                                    <mat-row *matRowDef="let row; columns: coursesList['tableHeader']; "></mat-row>
-                                    <!-- <mat-footer-row *matFooterRowDef="[ 'loading'] " [ngClass]="{ 'hide': tableData!=null} "></mat-footer-row> -->
+                                    <mat-header-row *matHeaderRowDef="tableDataItems['tableHeader']"></mat-header-row>
+                                    <mat-row *matRowDef="let row; columns: tableDataItems['tableHeader']; "></mat-row>
                                     <mat-footer-row *matFooterRowDef="[ 'noData'] " [ngClass]="{ 'hide': !(tableData != null && tableData.filteredData.length==0)} "></mat-footer-row>
                                 </mat-table>
                             </div>

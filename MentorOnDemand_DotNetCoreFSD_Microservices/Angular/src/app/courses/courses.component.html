@@ -1,0 +1,90 @@
+<section class="elementor-section elementor-section-top">
+    <div class="elementor-background-overlay"></div>
+    <div class="elementor-container elementor-container-custom">
+        <div class="elementor-row">
+            <div class="elementor-column">
+                <div class="elementor-column-wrap elementor-element-populated">
+                    <div class="elementor-widget-wrap">
+                        <div class="elementor-widget elementor-widget-heading">
+                            <div class="elementor-widget-container">
+                                <h1>Find the best mentors and start today!</h1>
+                            </div>
+                        </div>
+                        <div class="elementor-widget elementor-widget-heading">
+                            <div class="elementor-widget-container">
+                                <p>"Choose from wide range of courses and mentors..."</p>
+                            </div>
+                        </div>
+                        <div class="elementor-widget elementor-widget-search-form">
+                            <div class="elementor-widget-container">
+                                <div class="elementor-search-form">
+                                    <div class="elementor-search-form__container col-md-12">
+                                        <mat-form-field appearance="outline" class="">
+                                            <mat-label>Search Courses</mat-label>
+                                            <!-- <input matInput type="text" placeholder="Search for a course" formControlName="inputSearchCourses"> -->
+                                            <input matInput type="text" placeholder="Search for a course" [(ngModel)]="inputSearchCourses">
+                                        </mat-form-field>
+                                        <!-- <mat-form-field appearance="outline" class="" formControlName="inputSearchMentors">
+                                            <mat-label>Search Mentors</mat-label>
+                                            <input matInput type="text" placeholder="Search for a mentor">
+                                        </mat-form-field> -->
+                                        <!-- <mat-form-field appearance="outline" class="">
+                                            <input matInput [matDatepicker]="courseStartDate" placeholder="Choose a start date" formControlName="inputSearchDateFrom">
+                                            <mat-datepicker-toggle matSuffix [for]="courseStartDate"></mat-datepicker-toggle>
+                                            <mat-datepicker #courseStartDate></mat-datepicker>
+                                        </mat-form-field> -->
+                                        <!-- <mat-form-field appearance="outline" class="">
+                                            <input matInput [matDatepicker]="courseEndDate" placeholder="Choose an end date" formControlName="inputSearchDateTo">
+                                            <mat-datepicker-toggle matSuffix [for]="courseEndDate"></mat-datepicker-toggle>
+                                            <mat-datepicker #courseEndDate></mat-datepicker>
+                                        </mat-form-field> -->
+                                        <button mat-raised-button class="elementor-search-form__button" (click)="searchSubmit()">Search</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- <section class="elementor-section" *ngIf="courses != null">
+    <div class="elementor-container elementor-container-custom-2 shadow">
+        <div class="elementor-row">
+            <div class="elementor-column">
+                <div class="elementor-column-wrap elementor-element-populated">
+                    <div class="elementor-widget-wrap">
+                        <div class="elementor-widget elementor-column text-center elementor-widget-center">
+                            <div *ngFor="let course of courses | keyvalue" class="card card-custom shadow">
+                                <div class="card-img">
+                                    <img src="{{course.value.imgSourceLink}}">
+                                </div>
+                                <div class="card-body">
+                                    <h4 class="card-title">{{course.value.name}}</h4>
+                                    <p class="card-body">{{course.value.description}}</p>
+                                    <button class="btn btn-primary" (click)="selectMentor(course.value)">Apply</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> -->
+<div class="wrapper">
+    <div class="row text-center justify-content-center col-md-12">
+        <div *ngFor="let course of courses | keyvalue" class="card card-custom shadow">
+            <div class="card-img">
+                <img src="{{course.value.imgSourceLink}}">
+            </div>
+            <div class="card-body">
+                <h4 class="card-title">{{course.value.name}}</h4>
+                <p class="card-body">{{course.value.description}}</p>
+                <button class="btn btn-primary" (click)="selectMentor(course.value)">Apply</button>
+            </div>
+        </div>
+    </div>
+</div>
+<app-app-footer></app-app-footer>

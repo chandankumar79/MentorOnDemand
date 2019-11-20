@@ -1,0 +1,215 @@
+.elementor-section-top {
+    color: white;
+    height: 500px;
+    width: 100%;
+    background-color: #0b4f6c;
+    background-image: url(https://elementor.thelandingfactory.com/wp-content/uploads/2018/01/pattern-black-transparent.png);
+    transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+    padding: 10px 10px 10px 10px; // TODO: remove later
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    font-family: 'Oswald', sans-serif;
+    .elementor-background-overlay {
+        border-radius: 0px 0px 0px 0px;
+        background-color: transparent;
+        background-image: linear-gradient(45deg, #0b4f6c 0%, #01baef 100%);
+        opacity: 0.5;
+        transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        position: absolute;
+    }
+}
+
+.elementor-container-custom {
+    max-width: 900px;
+    margin-top: 100px;
+    margin-bottom: 200px;
+}
+
+.elementor-container-custom-2 {
+    padding: 20px 20px;
+    border-radius: 10px;
+    background: white;
+    margin-top: -120px;
+    margin-bottom: 20px;
+}
+
+.elementor-section {
+    width: 100%;
+    position: relative;
+    display: block;
+    .elementor-container {
+        display: flex;
+        max-width: 1200px;
+        position: relative;
+        margin-left: auto;
+        margin-right: auto;
+        .elementor-row {
+            width: 100%;
+            display: flex;
+            .elementor-column {
+                display: flex;
+                width: 100%;
+                position: relative;
+                min-height: 1px;
+                .elementor-column-wrap {
+                    display: flex;
+                    width: 100%;
+                    position: relative;
+                    align-items: center;
+                    .elementor-widget-start {
+                        align-content: flex-start;
+                    }
+                    .elementor-widget-end {
+                        align-content: flex-end;
+                    }
+                    .elementor-widget-center {
+                        align-content: center;
+                        align-items: center;
+                        flex-wrap: wrap;
+                    }
+                    .elementor-widget-wrap {
+                        position: relative;
+                        width: 100%;
+                        .elementor-widget {
+                            width: 100%;
+                            position: relative;
+                            .elementor-search-heading {
+                                font-family: 'Varela Round', sans-serif;
+                                margin: 0px 20px 20px 20px;
+                                padding: 20px 20px;
+                                border-radius: 10px;
+                            }
+                        }
+                        .elementor-widget-heading {
+                            text-align: center;
+                            margin-bottom: 0px;
+                        }
+                        .elementor-search-form {
+                            display: flex;
+                            position: relative;
+                            justify-content: center;
+                            margin: 0px auto 0px auto;
+                            .elementor-search-form__container {
+                                display: flex;
+                                position: relative;
+                                background-color: white;
+                                padding: 15px 15px 15px 15px;
+                                border-radius: 5px;
+                                align-items: center;
+                                align-content: center;
+                                .elementor-search-widget-wrap {
+                                    width: 300px;
+                                    height: 50px;
+                                    border-radius: 5px;
+                                    border-color: #0b4f6c;
+                                    position: relative;
+                                    display: flex;
+                                    justify-content: flex-start;
+                                    align-items: center;
+                                    margin: 5px 5px 5px 5px;
+                                }
+                                .elementor-search-form__input {
+                                    // margin: 5px 5px 5px 5px;
+                                    // width: 200px;
+                                    width: 100%;
+                                }
+                                .elementor-search-form__button {
+                                    background-color: #0b4f6c;
+                                    color: white;
+                                    height: 60px;
+                                    width: 400px;
+                                    margin-bottom: 24px;
+                                    margin-left: 5px;
+                                    font-size: 18px;
+                                }
+                            }
+                        }
+                    }
+                }
+                .elementor-element-populated {
+                    padding: 10px 10px 10px 10px;
+                }
+            }
+        }
+    }
+}
+
+.mat-form-field {
+    width: 100%;
+    margin: 5px 5px;
+    color: #0b4f6c;
+    .mat-form-field-outline {
+        background-color: #ffffff;
+    }
+}
+
+.card-custom {
+    margin-top: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    width: 340px;
+    border-radius: 15px;
+}
+
+img {
+    height: 145px;
+    width: 145px;
+    max-width: 150px !important;
+    max-height: 150px !important;
+    margin: 10px 95px 0px 95px;
+}
+
+.card-body p {
+    margin-top: -20px;
+    height: 160px;
+}
+
+.card {
+    font-family: 'Varela Round', sans-serif;
+}
+
+.card-body a {
+    width: 120px;
+    height: 40px;
+    border-radius: 7px;
+    position: relative;
+}
+
+
+.elementor-element {
+    color: white;
+    height: 500px;
+    width: 100%;
+    background-color: #0b4f6c;
+    background-image: url(https://elementor.thelandingfactory.com/wp-content/uploads/2018/01/pattern-black-transparent.png);
+    transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+    padding: 150px 0px 200px 0px;
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    font-family: 'Oswald', sans-serif;
+}
+
+.elementor-background-overlay {
+    background-color: transparent;
+    background-image: linear-gradient(45deg, #0b4f6c 0%, #01baef 100%);
+    opacity: 0.5;
+    transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+}
+
+.row:first-of-type {
+    margin-top: -120px;
+    width: 100%;
+}
+

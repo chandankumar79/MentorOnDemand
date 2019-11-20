@@ -1,0 +1,31 @@
+<section class="elementor-section">
+        <div class="elementor-container">
+            <div class="elementor-row">
+                <div class="elementor-column">
+                    <div class="elementor-column-wrap">
+                        <div class="elementor-widget-wrap elementor-widget-center">
+                            <div class="elementor-widget">
+                                <div class="elementor-element">                                    
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <h5 class="card-title">Wallet Balance</h5>
+                                        </div>
+                                        <div class="card-body">
+                                            <h5 class="card-title">₹0</h5>
+                                            <button class="btn btn-primary" *ngIf="!withdrawalStatus" (onClick)="changeWithdrawalStatus(true)">Withdraw</button>                                            
+                                            <div class="form-group" *ngIf="withdrawalStatus">
+                                                <label for="withdrawalAmount">Amount</label>
+                                                <input type="number" class="form-control" id="withdrawalAmount" placeholder="Enter the amount">
+                                                <small id="withdrawalHelp" class="form-text text-muted">Please enter the amount you would like to withdraw.</small>
+                                                <button class="btn btn-primary">Withdraw</button>                                            
+                                            </div>                                       
+                                        </div>
+                                    </div>                                    
+                                </div>                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>

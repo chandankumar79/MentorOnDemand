@@ -1,0 +1,22 @@
+<div class="wrapper">
+    <section class="elementor-element \">
+        <div class="elementor-background-overlay"></div>
+        <div class="container text-center col-md-12" style="position: absolute;">
+            <h1>Browse Mentor on Demand Courses</h1>
+            <p>BROWSE THROUGH OUR DIVERSE COURSES</p>
+        </div>
+    </section>
+    <div class="row text-center justify-content-center col-md-12">
+        <div *ngFor="let course of courses | keyvalue" class="card card-custom shadow">
+            <div class="card-img">
+                <img src="{{course.value.imgSourceLink}}">
+            </div>
+            <div class="card-body">
+                <h4 class="card-title">{{course.value.name}}</h4>
+                <p class="card-body">{{course.value.description}}</p>
+                <button class="btn btn-primary" (click)="selectMentor(course.value)">Apply</button>
+            </div>
+        </div>
+    </div>
+</div>
+<app-app-footer></app-app-footer>

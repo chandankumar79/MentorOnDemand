@@ -1,0 +1,22 @@
+<div class="sidebar shadow">
+    <div class="sidebar-user">
+        <div class="picture-wrapper text-center">
+            <div class="justify-content-center">
+                <img class="img-fluid" src="assets/images/user_male.png" alt="">
+            </div>
+        </div>
+        <div class="elementor-item-anchor profile-details text-center">
+            <span class="name">John Doe</span><br>
+            <small class="role text-uppercase">{{userType}}</small>
+        </div>
+    </div>
+    <div class="sidebar-menu">
+        <ul class="ul-none">
+            <li *ngFor="let item of sidebarMenu | keyvalue" 
+                    routerLink="{{item.value.link}}" class="elementor-item-anchor menu-item text-left">
+                <i class="fa {{item.value.icon}}">&nbsp;</i>
+                <span class="">{{item.value.name}}</span>
+            </li>
+        </ul>
+    </div>
+</div>

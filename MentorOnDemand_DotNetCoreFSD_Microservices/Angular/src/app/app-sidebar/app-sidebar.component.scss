@@ -1,0 +1,127 @@
+.sidebar {
+    position: fixed;
+    top: 86px;
+    bottom: 0;
+    left: 0;
+    width: 260px;
+    display: block;
+    font-weight: 200;
+    // background-size: cover;
+    background-position: center;
+}
+
+.sidebar-user {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 180px;
+}
+
+.sidebar-menu {
+    position: relative;
+    top: 60px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.sidebar .sidebar-menu .ul-none,
+li {
+    list-style: none;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.profile-details {
+    margin-top: 10px;
+    margin-left: 40px;
+    height: 75px;
+    width: 175px;
+}
+
+.menu-item {
+    height: 50px;
+    width: 175px;
+    padding: 5% 10% 5% 10%;
+}
+
+.text-left {
+    text-align: left;
+}
+
+i {
+    width: 20px;
+    margin-right: 4px;
+}
+
+img {
+    vertical-align: middle;
+    border-style: none;
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    height: 120px;
+    width: 120px;
+    margin-top: 10px;
+}
+
+.name {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+.role {
+    text-align: center;
+    font-size: .9rem;
+    font-weight: 400;
+}
+
+li {
+    border-width: 0 0 0 0;
+    position: relative;
+    display: block;
+    list-style: none;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    font-size: 18px;
+    color: #0b4f6c;
+    a {
+        color: #ffffff;
+        white-space: nowrap;
+        padding: 13px 20px 13px 20px;
+        transition-property: all;
+        transition-duration: 0.4s;
+        transition-timing-function: ease;
+        transition-delay: 0s;
+        line-height: 20px;
+        display: flex;
+        align-items: center;
+        position: relative;
+        box-shadow: none;
+        text-decoration: none;
+    }
+}
+
+li::after {
+    background-color: #00c6ff;
+    content: "";
+    width: 0;
+    height: 3px;
+    left: 0;
+    bottom: 0;
+    transition: width 0.35s ease 0s;
+    position: absolute;
+}
+
+li:hover::after {
+    width: 100%;
+}
+
+li:hover {
+    cursor: pointer;
+}

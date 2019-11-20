@@ -1,0 +1,89 @@
+<section class="elementor-section">
+    <div class="elementor-container">
+        <div class="elementor-row">
+            <div class="elementor-column">
+                <div class="elementor-column-wrap">
+                    <div class="elementor-widget-wrap elementor-widget-center">
+                        <div class="elementor-widget">
+                            <div class="elementor-element shadow">
+                                <div class="table-top">
+                                    <h3>{{tableTitle}}</h3>
+                                </div>
+                                <mat-table class="elementor-table" [dataSource]="tableData" matSort>
+                                    <ng-container matColumnDef="skillId">
+                                        <mat-header-cell class="table-header col-w2" *matHeaderCellDef mat-sort-header [style.display]="'none'">Skill Id</mat-header-cell>
+                                        <mat-cell *matCellDef="let element" class="table-data col-w2" [style.display]="'none'">{{element.skillId}}</mat-cell>
+                                    </ng-container>
+                                    <ng-container matColumnDef="mentorName">
+                                        <mat-header-cell class="table-header col-w2" *matHeaderCellDef mat-sort-header>Mentor</mat-header-cell>
+                                        <mat-cell *matCellDef="let element" class="table-data col-w2">{{element.mentorName}}</mat-cell>
+                                    </ng-container>
+                                    <ng-container matColumnDef="experience">
+                                        <mat-header-cell class="table-header col-w2" *matHeaderCellDef mat-sort-header>Experience</mat-header-cell>
+                                        <mat-cell *matCellDef="let element" class="table-data col-w2">{{element.experience}} Years</mat-cell>
+                                    </ng-container>
+
+                                    <ng-container matColumnDef="totalRating">
+                                        <mat-header-cell class="table-header col-w1" *matHeaderCellDef mat-sort-header>Rating</mat-header-cell>
+                                        <mat-cell *matCellDef="let element" class="table-data col-w1" title="Rated {{element.ratingsCount}} times">
+                                            <i class="fa fa-star" *ngIf="element.totalRating > 0"></i>
+                                            <i class="fa fa-star" *ngIf="element.totalRating > 1"></i>
+                                            <i class="fa fa-star" *ngIf="element.totalRating > 2"></i>
+                                            <i class="fa fa-star" *ngIf="element.totalRating > 3"></i>
+                                            <i class="fa fa-star" *ngIf="element.totalRating > 4"></i>
+                                            <i class="fa fa-star-o" *ngIf="element.totalRating < 5"></i>
+                                            <i class="fa fa-star-o" *ngIf="element.totalRating < 4"></i>
+                                            <i class="fa fa-star-o" *ngIf="element.totalRating < 3"></i>
+                                            <i class="fa fa-star-o" *ngIf="element.totalRating < 2"></i>
+                                            <i class="fa fa-star-o" *ngIf="element.totalRating < 1"></i>
+                                        </mat-cell>
+                                    </ng-container>
+                                    <ng-container matColumnDef="ratingsCount">
+                                        <mat-header-cell class="table-header col-w2" *matHeaderCellDef mat-sort-header [style.display]="'none'">Ratings Count</mat-header-cell>
+                                        <mat-cell *matCellDef="let element" class="table-data col-w2" [style.display]="'none'">{{element.ratingsCount}}</mat-cell>
+                                    </ng-container>
+                                    <ng-container matColumnDef="startDate">
+                                        <mat-header-cell class="table-header col-w1" *matHeaderCellDef mat-sort-header>Start Date</mat-header-cell>
+                                        <mat-cell *matCellDef="let element" class="table-data col-w1">{{element.startDate | date: 'dd MMM yyyy'}}</mat-cell>
+                                    </ng-container>
+                                    <ng-container matColumnDef="endDate">
+                                        <mat-header-cell class="table-header col-w1" *matHeaderCellDef mat-sort-header>End Date</mat-header-cell>
+                                        <mat-cell *matCellDef="let element" class="table-data col-w1">{{element.endDate | date:'dd MMM yyyy'}}</mat-cell>
+                                    </ng-container>
+                                    <ng-container matColumnDef="totalFee">
+                                        <mat-header-cell class="table-header col-w1" *matHeaderCellDef mat-sort-header>Course Fee</mat-header-cell>
+                                        <mat-cell *matCellDef="let element" class="table-data col-w1" title="Fee is inclusive of all charges.">{{element.totalFee}}</mat-cell>
+                                    </ng-container>
+
+                                    <ng-container matColumnDef="action">
+                                        <mat-header-cell class="table-header col-w2" *matHeaderCellDef>Action</mat-header-cell>
+                                        <mat-cell *matCellDef="let row; let element" class="table-data col-w2">
+                                            <button mat-raised-button color="primary" (click)="onSelect(row)" title="Propose Training">
+                                                <i class="fa fa-check fa-lg"></i>
+                                                &nbsp;&nbsp;Select&nbsp;&nbsp;
+                                            </button>
+                                        </mat-cell>
+                                    </ng-container>
+
+                                    <!-- <ng-container matColumnDef="loading ">
+                                        <mat-footer-cell *matFooterCellDef colspan="6 ">
+                                            Loading data...
+                                        </mat-footer-cell>
+                                    </ng-container> -->
+                                    <ng-container matColumnDef="noData">
+                                        <mat-footer-cell *matFooterCellDef colspan="6 ">
+                                            No mentors available for the selected course.
+                                        </mat-footer-cell>
+                                    </ng-container>
+                                    <mat-header-row *matHeaderRowDef="tableDataItems['tableHeader']"></mat-header-row>
+                                    <mat-row *matRowDef="let row; columns: tableDataItems['tableHeader']; "></mat-row>
+                                    <mat-footer-row *matFooterRowDef="[ 'noData'] " [ngClass]="{ 'hide': !(tableData != null && tableData.filteredData.length==0)} "></mat-footer-row>
+                                </mat-table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

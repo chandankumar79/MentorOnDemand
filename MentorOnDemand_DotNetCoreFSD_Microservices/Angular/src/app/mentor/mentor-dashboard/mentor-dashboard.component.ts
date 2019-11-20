@@ -1,0 +1,20 @@
+import { Component, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'app-mentor-dashboard',
+  templateUrl: './mentor-dashboard.component.html',
+  styleUrls: ['./mentor-dashboard.component.scss']
+})
+export class MentorDashboardComponent implements OnInit {
+  withdrawStatus = false;
+  constructor() { }
+
+  ngOnInit() {
+  }
+
+  changeWithdrawalStatus(status) {
+    console.log(status);
+    this.withdrawStatus = status;
+  }
+
+}

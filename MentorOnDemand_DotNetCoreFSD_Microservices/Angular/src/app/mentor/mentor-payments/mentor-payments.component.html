@@ -1,0 +1,45 @@
+<section class="elementor-section">
+    <div class="elementor-container">
+        <div class="elementor-row">
+            <div class="elementor-column">
+                <div class="elementor-column-wrap">
+                    <div class="elementor-widget-wrap elementor-widget-center">
+                        <div class="elementor-widget">
+                            <div class="elementor-element shadow">
+                                <div class="table-top">
+                                    <h3>{{tableTitle}}</h3>
+                                </div>
+                                <mat-table class="elementor-table" [dataSource]="tableData" matSort>
+                                    <ng-container matColumnDef="paymentId">
+                                        <mat-header-cell class="table-header" *matHeaderCellDef mat-sort-header>Payment Id</mat-header-cell>
+                                        <mat-cell *matCellDef="let element" class="table-data">{{element.paymentId}}</mat-cell>
+                                    </ng-container>
+                                    <ng-container matColumnDef="dateOfTransaction">
+                                        <mat-header-cell class="table-header" *matHeaderCellDef mat-sort-header>Date</mat-header-cell>
+                                        <mat-cell *matCellDef="let element" class="table-data">{{element.dateOfTransaction | date: 'dd MMM yyyy'}}</mat-cell>
+                                    </ng-container>
+                                    <ng-container matColumnDef="amount">
+                                        <mat-header-cell class="table-header" *matHeaderCellDef mat-sort-header>Amount</mat-header-cell>
+                                        <mat-cell *matCellDef="let element" class="table-data">{{element.amount}}</mat-cell>
+                                    </ng-container>
+                                    <ng-container matColumnDef="transactionType">
+                                        <mat-header-cell class="table-header" *matHeaderCellDef mat-sort-header>Transaction</mat-header-cell>
+                                        <mat-cell *matCellDef="let element" class="table-data">{{element.transactionType? 'Payment' : 'Withdrawal'}}</mat-cell>
+                                    </ng-container>
+                                    <ng-container matColumnDef="noData" class="text-center">
+                                        <mat-footer-cell *matFooterCellDef colspan="6">
+                                            No transactions found.
+                                        </mat-footer-cell>
+                                    </ng-container>
+                                    <mat-header-row *matHeaderRowDef="tableDataItems['tableHeader']"></mat-header-row>
+                                    <mat-row *matRowDef="let row; columns: tableDataItems['tableHeader']; "></mat-row>
+                                    <mat-footer-row *matFooterRowDef="[ 'noData'] " [ngClass]="{ 'hide': !(tableData != null && tableData.filteredData.length==0)} "></mat-footer-row>
+                                </mat-table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

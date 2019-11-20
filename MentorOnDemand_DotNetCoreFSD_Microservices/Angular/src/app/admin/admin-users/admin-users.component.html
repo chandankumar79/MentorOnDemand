@@ -1,0 +1,61 @@
+<section class="elementor-section">
+    <div class="elementor-container">
+        <div class="elementor-row">
+            <div class="elementor-column">
+                <div class="elementor-column-wrap">
+                    <div class="elementor-widget-wrap elementor-widget-center">
+                        <div class="elementor-widget">
+                            <div class="elementor-element shadow">
+                                <div class="table-top">
+                                    <h3>{{tableTitle}}</h3>
+                                </div>
+                                <mat-table class="elementor-table" [dataSource]="tableData" matSort>
+                                    <ng-container matColumnDef="name">
+                                        <mat-header-cell class="table-header col-w2" *matHeaderCellDef mat-sort-header>Name</mat-header-cell>
+                                        <mat-cell *matCellDef="let element" class="table-data col-w2">{{element.name}}</mat-cell>
+                                    </ng-container>
+                                    <ng-container matColumnDef="email">
+                                        <mat-header-cell class="table-header col-w2" *matHeaderCellDef mat-sort-header>Email</mat-header-cell>
+                                        <mat-cell *matCellDef="let element" class="table-data col-w2">{{element.email}}</mat-cell>
+                                    </ng-container>
+                                    <ng-container matColumnDef="activeCourses">
+                                        <mat-header-cell class="table-header col-w1" *matHeaderCellDef mat-sort-header>Active Courses</mat-header-cell>
+                                        <mat-cell *matCellDef="let element" class="table-data col-w1">&nbsp;&nbsp;{{element.activeCourses}}&nbsp;&nbsp;</mat-cell>
+                                    </ng-container>
+                                    <ng-container matColumnDef="completedCourses">
+                                        <mat-header-cell class="table-header col-w1" *matHeaderCellDef mat-sort-header>Completed Courses</mat-header-cell>
+                                        <mat-cell *matCellDef="let element" class="table-data col-w1">&nbsp;&nbsp;{{element.completedCourses}}&nbsp;&nbsp;</mat-cell>
+                                    </ng-container>
+                                    <ng-container matColumnDef="totalCourses">
+                                        <mat-header-cell class="table-header col-w1" *matHeaderCellDef mat-sort-header>Total Courses</mat-header-cell>
+                                        <mat-cell *matCellDef="let element" class="table-data col-w1">&nbsp;&nbsp;{{element.totalCourses}}&nbsp;&nbsp;</mat-cell>
+                                    </ng-container>
+                                    <ng-container matColumnDef="status">
+                                        <mat-header-cell class="table-header col-w1" *matHeaderCellDef mat-sort-header>Status</mat-header-cell>
+                                        <mat-cell *matCellDef="let element" class="table-data col-w1">{{element.status ? 'Active' : 'Blocked'}}</mat-cell>
+                                    </ng-container>
+                                    <ng-container matColumnDef="action">
+                                        <mat-header-cell class="table-header col-w2" *matHeaderCellDef>Action</mat-header-cell>
+                                        <mat-cell *matCellDef="let row; let element" class="table-data col-w2">
+                                            <button mat-raised-button [color]="element.status ? 'warn' : 'accent'" (click)="onBlock(row)" [title]="element.status ? 'Block' : 'Activate'"><i class="fa {{element.status ? 'fa-ban' : 'fa-check'}} fa-lg"></i></button>
+                                            <!-- <button mat-raised-button color="primary" (click)="onInfo(row)" title="Profile"><i class="fa fa-info-circle fa-lg"></i></button> -->
+                                        </mat-cell>
+                                    </ng-container>
+                                    <ng-container matColumnDef="noData" class="text-center">
+                                        <mat-footer-cell *matFooterCellDef colspan="6">
+                                            No students found.
+                                        </mat-footer-cell>
+                                    </ng-container>
+                                    <mat-header-row *matHeaderRowDef="tableDataItems['tableHeader']"></mat-header-row>
+                                    <mat-row *matRowDef="let row; columns: tableDataItems['tableHeader']; "></mat-row>
+                                    <mat-footer-row *matFooterRowDef="[ 'noData'] " [ngClass]="{ 'hide': !(tableData != null && tableData.filteredData.length==0)} "></mat-footer-row>
+
+                                </mat-table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

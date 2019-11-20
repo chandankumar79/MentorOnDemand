@@ -1,0 +1,24 @@
+<div class="dialog-container">
+    <div class="card border-dark mb-3">
+        <div class="card-header" style="margin:0px 0px;">
+            How far has the course completed?
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">{{courseName}}</h5>
+            <p class="card-text">Please set the progress status for {{courseName}}. Click on one of the options and submit.</p>
+            <div class="container">
+                <div class="stars-container">
+                    <button mat-raised-button [ngClass]="progress >= 0 ? 'btn-success' : 'btn-secondary'" (click)="setProgress(0)" title="0 % Complete" style="font-size: 18;">0 %</button>
+                    <button mat-raised-button [ngClass]="progress >= 25 ? 'btn-success' : 'btn-secondary'" (click)="setProgress(25)" title="25 % Complete" style="font-size: 18;">25 %</button>
+                    <button mat-raised-button [ngClass]="progress >= 50 ? 'btn-success' : 'btn-secondary'" (click)="setProgress(50)" title="50 % Complete" style="font-size: 18;">50 %</button>
+                    <button mat-raised-button [ngClass]="progress >= 75 ? 'btn-success' : 'btn-secondary'" (click)="setProgress(75)" title="75 % Complete" style="font-size: 18;">75 %</button>
+                    <button mat-raised-button [ngClass]="progress >= 100 ? 'btn-success' : 'btn-secondary'" (click)="setProgress(100)" title="100 % Complete" style="font-size: 18;">100 %</button>
+                </div>
+            </div>
+        </div>
+        <div class="card-footer ">
+            <button mat-raised-button class="btn-primary" (click)="onSubmit()" style="font-size: 16px; width: 120px;">Submit</button>
+            <button mat-raised-button class="btn-info" (click)="onCancel()" style="font-size: 16px; width: 120px;">Cancel</button>
+        </div>
+    </div>
+</div>

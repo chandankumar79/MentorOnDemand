@@ -1,0 +1,74 @@
+<section class="elementor-section">
+    <div class="elementor-container">
+        <div class="elementor-row">
+            <div class="elementor-column">
+                <div class="elementor-column-wrap elementor-element-populated">
+                    <div class="elementor-widget-wrap elementor-widget-center">
+                        <div class="elementor-widget">
+                            <div class="elementor-element shadow">
+                                <form [formGroup]="addTechForm">
+                                    <div class="col-md-12 form-heading">
+                                        <h2>Add Technology</h2>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <mat-form-field appearance="outline" class="col-md-6">
+                                            <mat-label>Course Id</mat-label>
+                                            <input matInput type="text" placeholder="Course id" formControlName="techId" readonly>
+                                            <mat-hint><i>* Course id is auto-generated</i></mat-hint>
+                                            <!-- <mat-hint *ngIf="submitted && techFormControls.techId.errors && techFormControls.techId.errors.required">A technology with same course id already exists</mat-hint> -->
+                                        </mat-form-field>
+                                        <mat-form-field appearance="outline" class="col-md-6">
+                                            <mat-label>Name</mat-label>
+                                            <input matInput type="text" placeholder="Course name" formControlName="name" [ngClass]="{ 'is-invalid': submitted && techFormControls.name.errors }">
+                                            <mat-hint *ngIf="submitted && techFormControls.name.errors && techFormControls.name.errors.required">Course name is required</mat-hint>
+                                        </mat-form-field>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <mat-form-field appearance="outline" class="col-md-12">
+                                            <mat-label>Course Description</mat-label>
+                                            <input matInput type="text" placeholder="Course description" formControlName="description" [ngClass]="{ 'is-invalid': submitted && techFormControls.description.errors }">
+                                            <mat-hint *ngIf="submitted && techFormControls.description.errors && techFormControls.description.errors.required">Description is required</mat-hint>
+                                        </mat-form-field>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <mat-form-field appearance="outline" class="col-md-12">
+                                            <mat-label>Course Image Source</mat-label>
+                                            <input matInput type="url" placeholder="Enter the url for the course image" formControlName="imgSourceLink" [ngClass]="{ 'is-invalid': submitted && techFormControls.imgSourceLink.errors }">
+                                            <mat-hint *ngIf="submitted && techFormControls.imgSourceLink.errors && techFormControls.imgSourceLink.errors.required">An image is required for the technology. Please provide a url for the image</mat-hint>
+                                            <mat-hint *ngIf="submitted && techFormControls.imgSourceLink.errors && techFormControls.imgSourceLink.errors.pattern">Invalid url. Please provide a url for the image. e.g. https://image.com/image101.jpg  </mat-hint>
+                                        </mat-form-field>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <mat-form-field appearance="outline" class="col-md-6">
+                                            <mat-label>Course Fee</mat-label>
+                                            <input matInput type="number" placeholder="Basic fee of course" formControlName="basicFee" [ngClass]="{ 'is-invalid': submitted && techFormControls.basicFee.errors }">
+                                            <mat-hint *ngIf="submitted && techFormControls.basicFee.errors && techFormControls.basicFee.errors.required">Course fee is required</mat-hint>
+                                            <mat-hint *ngIf="submitted && techFormControls.basicFee.errors && techFormControls.basicFee.errors.min">Course fee must be greater than 0</mat-hint>
+                                        </mat-form-field>
+                                        <mat-form-field appearance="outline" class="col-md-6">
+                                            <mat-label>Commission</mat-label>
+                                            <input matInput type="number" placeholder="Commission as a percentage of basic fee" formControlName="commission" [ngClass]="{ 'is-invalid': submitted && techFormControls.commission.errors }">
+                                            <mat-hint *ngIf="submitted && techFormControls.commission.errors && techFormControls.commission.errors.required">Commission is required</mat-hint>
+                                            <mat-hint *ngIf="submitted && techFormControls.commission.errors && (techFormControls.commission.errors.min || techFormControls.commission.errors.max)">Commision must be an interger between 0 and 50. Commision is calculated as a percentage of basic fee</mat-hint>
+                                        </mat-form-field>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <mat-form-field appearance="outline" class="col-md-6">
+                                            <mat-label>Duration</mat-label>
+                                            <input matInput type="number" placeholder="Duration of course" formControlName="duration" [ngClass]="{ 'is-invalid': submitted && techFormControls.duration.errors }">
+                                            <mat-hint *ngIf="submitted && techFormControls.duration.errors && techFormControls.duration.errors.required">
+                                                Duration (Number of days to complete the course) is required</mat-hint>
+                                        </mat-form-field>
+                                        <button mat-raised-button color="primary" style="float: right;" (click)="onTechUpdate()" *ngIf="editable">Update</button>
+                                        <button mat-raised-button color="primary" style="float: right;" (click)="onSubmit()" *ngIf="!editable">Submit</button>
+                                        <button mat-raised-button style="float: right;" (click)="onCancel()">Cancel</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

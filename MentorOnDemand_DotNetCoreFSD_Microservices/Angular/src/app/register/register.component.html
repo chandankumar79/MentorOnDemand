@@ -1,0 +1,103 @@
+<div class="container register">
+    <div class="row">
+        <div class="col-md-3 register-left">
+            <i class="fa fa-graduation-cap fa-3x"></i>
+            <h3>Welcome</h3>
+            <p>You are 30 seconds away from creating your account with us!</p>
+            <button class="btnRegisterX" type="button" routerLink="/login">Login</button>
+        </div>
+        <div class="col-md-9 register-right">
+            <div class="tab-content">
+                <div class="tab-pane fade show active" role="tabpanel" aria-labelledby="home-tab">
+                    <div class="row" style="padding: 5% 10% 0 10%;">
+                        <div class="col-md-6">
+                            <h3 class="register-heading">Register</h3>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="btn-switch user-switch-location">
+                                <div class="text-center">
+                                    <div class="list-group list-group-horizontal">
+                                        <a class="btn list-group-item {{role == 3? 'active': ''}}" (click)="selectRole(3)">Student</a>
+                                        <a class="btn list-group-item {{role == 2? 'active': ''}}" (click)="selectRole(2);">Mentor</a>
+                                        <a class="btn list-group-item {{role == 1? 'active': ''}}" (click)="selectRole(1)">Admin</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <form class="row register-form" [formGroup]="registerForm">
+                        <div class="col-md-6">
+                            <mat-form-field appearance="outline">
+                                <mat-label>First Name</mat-label>
+                                <input matInput type="text" placeholder="First Name" formControlName="firstName" [ngClass]="{ 'is-invalid': submitted && user.firstName.errors }">
+                                <mat-hint *ngIf="submitted && user.firstName.errors && user.firstName.errors.required">First name is required</mat-hint>
+                            </mat-form-field>
+                            <mat-form-field appearance="outline">
+                                <mat-label>Last Name</mat-label>
+                                <input matInput type="text" placeholder="Last Name *" formControlName="lastName" [ngClass]="{ 'is-invalid': submitted && user.lastName.errors }">
+                                <mat-hint *ngIf="submitted && user.lastName.errors && user.lastName.errors.required">Last name is required</mat-hint>
+                            </mat-form-field>
+                            <mat-form-field appearance="outline">
+                                <mat-label>Contact Number</mat-label>
+                                <!-- <span matPrefix>+91 &nbsp;</span> -->
+                                <input matInput type="text" placeholder="Contact Number *" formControlName="phoneNumber" [ngClass]="{ 'is-invalid': submitted && user.phoneNumber.errors }">
+                                <mat-hint *ngIf="submitted && user.phoneNumber.errors && user.phoneNumber.errors.required">Contact Number is required</mat-hint>
+                                <mat-hint *ngIf="submitted && user.phoneNumber.errors && (user.phoneNumber.errors.minLength || user.phoneNumber.errors.maxLength)">Contact Number is invalid</mat-hint>
+                            </mat-form-field>
+                            <mat-form-field appearance="outline">
+                                <mat-label>Date of Birth</mat-label>
+                                <input matInput placeholder="Date of Birth" formControlName="dateOfBirth" [matDatepicker]="picker" [ngClass]="{ 'is-invalid': submitted && user.dateOfBirth.errors }">
+                                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                                <mat-datepicker #picker></mat-datepicker>
+                                <mat-hint *ngIf="submitted && user.dateOfBirth.errors && user.dateOfBirth.errors.required">Date of Birth is required</mat-hint>
+                            </mat-form-field>
+                            <div class="text-center">
+                                <div class="list-group list-group-horizontal">
+                                    <a class="btn list-group-item {{gender == 1? 'active' : ''}}" (click)="selectGender(1);">Male</a>
+                                    <a class="btn list-group-item {{gender == 2? 'active' : ''}}" (click)="selectGender(2);">Female</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <mat-form-field appearance="outline">
+                                <mat-label>Email</mat-label>
+                                <input matInput type="email" placeholder="Email *" formControlName="email" [ngClass]="{ 'is-invalid': submitted && user.email.errors }" />
+                                <mat-hint *ngIf="submitted && user.email.errors && user.email.errors.required">Email is required</mat-hint>
+                                <mat-hint *ngIf="submitted && user.email.errors && user.email.errors.email">Entered email is invalid</mat-hint>
+                            </mat-form-field>
+                            <mat-form-field appearance="outline">
+                                <mat-label>LinkedIn Profile</mat-label>
+                                <input matInput type="text" placeholder="LinkedIn Id *" formControlName="linkedInProfile" />
+                            </mat-form-field>
+
+                            <mat-form-field appearance="outline">
+                                <mat-label>Password</mat-label>
+                                <input matInput type="password" placeholder="Password *" formControlName="password" [ngClass]="{ 'is-invalid': submitted && user.password.errors }" />
+                                <mat-hint *ngIf="submitted && user.password.errors && user.password.errors.required">Password is required</mat-hint>
+                                <mat-hint *ngIf="submitted && user.password.errors && user.password.errors.minLength">Password must be at least 6 digits long</mat-hint>
+                                <mat-hint *ngIf="submitted && user.passwordConfirm.errors && user.passwordConfirm.errors.mustMatch">Passwords must match</mat-hint>
+                            </mat-form-field>
+                            <mat-form-field appearance="outline">
+                                <mat-label>Confirm Password</mat-label>
+                                <input matInput type="password" placeholder="Confirm Password *" formControlName="passwordConfirm" [ngClass]="{ 'is-invalid': submitted && user.passwordConfirm.errors }" />
+                                <mat-hint *ngIf="submitted && user.passwordConfirm.errors && user.passwordConfirm.errors.required">Password confirmation is required</mat-hint>
+                                <mat-hint *ngIf="submitted && user.passwordConfirm.errors && user.passwordConfirm.errors.minLength">Password must be at least 6 digits long</mat-hint>
+                                <mat-hint *ngIf="submitted && user.passwordConfirm.errors && user.passwordConfirm.errors.mustMatch">Passwords must match</mat-hint>
+                            </mat-form-field>
+                            <mat-form-field appearance="outline" [hidden]="role != 2">
+                                <mat-label>Experience [Years]</mat-label>
+                                <input matInput type="number" placeholder="Experience *" formControlName="experience" [ngClass]="{ 'is-invalid': submitted && user.experience.errors }" />
+                                <mat-hint *ngIf="submitted && user.experience.errors && user.experience.errors.required">Experience is required, enter 0 if not applicable.</mat-hint>
+                                <mat-hint *ngIf="submitted && user.experience.errors && user.experience.errors.min">Experience cannot be negative.</mat-hint>
+                            </mat-form-field>
+                            <div>
+                                <button class="btn btn-primary btnRegister" (click)="onSubmit()">Register</button>
+                                <button class="btn btn-secondary btnRegister" (click)="cancelRegistration()">Cancel</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

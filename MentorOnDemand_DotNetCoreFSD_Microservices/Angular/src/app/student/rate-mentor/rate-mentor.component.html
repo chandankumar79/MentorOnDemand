@@ -1,0 +1,25 @@
+<div class="dialog-container">
+        <div class="card border-dark mb-3">
+            <div class="card-header" style="margin:0px 0px;">
+                How would you rate your mentor?
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">{{mentorName}}</h5>
+                <p class="card-text">Please provide a rating for your {{mentorName}} between 1 to 5 starts.</p>
+                <div class="container">
+                    <div class="stars-container">
+                        <i class="fa fa-star{{rating >= 1? '' : '-o'}} fa-2x" (click)="selectStar(1)"></i>&nbsp;
+                        <i class="fa fa-star{{rating >= 2? '' : '-o'}} fa-2x" (click)="selectStar(2)"></i>&nbsp;
+                        <i class="fa fa-star{{rating >= 3? '' : '-o'}} fa-2x" (click)="selectStar(3)"></i>&nbsp;
+                        <i class="fa fa-star{{rating >= 4? '' : '-o'}} fa-2x" (click)="selectStar(4)"></i>&nbsp;
+                        <i class="fa fa-star{{rating >= 5? '' : '-o'}} fa-2x" (click)="selectStar(5)"></i>&nbsp;
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer ">
+                <button mat-raised-button class="btn-primary" (click)="onSubmit()" style="margin-right: 5px;">Submit</button>
+                <button mat-raised-button class="btn-info" (click)="onCancel()" style="margin-left: 5px;">Cancel</button>
+            </div>
+        </div>
+    </div>
+    

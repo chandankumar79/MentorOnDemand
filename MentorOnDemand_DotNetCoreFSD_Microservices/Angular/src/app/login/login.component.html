@@ -1,0 +1,53 @@
+<div class="container register">
+    <div class="row">
+        <div class="col-md-3 register-left">
+            <!-- <img src="https://image.ibb.co/n7oTvU/logo_white.png" alt="" /> -->
+            <i class="fa fa-graduation-cap fa-3x"></i>
+            <h3>Welcome</h3>
+            <p>You are 30 seconds away from your account!</p>
+            <button class="btnRegisterX" routerLink="/register">Register</button>
+        </div>
+        <div class="col-md-9 register-right">
+            <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                    <div class="row" style="padding: 5% 10% 0 10%;">
+                        <div class="col-md-6">
+                            <h3 class="register-heading">Login</h3>
+                        </div>
+                        <!-- <div class="col-md-6">
+                            <div class="btn-switch user-switch-location">
+                                <div class="text-center">
+                                    <div class="list-group list-group-horizontal">
+                                        <a class="btn list-group-item {{student}}" (click)="selectUserType('student')">Student</a>
+                                        <a class="btn list-group-item {{mentor}}" (click)="selectUserType('mentor')">Mentor</a>
+                                        <a class="btn list-group-item {{admin}}" (click)="selectUserType('admin')">Admin</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> -->
+                    </div>
+                    <form class="row register-form" [formGroup]="loginForm">
+                        <div class="col-md-6">
+                            <mat-form-field appearance="outline">
+                                <mat-label>Email</mat-label>
+                                <input matInput type="email" placeholder="Email *" formControlName="email" [ngClass]="{ 'is-invalid': submitted && user.email.errors }" />
+                                <mat-hint *ngIf="submitted && user.email.errors && user.email.errors.required">Email is required</mat-hint>
+                                <mat-hint *ngIf="submitted && user.email.errors && user.email.errors.email">Entered email is invalid</mat-hint>
+                            </mat-form-field>
+                            <mat-form-field appearance="outline">
+                                <mat-label>Password</mat-label>
+                                <input matInput type="password" placeholder="Password *" formControlName="password" [ngClass]="{ 'is-invalid': submitted && user.password.errors }" />
+                                <mat-hint *ngIf="submitted && user.password.errors && user.password.errors.required">Password is required</mat-hint>
+                                <mat-hint *ngIf="submitted && user.password.errors && user.password.errors.minLength">Password must be at least 6 digits long</mat-hint>
+                            </mat-form-field>
+                            <button class="btn btn-primary btnRegister" (click)="onSubmit()">Login</button>
+                            <!-- <button class="btn btn-primary btnRegister" (click)="onSubmit()">Login</button> -->
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>

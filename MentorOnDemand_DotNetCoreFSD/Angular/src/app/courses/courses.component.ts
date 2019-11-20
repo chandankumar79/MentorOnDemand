@@ -11,63 +11,52 @@ import { AddCourseComponent } from '../student/add-course/add-course.component';
 })
 export class CoursesComponent implements OnInit {
   searchForm: FormGroup;
-  courses: any;
+  courses: any = null;
   inputSearchCourses: string;
 
   constructor(
     public dialog: MatDialog,
     private snackbar: MatSnackBar,
-    private formBuilder: FormBuilder,
     private dataService: DataService
-  ) {
-    // this.dataService.courses.subscribe(courses => this.courses = courses);
-  }
+  ) { }
 
-  ngOnInit() {
-    // this.initFormFields();
-    this.dataService.getCourses2();
-
-  }
-
-  initFormFields() {
-    this.searchForm = this.formBuilder.group({
-      inputSearchCourses: '',
-      inputSearchMentors: '',
-      inputSearchDateFrom: '',
-      inputSearchDateTo: ''
-    });
-  }
+  ngOnInit() { }
 
   searchSubmit() {
-    // console.log(this.searchForm.value);
-    // console.log(this.courses);
-    // this.dataService.searchCourses(this.searchForm.value).subscribe(
-    //   res => {
-    //     console.log(res);
-    //   },
-    //   err => {
-    //     console.log(err);
-    //   }
-    // );
-    // TODO: currently using filter pipe to search for courses
+    console.log(this.inputSearchCourses);
+    this.dataService.searchCourses(this.inputSearchCourses).subscribe(res => {
+      console.log(res);
+      this.courses = res['courses'];
+    }, err => {
+      console.log(err);
+    });
   }
 
   // open dialog
   selectMentor(course) {
-    console.log(course);
     const dialogRef = this.dialog.open(AddCourseComponent, {
       width: '100%',
       data: { course }
     });
 
-    dialogRef.afterClosed().subscribe(result => {
-      console.log('The dialog was closed.');
-      console.log(result);
-      const config = new MatSnackBarConfig();
-      config.duration = 5000;
-      this.snackbar.open(result.message, '', config);
+    dialogRef.afterClosed().subscribe(res => {
+      console.log('dialog')
+      if (res != null) {
+        this.displaySnackbar(res.message);
+      } else if( res == null) {
+        this.displaySnackbar('You must be logged in to apply for courses', 'red');
+      }
+      else if(res == 'blank') { }
+    }, err => {
+      console.log('dialog close err' + JSON.stringify(err));
     });
   }
 
+  displaySnackbar(message, color = 'black') {
+    const config = new MatSnackBarConfig() ;
+    config.duration = 10000;
+    config.panelClass = [`snackbar-${color}`];
+    this.snackbar.open(message, '', config);
+  }
 
 }

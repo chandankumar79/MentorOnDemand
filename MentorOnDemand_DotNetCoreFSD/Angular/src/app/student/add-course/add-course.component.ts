@@ -42,11 +42,11 @@ coursesList = {
           this.dialogRef.close(res);
         },
         err => {
-          this.dialogRef.close(err.error);
+          this.dialogRef.close(err);
         }
       );
     } else {
-      this.dialogRef.close(null);
+      this.dialogRef.close({ message: 'You must be logged in to apply for courses'});
     }
   }
 

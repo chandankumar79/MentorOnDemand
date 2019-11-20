@@ -49,21 +49,21 @@ namespace ProjectAPI.Migrations
                         new
                         {
                             Id = "1",
-                            ConcurrencyStamp = "d874255e-3162-4f5a-ab9d-332664131d6a",
+                            ConcurrencyStamp = "d588a3b7-58de-445e-885a-df9279c97b7b",
                             Name = "Admin",
                             NormalizedName = "Admin"
                         },
                         new
                         {
                             Id = "2",
-                            ConcurrencyStamp = "5f65ab2e-0e00-46e9-8d1c-9f283729d33f",
+                            ConcurrencyStamp = "8e568983-43a7-4adb-a3e2-2629cd8de568",
                             Name = "Mentor",
                             NormalizedName = "Mentor"
                         },
                         new
                         {
                             Id = "3",
-                            ConcurrencyStamp = "8aa49542-5ee7-48ac-8f1b-f30a83e12079",
+                            ConcurrencyStamp = "131fc234-622d-4e13-bdb3-205776567e21",
                             Name = "Student",
                             NormalizedName = "Student"
                         });
@@ -254,12 +254,6 @@ namespace ProjectAPI.Migrations
                     b.Property<DateTime>("EndDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<decimal>("Rating")
-                        .HasColumnType("decimal(18,2)");
-
-                    b.Property<int>("RatingsCount")
-                        .HasColumnType("int");
-
                     b.Property<int>("SkillSurcharge")
                         .HasColumnType("int");
 
@@ -284,6 +278,31 @@ namespace ProjectAPI.Migrations
                     b.HasIndex("UserId");
 
                     b.ToTable("MentorSkills");
+                });
+
+            modelBuilder.Entity("ProjectAPI.Models.Payment", b =>
+                {
+                    b.Property<string>("PaymentId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<decimal>("Amount")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<DateTime>("DateOfTransaction")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("TransactionType")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("PaymentId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("Payments");
                 });
 
             modelBuilder.Entity("ProjectAPI.Models.StudentCourse", b =>
@@ -455,6 +474,15 @@ namespace ProjectAPI.Migrations
                 });
 
             modelBuilder.Entity("ProjectAPI.Models.MentorSkill", b =>
+                {
+                    b.HasOne("ProjectAPI.Models.MODUser", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("ProjectAPI.Models.Payment", b =>
                 {
                     b.HasOne("ProjectAPI.Models.MODUser", "User")
                         .WithMany()

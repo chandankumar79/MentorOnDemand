@@ -21,8 +21,8 @@ import { MentorPaymentsComponent } from './mentor/mentor-payments/mentor-payment
 import { MentorNotificationsComponent } from './mentor/mentor-notifications/mentor-notifications.component';
 import { ProfileComponent } from './profile/profile.component';
 import { StudentCoursesComponent } from './student/student-courses/student-courses.component';
-import { StudentNotificationsComponent } from './student/student-notifications/student-notifications.component';
 import { MentorDashboardComponent } from './mentor/mentor-dashboard/mentor-dashboard.component';
+import { StudentPaymentsComponent } from './student/student-payments/student-payments.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -35,16 +35,17 @@ const routes: Routes = [
   {
     path: 'student',
     component: StudentComponent,
-    // canActivate: [AuthGuard],
+    canActivate: [AuthGuard],
     children: [
+      { path: '', redirectTo: 'student-courses', pathMatch: 'full' },
       { path: 'student-profile', component: ProfileComponent },
       { path: 'student-courses', component: StudentCoursesComponent },
-      { path: 'student-notifications', component: StudentNotificationsComponent },
+      { path: 'student-payments', component: StudentPaymentsComponent },
     ]
   },
   {
     path: 'mentor', component: MentorComponent,
-    // canActivate: [AuthGuard],
+    canActivate: [AuthGuard],
     children: [
       { path: '', redirectTo: 'mentor-dashboard', pathMatch: 'full' },
       { path: 'add-skill', component: AddSkillComponent },
@@ -58,7 +59,7 @@ const routes: Routes = [
   {
     path: 'admin',
     component: AdminComponent,
-    // canActivate: [AuthGuard],
+    canActivate: [AuthGuard],
     children: [
       { path: 'add-tech', component: TechAddComponent },
       { path: 'admin-mentors', component: AdminMentorsComponent },

@@ -34,6 +34,21 @@ namespace ProjectAPI.Controllers
             }
         }
 
+        // GET: api/Admin
+        [HttpGet("getPayments")]
+        public IActionResult GetPayments()
+        {
+            try
+            {
+                var payments = repository.GetPayments();
+                return Ok(new { Payments = payments });
+            }
+            catch (Exception e)
+            {
+                return BadRequest(new { e.InnerException.Message });
+            }
+        }
+
         // GET: api/Admin/5
         [HttpGet("GetTechById/{id}", Name = "GetTechById")]
         public async Task<IActionResult> Get(int id)

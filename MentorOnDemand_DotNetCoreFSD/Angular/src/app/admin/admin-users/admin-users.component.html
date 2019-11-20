@@ -9,47 +9,37 @@
                                 <div class="table-top">
                                     <h3>{{tableTitle}}</h3>
                                 </div>
-                                <table mat-table class="elementor-table" [dataSource]="tableData" matSort>
-                                    <!-- * hard coded table data -->
+                                <mat-table class="elementor-table" [dataSource]="tableData" matSort>
                                     <ng-container matColumnDef="name">
-                                        <th mat-header-cell class="table-header col-w2" *matHeaderCellDef mat-sort-header>Name</th>
-                                        <td mat-cell *matCellDef="let element" class="table-data col-w2">{{element.name}}</td>
+                                        <mat-header-cell class="table-header col-w2" *matHeaderCellDef mat-sort-header>Name</mat-header-cell>
+                                        <mat-cell *matCellDef="let element" class="table-data col-w2">{{element.name}}</mat-cell>
                                     </ng-container>
                                     <ng-container matColumnDef="email">
-                                        <th mat-header-cell class="table-header col-w2" *matHeaderCellDef mat-sort-header>Email</th>
-                                        <td mat-cell *matCellDef="let element" class="table-data col-w2">{{element.email}}</td>
+                                        <mat-header-cell class="table-header col-w2" *matHeaderCellDef mat-sort-header>Email</mat-header-cell>
+                                        <mat-cell *matCellDef="let element" class="table-data col-w2">{{element.email}}</mat-cell>
                                     </ng-container>
                                     <ng-container matColumnDef="coursesActive">
-                                        <th mat-header-cell class="table-header col-w1" *matHeaderCellDef mat-sort-header>Courses Active</th>
-                                        <td mat-cell *matCellDef="let element" class="table-data col-w1">{{element.coursesActive}}</td>
+                                        <mat-header-cell class="table-header col-w1" *matHeaderCellDef mat-sort-header>Active Courses</mat-header-cell>
+                                        <mat-cell *matCellDef="let element" class="table-data col-w1">{{element.coursesActive}}</mat-cell>
                                     </ng-container>
                                     <ng-container matColumnDef="coursesCompleted">
-                                        <th mat-header-cell class="table-header col-w1" *matHeaderCellDef mat-sort-header>Courses Completed</th>
-                                        <td mat-cell *matCellDef="let element" class="table-data col-w1">{{element.coursesCompleted}}</td>
+                                        <mat-header-cell class="table-header col-w1" *matHeaderCellDef mat-sort-header>Completed Courses</mat-header-cell>
+                                        <mat-cell *matCellDef="let element" class="table-data col-w1">{{element.coursesCompleted}}</mat-cell>
                                     </ng-container>
                                     <!-- <ng-container matColumnDef="studentPaymentTotal">
-                                        <th mat-header-cell class="table-header col-w1" *matHeaderCellDef mat-sort-header>Total Payment</th>
-                                        <td mat-cell *matCellDef="let element" class="table-data col-w1">{{element.studentPaymentTotal}}</td>
+                                        <mat-header-cell class="table-header col-w1" *matHeaderCellDef mat-sort-header>Total Payment</mat-header-cell>
+                                        <mat-cell *matCellDef="let element" class="table-data col-w1">{{element.studentPaymentTotal}}</mat-cell>
                                     </ng-container> -->
                                     <ng-container matColumnDef="status">
-                                        <th mat-header-cell class="table-header col-w1" *matHeaderCellDef mat-sort-header>Status</th>
-                                        <td mat-cell *matCellDef="let element" class="table-data col-w1">{{element.status ? 'Active' : 'Blocked'}}</td>
+                                        <mat-header-cell class="table-header col-w1" *matHeaderCellDef mat-sort-header>Status</mat-header-cell>
+                                        <mat-cell *matCellDef="let element" class="table-data col-w1">{{element.status ? 'Active' : 'Blocked'}}</mat-cell>
                                     </ng-container>
-                                    <!-- * hard coded table data ends here -->
-
-                                    <!-- TODO: atomating the table data --starts -->
-                                    <!-- <ng-container [matColumnDef]="column" *ngFor="let column of mentorListHeader">
-                                                <th mat-header-cell *matHeaderCellDef>{{column}}</th>
-                                                <td mat-cell *matCellDef="let element">{{element[column]}}</td>
-                                            </ng-container> -->
-                                    <!-- TODO: automating the table data --ends -->
-
                                     <ng-container matColumnDef="action">
-                                        <th mat-header-cell class="table-header col-w2" *matHeaderCellDef>Action</th>
-                                        <td mat-cell *matCellDef="let row; let element" class="table-data col-w2">
-                                            <button mat-raised-button (click)="onBlock(row)" [color]="element.status ? 'warn' : 'accent'"  [title]="element.status ? 'Block' : 'Activate'"><i class="fa fa-ban fa-lg"></i></button>
+                                        <mat-header-cell class="table-header col-w2" *matHeaderCellDef>Action</mat-header-cell>
+                                        <mat-cell *matCellDef="let row; let element" class="table-data col-w2">
+                                            <button mat-raised-button [color]="element.status ? 'warn' : 'accent'" (click)="onBlock(row)" [title]="element.status ? 'Block' : 'Activate'"><i class="fa {{element.status ? 'fa-ban' : 'fa-check'}} fa-lg"></i></button>
                                             <button mat-raised-button color="primary" (click)="onInfo(row)" title="Profile"><i class="fa fa-info-circle fa-lg"></i></button>
-                                        </td>
+                                        </mat-cell>
                                     </ng-container>
 
                                     <!-- TODO: implement paginator -->
@@ -67,7 +57,7 @@
                                     <mat-row *matRowDef="let row; columns: tableDataItems['tableHeader']; "></mat-row>
                                     <!-- <mat-footer-row *matFooterRowDef="[ 'loading'] " [ngClass]="{ 'hide': tableData!=null} "></mat-footer-row> -->
                                     <!-- <mat-footer-row *matFooterRowDef="[ 'noData'] " [ngClass]="{ 'hide': !(tableData!=null && tableData.length==0)} "></mat-footer-row> -->
-                                </table>
+                                </mat-table>
                             </div>
                         </div>
                     </div>

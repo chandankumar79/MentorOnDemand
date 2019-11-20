@@ -15,8 +15,8 @@ namespace ProjectAPI.Data
         private RoleManager<IdentityRole> roleManager;
 
         public MentorRepository(
-            ProjectContext context, 
-            UserManager<MODUser> userManager, 
+            ProjectContext context,
+            UserManager<MODUser> userManager,
             RoleManager<IdentityRole> roleManager)
         {
             this.context = context;
@@ -35,7 +35,7 @@ namespace ProjectAPI.Data
                     return 2;
                 }
                 var isDublicate = context.MentorSkills.Where(ms => ms.User == user && ms.TechId == tech.TechId).FirstOrDefault();
-                if(isDublicate == null)
+                if (isDublicate == null)
                 {
                     MentorSkill skill = new MentorSkill
                     {
@@ -105,7 +105,7 @@ namespace ProjectAPI.Data
                 var skill = context.MentorSkills.Where(s => s.SkillId == id && s.User == user).FirstOrDefault();
                 context.MentorSkills.Remove(skill);
                 var result = context.SaveChanges();
-                if(result > 0)
+                if (result > 0)
                 {
                     return true;
                 }
@@ -123,21 +123,27 @@ namespace ProjectAPI.Data
             {
                 var role = await userManager.GetUsersInRoleAsync("Mentor");
                 var user = role.Where(r => r.Email == email).FirstOrDefault();
-                if(user != null)
+                if (user != null)
                 {
-                    var skills = context.MentorSkills.Where(s => s.User.Email == user.Email)
-                        .Select(ms => new MentorSkillGetDTO
-                        {
-                            Email = user.Email,
-                            SkillId = ms.SkillId,
-                            TechId = ms.TechId,
-                            Name = context.Technologies.Where(tech => tech.TechId == ms.TechId).FirstOrDefault().Name,
-                            SkillSurcharge = ms.SkillSurcharge,
-                            TotalFee = ms.TotalFee,
-                            StartDate = ms.StartDate,
-                            EndDate = ms.EndDate,
-                            Status = ms.Status
-                        });
+                    var skills = from mentor in context.MODUsers
+                                 join skill in context.MentorSkills on mentor equals skill.User
+                                 join tech in context.Technologies on skill.TechId equals tech.TechId
+                                 where mentor.Email == email
+                                 select (new MentorSkillGetDTO
+                                 {
+                                     Email = mentor.Email,
+                                     SkillId = skill.SkillId,
+                                     TechId = skill.TechId,
+                                     Name = tech.Name,
+                                     BasicFee = tech.BasicFee,
+                                     Commission = tech.Commission,
+                                     SkillSurcharge = skill.SkillSurcharge,
+                                     TotalFee = skill.TotalFee,
+                                     StartDate = skill.StartDate,
+                                     EndDate = skill.EndDate,
+                                     ActiveStudents = context.StudentCourses.Count(sc => sc.Status == 4 && sc.SkillId == skill.SkillId),
+                                     Status = skill.Status
+                                 });
                     return skills;
                 }
                 return null;
@@ -192,21 +198,22 @@ namespace ProjectAPI.Data
             try
             {
                 var res = (from user in context.MODUsers
-                          join skill in context.MentorSkills on user equals skill.User
-                          join tech in context.Technologies on skill.TechId equals tech.TechId
-                          where user.Email == email && tech.TechId == techId
-                          select new MentorSkillGetDTO {
-                              Email = user.Email,
-                              SkillId = skill.SkillId,
-                              TechId = tech.TechId,
-                              Name = tech.Name,
-                              SkillSurcharge = skill.SkillSurcharge,
-                              TotalFee = skill.TotalFee,
-                              StartDate = skill.StartDate,
-                              EndDate = skill.EndDate,
-                              Status = skill.Status
-                          }).FirstOrDefault();
-                Console.WriteLine(res);                           
+                           join skill in context.MentorSkills on user equals skill.User
+                           join tech in context.Technologies on skill.TechId equals tech.TechId
+                           where user.Email == email && tech.TechId == techId
+                           select new MentorSkillGetDTO
+                           {
+                               Email = user.Email,
+                               SkillId = skill.SkillId,
+                               TechId = tech.TechId,
+                               Name = tech.Name,
+                               SkillSurcharge = skill.SkillSurcharge,
+                               TotalFee = skill.TotalFee,
+                               StartDate = skill.StartDate,
+                               EndDate = skill.EndDate,
+                               Status = skill.Status
+                           }).FirstOrDefault();
+                Console.WriteLine(res);
                 return res;
             }
             catch (Exception e)
@@ -214,29 +221,43 @@ namespace ProjectAPI.Data
                 throw;
             }
         }
-
+        public IEnumerable<Payment> GetPayments(string email)
+        {
+            try
+            {
+                var payments = (from payment in context.Payments
+                                join user in context.MODUsers on payment.User equals user
+                                where user.Email == email
+                                select payment).ToList();
+                return payments;
+            }
+            catch (Exception e)
+            {
+                throw;
+            }
+        }
         public int UpdateCourseStatus(MentorUpdateCourseDTO mentorUpdateCourseDTO)
         {
             try
             {
                 var mentor = context.MODUsers.SingleOrDefault(m => m.Email == mentorUpdateCourseDTO.Email);
-                if(mentor != null)
+                if (mentor != null)
                 {
                     var course = (from studentCourse in context.StudentCourses
-                                 where studentCourse.CourseId == mentorUpdateCourseDTO.CourseId
-                                 select studentCourse).SingleOrDefault();
-                    if(course.Status == 1 )
+                                  where studentCourse.CourseId == mentorUpdateCourseDTO.CourseId
+                                  select studentCourse).SingleOrDefault();
+                    if (course.Status == 1)
                     {
-                        if(mentorUpdateCourseDTO.Status == "accepted")
+                        if (mentorUpdateCourseDTO.Status == "accepted")
                         {
                             course.Status = 2;
                         }
-                        else if(mentorUpdateCourseDTO.Status == "rejected")
+                        else if (mentorUpdateCourseDTO.Status == "rejected")
                         {
                             course.Status = 7;
                         }
                         var result = context.SaveChanges();
-                        if(result > 0)
+                        if (result > 0)
                         {
                             return 1; // success
                         }

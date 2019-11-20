@@ -14,34 +14,32 @@
                                         <mat-header-cell class="table-header" *matHeaderCellDef mat-sort-header>Name</mat-header-cell>
                                         <mat-cell *matCellDef="let element" class="table-data">{{element.name}}</mat-cell>
                                     </ng-container>
-                                    <!-- <ng-container matColumnDef="rating">
-                                        <mat-header-cell class="table-header" *matHeaderCellDef mat-sort-header>My Ratings</mat-header-cell>
-                                        <mat-cell *matCellDef="let element" class="table-data">
-                                            <i class="fa fa-star" *ngIf="element.rating > 0"></i>
-                                            <i class="fa fa-star" *ngIf="element.rating > 1"></i>
-                                            <i class="fa fa-star" *ngIf="element.rating > 2"></i>
-                                            <i class="fa fa-star" *ngIf="element.rating > 3"></i>
-                                            <i class="fa fa-star" *ngIf="element.rating > 4"></i>
-                                            <i class="fa fa-star-o" *ngIf="element.rating < 5"></i>
-                                            <i class="fa fa-star-o" *ngIf="element.rating < 4"></i>
-                                            <i class="fa fa-star-o" *ngIf="element.rating < 3"></i>
-                                            <i class="fa fa-star-o" *ngIf="element.rating < 2"></i>
-                                            <i class="fa fa-star-o" *ngIf="element.rating < 1"></i>
-                                        </mat-cell>
-                                    </ng-container> -->
+                                    <ng-container matColumnDef="basicFee">
+                                        <mat-header-cell class="table-header" *matHeaderCellDef mat-sort-header>Basic Fee</mat-header-cell>
+                                        <mat-cell *matCellDef="let element" class="table-data">{{element.basicFee}}</mat-cell>
+                                    </ng-container><ng-container matColumnDef="commission">
+                                        <mat-header-cell class="table-header" *matHeaderCellDef mat-sort-header>Commission</mat-header-cell>
+                                        <mat-cell *matCellDef="let element" class="table-data">{{element.commission}} %</mat-cell>
+                                    </ng-container><ng-container matColumnDef="skillSurcharge">
+                                        <mat-header-cell class="table-header" *matHeaderCellDef mat-sort-header>Skill Surcharge</mat-header-cell>
+                                        <mat-cell *matCellDef="let element" class="table-data">{{element.skillSurcharge}} %</mat-cell>
+                                    </ng-container>                 
                                     <ng-container matColumnDef="totalFee">
                                         <mat-header-cell class="table-header" *matHeaderCellDef mat-sort-header>Total Fee</mat-header-cell>
                                         <mat-cell *matCellDef="let element" class="table-data">{{element.totalFee}}</mat-cell>
                                     </ng-container>
                                     <ng-container matColumnDef="startDate">
                                         <mat-header-cell class="table-header" *matHeaderCellDef mat-sort-header>Start Date</mat-header-cell>
-                                        <mat-cell *matCellDef="let element" class="table-data">{{element.startDate | date:'dd-MM-yyyy'}}</mat-cell>
+                                        <mat-cell *matCellDef="let element" class="table-data">{{element.startDate | date:'dd MMM yyyy'}}</mat-cell>
                                     </ng-container>
                                     <ng-container matColumnDef="endDate">
                                         <mat-header-cell class="table-header" *matHeaderCellDef mat-sort-header>End Date</mat-header-cell>
-                                        <mat-cell *matCellDef="let element" class="table-data">{{element.endDate | date:'dd-MM-yyyy'}}</mat-cell>
+                                        <mat-cell *matCellDef="let element" class="table-data">{{element.endDate | date:'dd MMM yyyy'}}</mat-cell>
                                     </ng-container>
-
+                                    <ng-container matColumnDef="activeStudents">
+                                        <mat-header-cell class="table-header" *matHeaderCellDef mat-sort-header>Active Students</mat-header-cell>
+                                        <mat-cell *matCellDef="let element" class="table-data">{{element.activeStudents}}</mat-cell>
+                                    </ng-container>
                                     <ng-container matColumnDef="action">
                                         <mat-header-cell class="table-header" *matHeaderCellDef>Action</mat-header-cell>
                                         <mat-cell *matCellDef="let row; let element" class="table-data">

@@ -16,7 +16,7 @@ namespace ProjectAPI.Data
         public int UpdateCourseStatus(MentorUpdateCourseDTO mentorUpdateCourseDTO);
         public Task<bool> UpdateSkill(MentorSkillAddDTO updateSkillDTO);
         public IEnumerable<Technology> GetTechnologies();
+        public IEnumerable<Payment> GetPayments(string email);        
         public bool DeleteSkill(int id, string email);
-
     }
 }

@@ -42,21 +42,24 @@ export class HomeComponent implements OnInit {
       data: { course }
     });
 
-    dialogRef.afterClosed().subscribe(result => {
-      if (result != null) {
-        this.snackbarMessage = result.message;
-        this.displaySnackbar();
-      } else {
-        this.displaySnackbar('red');
+    dialogRef.afterClosed().subscribe(res => {
+      console.log('res-dialog ' + JSON.stringify(res));
+      if(res != null) {
+        if(res.status == 403) {
+          this.displaySnackbar('Forbidden: You must be logged in as a student to apply for courses.', 'red');
+        }  
+        else if (res.message != null) {
+          this.displaySnackbar(res.message);
+        }
       }
     });
   }
 
-  displaySnackbar(color = 'black') {
+  displaySnackbar(message, color = 'black') {
     const config = new MatSnackBarConfig() ;
     config.duration = 10000;
     config.panelClass = [`snackbar-${color}`];
-    this.snackbar.open(this.snackbarMessage, '', config);
+    this.snackbar.open(message, '', config);
   }
 
 }

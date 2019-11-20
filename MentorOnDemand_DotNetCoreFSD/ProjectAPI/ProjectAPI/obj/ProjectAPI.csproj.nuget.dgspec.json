@@ -1,24 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Chandan Kumar\\source\\repos\\Project\\ProjectAPI\\ProjectAPI\\ProjectAPI.csproj": {}
+    "C:\\Users\\hp\\Documents\\Dot NET Solution\\EMS\\EMS_Core\\ProjectAPI\\ProjectAPI\\ProjectAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Chandan Kumar\\source\\repos\\Project\\ProjectAPI\\ProjectAPI\\ProjectAPI.csproj": {
+    "C:\\Users\\hp\\Documents\\Dot NET Solution\\EMS\\EMS_Core\\ProjectAPI\\ProjectAPI\\ProjectAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Chandan Kumar\\source\\repos\\Project\\ProjectAPI\\ProjectAPI\\ProjectAPI.csproj",
+        "projectUniqueName": "C:\\Users\\hp\\Documents\\Dot NET Solution\\EMS\\EMS_Core\\ProjectAPI\\ProjectAPI\\ProjectAPI.csproj",
         "projectName": "ProjectAPI",
-        "projectPath": "C:\\Users\\Chandan Kumar\\source\\repos\\Project\\ProjectAPI\\ProjectAPI\\ProjectAPI.csproj",
-        "packagesPath": "C:\\Users\\Chandan Kumar\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Chandan Kumar\\source\\repos\\Project\\ProjectAPI\\ProjectAPI\\obj\\",
+        "projectPath": "C:\\Users\\hp\\Documents\\Dot NET Solution\\EMS\\EMS_Core\\ProjectAPI\\ProjectAPI\\ProjectAPI.csproj",
+        "packagesPath": "C:\\Users\\hp\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\hp\\Documents\\Dot NET Solution\\EMS\\EMS_Core\\ProjectAPI\\ProjectAPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\Chandan Kumar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\hp\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],

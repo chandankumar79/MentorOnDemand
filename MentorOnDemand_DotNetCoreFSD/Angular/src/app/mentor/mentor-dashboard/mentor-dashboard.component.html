@@ -11,26 +11,17 @@
                                             <h5 class="card-title">Wallet Balance</h5>
                                         </div>
                                         <div class="card-body">
-                                            <h5 class="card-title">$100</h5>
-                                            <a class="btn btn-primary" href="">Withdraw</a>
+                                            <h5 class="card-title">₹100</h5>
+                                            <button class="btn btn-primary" *ngIf="!withdrawalStatus" (onClick)="changeWithdrawalStatus(true)">Withdraw</button>                                            
+                                            <div class="form-group" *ngIf="withdrawalStatus">
+                                                <label for="withdrawalAmount">Amount</label>
+                                                <input type="number" class="form-control" id="withdrawalAmount" placeholder="Enter the amount">
+                                                <small id="withdrawalHelp" class="form-text text-muted">Please enter the amount you would like to withdraw.</small>
+                                                <button class="btn btn-primary">Withdraw</button>                                            
+                                            </div>                                       
                                         </div>
-                                    </div>
-                                </div>
-                                <div class="elementor-element">                                    
-                                    <div class="card">
-                                        <div class="card-header">
-                                            <h5 class="card-title">Notifications</h5>
-                                        </div>
-                                        <div class="card-body">
-                                            <ul class="list-group list-group-flush">
-                                                <li class="list-group-item">Cras justo odio</li>
-                                                <li class="list-group-item">Dapibus ac facilisis in</li>
-                                                <li class="list-group-item">Vestibulum at eros</li>
-                                            </ul>
-                                            <a class="btn btn-primary" href="">Notifications</a>
-                                        </div>
-                                    </div>
-                                </div>
+                                    </div>                                    
+                                </div>                                
                             </div>
                         </div>
                     </div>

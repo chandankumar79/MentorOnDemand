@@ -49,20 +49,20 @@
         </div>
     </div>
 </section>
-<section class="elementor-section">
+<!-- <section class="elementor-section" *ngIf="courses != null">
     <div class="elementor-container elementor-container-custom-2 shadow">
         <div class="elementor-row">
             <div class="elementor-column">
                 <div class="elementor-column-wrap elementor-element-populated">
                     <div class="elementor-widget-wrap">
                         <div class="elementor-widget elementor-column text-center elementor-widget-center">
-                            <div *ngFor="let course of courses | keyvalue | courseFilter: inputSearchCourses" class="card card-custom shadow">
+                            <div *ngFor="let course of courses | keyvalue" class="card card-custom shadow">
                                 <div class="card-img">
-                                    <img src="{{course.value.courseImageSource}}">
+                                    <img src="{{course.value.imgSourceLink}}">
                                 </div>
                                 <div class="card-body">
-                                    <h4 class="card-title">{{course.value.courseName}}</h4>
-                                    <p class="card-body">{{course.value.courseDescription}}</p>
+                                    <h4 class="card-title">{{course.value.name}}</h4>
+                                    <p class="card-body">{{course.value.description}}</p>
                                     <button class="btn btn-primary" (click)="selectMentor(course.value)">Apply</button>
                                 </div>
                             </div>
@@ -72,5 +72,19 @@
             </div>
         </div>
     </div>
-</section>
+</section> -->
+<div class="wrapper">
+    <div class="row text-center justify-content-center col-md-12">
+        <div *ngFor="let course of courses | keyvalue" class="card card-custom shadow">
+            <div class="card-img">
+                <img src="{{course.value.imgSourceLink}}">
+            </div>
+            <div class="card-body">
+                <h4 class="card-title">{{course.value.name}}</h4>
+                <p class="card-body">{{course.value.description}}</p>
+                <button class="btn btn-primary" (click)="selectMentor(course.value)">Apply</button>
+            </div>
+        </div>
+    </div>
+</div>
 <app-app-footer></app-app-footer>

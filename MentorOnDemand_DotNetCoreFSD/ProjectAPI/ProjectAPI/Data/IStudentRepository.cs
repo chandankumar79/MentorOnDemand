@@ -16,8 +16,9 @@ namespace ProjectAPI.Data
         public int CancelCourse(string email, int courseId);
         public int UpdateCourseRating(StudentCourseRatingDTO courseRatingDTO);
         public int UpdateCourseProgress(StudentCourseProgressDTO courseProgressDTO);
-
+        public IEnumerable<Payment> GetPayments(string email);
         public IEnumerable<Technology> GetTechnologies();
-
+        public IEnumerable<Technology> SearchCourses(string searchString);
+        
     }
 }

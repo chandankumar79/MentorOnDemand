@@ -32,14 +32,13 @@ import { MentorCoursesComponent } from './mentor/mentor-courses/mentor-courses.c
 import { MentorNotificationsComponent } from './mentor/mentor-notifications/mentor-notifications.component';
 import { MentorPaymentsComponent } from './mentor/mentor-payments/mentor-payments.component';
 import { CommonModule } from '@angular/common';
-import { SnackbarComponent } from './snackbar/snackbar.component';
 import { StudentCoursesComponent } from './student/student-courses/student-courses.component';
 import { CourseFilterPipe } from './shared/courses-filter.pipe';
-import { StudentNotificationsComponent } from './student/student-notifications/student-notifications.component';
 import { MentorDashboardComponent } from './mentor/mentor-dashboard/mentor-dashboard.component';
 import { RateMentorComponent } from './student/rate-mentor/rate-mentor.component';
 import { AuthInterceptor } from './auth/auth.interceptor';
 import { SetProgressComponent } from './student/set-progress/set-progress.component';
+import { StudentPaymentsComponent } from './student/student-payments/student-payments.component';
 
 @NgModule({
   declarations: [
@@ -68,13 +67,12 @@ import { SetProgressComponent } from './student/set-progress/set-progress.compon
     MentorCoursesComponent,
     MentorNotificationsComponent,
     MentorPaymentsComponent,
-    SnackbarComponent,
     StudentCoursesComponent,
     CourseFilterPipe,
-    StudentNotificationsComponent,
     MentorDashboardComponent,
     RateMentorComponent,
     SetProgressComponent,
+    StudentPaymentsComponent,
   ],
   imports: [
     BrowserModule,

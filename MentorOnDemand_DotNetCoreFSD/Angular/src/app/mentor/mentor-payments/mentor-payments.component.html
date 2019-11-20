@@ -10,63 +10,30 @@
                                     <h3>{{tableTitle}}</h3>
                                 </div>
                                 <mat-table class="elementor-table" [dataSource]="tableData" matSort>
-                                    <!-- * hard coded table data -->
-                                    <ng-container matColumnDef="courseId">
-                                        <mat-header-cell class="table-header" *matHeaderCellDef mat-sort-header>Course Id</mat-header-cell>
-                                        <mat-cell *matCellDef="let element" class="table-data">{{element.courseId}}</mat-cell>
-                                    </ng-container>
-                                    <ng-container matColumnDef="studentId">
-                                        <mat-header-cell class="table-header" *matHeaderCellDef mat-sort-header>Student Id</mat-header-cell>
-                                        <mat-cell *matCellDef="let element" class="table-data">{{element.studentId}}</mat-cell>
-                                    </ng-container>
-                                    <ng-container matColumnDef="paymentSlot">
-                                        <mat-header-cell class="table-header" *matHeaderCellDef mat-sort-header>Payment Slot</mat-header-cell>
-                                        <mat-cell *matCellDef="let element" class="table-data">{{element.paymentSlot}}</mat-cell>
-                                    </ng-container>
-                                    <ng-container matColumnDef="paymentAmount">
-                                        <mat-header-cell class="table-header" *matHeaderCellDef mat-sort-header>Amount</mat-header-cell>
-                                        <mat-cell *matCellDef="let element" class="table-data">{{element.paymentAmount}}</mat-cell>
-                                    </ng-container>
-                                    <ng-container matColumnDef="paymentDue">
-                                        <mat-header-cell class="table-header" *matHeaderCellDef mat-sort-header>Payment Due</mat-header-cell>
-                                        <mat-cell *matCellDef="let element" class="table-data">{{element.paymentDue}}</mat-cell>
-                                    </ng-container>
                                     <ng-container matColumnDef="paymentId">
                                         <mat-header-cell class="table-header" *matHeaderCellDef mat-sort-header>Payment Id</mat-header-cell>
                                         <mat-cell *matCellDef="let element" class="table-data">{{element.paymentId}}</mat-cell>
                                     </ng-container>
-                                    <!-- * hard coded table data ends here -->
-
-                                    <!-- TODO: atomating the table data --starts -->
-                                    <!-- <ng-container [matColumnDef]="column" *ngFor="let column of mentorListHeader">
-                                            <mat-header-cell *matHeaderCellDef>{{column}}</mat-header-cell>
-                                            <mat-cell *matCellDef="let element">{{element[column]}}</mat-cell>
-                                        </ng-container> -->
-                                    <!-- TODO: automating the table data --ends -->
-
-                                    <!-- <ng-container matColumnDef="mentorAction">
-                                        <mat-header-cell class="table-header" *matHeaderCellDef>Action</mat-header-cell>
-                                        <mat-cell *matCellDef="let row; let element" class="table-data">
-                                            <button mat-raised-button color="accent"><i class="fa fa-window-close fa-lg" (click)="onSelect(row)"></i></button> 
-                                            <button mat-raised-button color="primary"><i class="fa fa-edit fa-lg" (click)="onSelect(row)"></i></button> 
-                                        </mat-cell>
-                                    </ng-container> -->
-
-                                    <!-- TODO: implement paginator -->
-                                    <!-- <ng-container matColumnDef="loading ">
-                                            <mat-footer-cell *matFooterCellDef colspan="6 ">
-                                                Loading data...
-                                            </mat-footer-cell>
-                                        </ng-container> -->
-                                    <!-- <ng-container matColumnDef="noData ">
-                                            <mat-footer-cell *matFooterCellDef colspan="6 ">
-                                                No data found.
-                                            </mat-footer-cell>
-                                        </ng-container> -->
-                                    <mat-header-row *matHeaderRowDef="mentorList['tableHeader']"></mat-header-row>
-                                    <mat-row *matRowDef="let row; columns: mentorList['tableHeader']; "></mat-row>
-                                    <!-- <mat-footer-row *matFooterRowDef="[ 'loading'] " [ngClass]="{ 'hide': tableData!=null} "></mat-footer-row> -->
-                                    <!-- <mat-footer-row *matFooterRowDef="[ 'noData'] " [ngClass]="{ 'hide': !(tableData!=null && tableData.length==0)} "></mat-footer-row> -->
+                                    <ng-container matColumnDef="dateOfTransaction">
+                                        <mat-header-cell class="table-header" *matHeaderCellDef mat-sort-header>Date</mat-header-cell>
+                                        <mat-cell *matCellDef="let element" class="table-data">{{element.dateOfTransaction | date: 'dd MMM yyyy'}}</mat-cell>
+                                    </ng-container>
+                                    <ng-container matColumnDef="amount">
+                                        <mat-header-cell class="table-header" *matHeaderCellDef mat-sort-header>Amount</mat-header-cell>
+                                        <mat-cell *matCellDef="let element" class="table-data">{{element.amount}}</mat-cell>
+                                    </ng-container>
+                                    <ng-container matColumnDef="transactionType">
+                                        <mat-header-cell class="table-header" *matHeaderCellDef mat-sort-header>Transaction</mat-header-cell>
+                                        <mat-cell *matCellDef="let element" class="table-data">{{element.transactionType? 'Payment' : 'Withdrawal'}}</mat-cell>
+                                    </ng-container>
+                                    <ng-container matColumnDef="noData" class="text-center">
+                                        <mat-footer-cell *matFooterCellDef colspan="6">
+                                            No transactions found.
+                                        </mat-footer-cell>
+                                    </ng-container>
+                                    <mat-header-row *matHeaderRowDef="coursesList['tableHeader']"></mat-header-row>
+                                    <mat-row *matRowDef="let row; columns: coursesList['tableHeader']; "></mat-row>
+                                    <mat-footer-row *matFooterRowDef="[ 'noData'] " [ngClass]="{ 'hide': !(tableData != null && tableData.filteredData.length==0)} "></mat-footer-row>
                                 </mat-table>
                             </div>
                         </div>

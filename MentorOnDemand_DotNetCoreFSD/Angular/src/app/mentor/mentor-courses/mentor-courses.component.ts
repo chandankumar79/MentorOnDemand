@@ -17,7 +17,7 @@ export class MentorCoursesComponent implements OnInit {
 
   mentorList = {
     tableDisplayHeader: [ ],
-    tableHeader: ['name', 'totalFee', 'startDate', 'endDate', 'action'],
+    tableHeader: ['name', 'basicFee', 'commission', 'skillSurcharge', 'totalFee', 'startDate', 'endDate', 'activeStudents', 'action'],
     tableRow: []
   };
 

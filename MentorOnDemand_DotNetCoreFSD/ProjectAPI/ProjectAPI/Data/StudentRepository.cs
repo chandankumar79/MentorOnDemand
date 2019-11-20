@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity;
 using ProjectAPI.DTO;
 using ProjectAPI.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace ProjectAPI.Data
 {
@@ -36,7 +37,7 @@ namespace ProjectAPI.Data
                                    join role in context.UserRoles on _student.Id equals role.UserId
                                    where _student.Email == courseAddDTO.Email
                                    select role.RoleId).SingleOrDefault();
-                if(studentRole.Equals("3")) // Role Student
+                if (studentRole.Equals("3")) // Role Student
                 {
                     // check if student has already applied for this course
                     var isExists = (from user in context.MODUsers
@@ -65,7 +66,7 @@ namespace ProjectAPI.Data
                 {
                     return 4; // not logged in as student
                 }
-                
+
             }
             catch (Exception e)
             {
@@ -137,23 +138,32 @@ namespace ProjectAPI.Data
                 var course = (from studentCourse in context.StudentCourses
                               join student in context.MODUsers on studentCourse.User equals student
                               where student.Email == updatePaymentDTO.Email && studentCourse.CourseId == updatePaymentDTO.CourseId
-                              select studentCourse).FirstOrDefault();
-                if(course != null)
+                              select studentCourse).Include(sc => sc.User).SingleOrDefault();
+                if (course != null)
                 {
-                    if(course.PaymentStatus)
+                    if (course.PaymentStatus)
                     {
                         return 4;
                     }
-                    else if(course.Status == 6 || course.Status == 7)
+                    else if (course.Status == 6 || course.Status == 7)
                     {
                         return 5; // cancelled or rejected
                     }
                     course.PaymentStatus = true;
                     course.PaymentId = updatePaymentDTO.PaymentId;
                     course.Status = 3;
+                    // payment transaction
+                    var payment = new Payment
+                    {
+                        PaymentId = course.PaymentId,
+                        User = course.User,
+                        Amount = context.MentorSkills.Where(s => s.SkillId == course.SkillId).FirstOrDefault().TotalFee,
+                        TransactionType = true
+                    };
+                    context.Payments.Add(payment);
                     context.StudentCourses.Update(course);
                     var result = context.SaveChanges();
-                    if(result > 0)
+                    if (result > 0)
                     {
                         return 1; // success
                     }
@@ -175,16 +185,16 @@ namespace ProjectAPI.Data
                               join studentCourse in context.StudentCourses on student equals studentCourse.User
                               where student.Email == email && studentCourse.CourseId == courseId
                               select studentCourse).FirstOrDefault();
-                if(course != null)
+                if (course != null)
                 {
                     // already completed or rejected
-                    if(course.Status == 5 || course.Status == 7)
+                    if (course.Status == 5 || course.Status == 7)
                     {
                         return 4;
                     }
                     course.Status = 6; // cancelled
                     var result = context.SaveChanges();
-                    if(result > 0)
+                    if (result > 0)
                     {
                         return 1;
                     }
@@ -258,7 +268,7 @@ namespace ProjectAPI.Data
                         return 4; // already progress is 100 or not ongoing or not completed
                     }
                     course.Progress = courseProgressDTO.Progress;
-                    if(course.Progress == 100)
+                    if (course.Progress == 100)
                     {
                         course.Status = 5; // completed
                     }
@@ -278,12 +288,47 @@ namespace ProjectAPI.Data
             }
         }
 
-
         public IEnumerable<Technology> GetTechnologies()
         {
             try
             {
                 return context.Technologies.Where(tech => tech.Status == true);
+            }
+            catch (Exception e)
+            {
+                throw;
+            }
+        }
+
+        public IEnumerable<Payment> GetPayments(string email)
+        {
+            try
+            {
+                var payments = (from payment in context.Payments
+                                join user in context.MODUsers on payment.User equals user
+                                where user.Email == email
+                                select payment).ToList();
+                return payments;
+            }
+            catch (Exception e)
+            {
+                throw;
+            }
+        }
+
+        public IEnumerable<Technology> SearchCourses(string searchString)
+        {
+            try
+            {
+                if (searchString == "undefined")
+                {
+                    return context.Technologies.ToList();
+                }
+                var technologies = from tech in context.Technologies
+                                   where tech.Name.ToLower().Contains(searchString.ToLower())
+                                        || tech.Description.ToLower().Contains(searchString.ToLower())
+                                   select tech;
+                return technologies;
             }
             catch (Exception e)
             {

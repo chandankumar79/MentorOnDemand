@@ -44,6 +44,21 @@ namespace ProjectAPI.Controllers
         }
 
         // GET: api/Admin
+        [HttpGet("getPayments/{email}")]
+        public IActionResult GetPayments(string email)
+        {
+            try
+            {
+                var payments = repository.GetPayments(email);
+                return Ok(new { Payments = payments });
+            }
+            catch (Exception e)
+            {
+                return BadRequest(new { e.InnerException.Message });
+            }
+        }
+
+        // GET: api/Admin
         [HttpGet("getTechnologies")]
         [AllowAnonymous]
         public IActionResult Get()
@@ -59,8 +74,24 @@ namespace ProjectAPI.Controllers
             }
         }
 
+        [HttpGet("search/{searchString}")]
+        [AllowAnonymous]
+        public IActionResult Search(string searchString)
+        {
+            try
+            {
+                var courses = repository.SearchCourses(searchString);
+                return Ok(new { Courses = courses });
+            }
+            catch (Exception e)
+            {
+                throw;
+            }
+        }
+
         // GET: api/Student/GetCourseMentors
         [HttpGet("getCourseMentors/{techId}")]
+        [AllowAnonymous]
         public IActionResult GetCourseMentors(int techId)
         {
             try
@@ -191,7 +222,7 @@ namespace ProjectAPI.Controllers
                     {
                         return Conflict(new { Message = "Unable to process request. You have either cancelled the course or request has been rejeted by mentor." });
                     }
-                    return BadRequest(new { Message = "An error occured while processing payment. Please try again later." });
+                    return BadRequest(new { Message = "An error occurred while processing payment. Please try again later." });
                 }
                 return BadRequest(new { Message = "Invalid action. Try again." });
             }

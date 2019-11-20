@@ -85,8 +85,15 @@ namespace ProjectAPI.Controllers
             if (result.Succeeded)
             {
                 var appUser = userManager.Users.Single(r => r.Email == model.Email);
-                var response = await GenerateJwtToken(model.Email, appUser);
-                return Ok(response);
+                if(appUser.Status)
+                {
+                    var response = await GenerateJwtToken(model.Email, appUser);
+                    return Ok(response);
+                }
+                else
+                {
+                    return Unauthorized(new { Message = "You have been blocked by the administrator" });
+                }
             }
             return BadRequest(result);
         }

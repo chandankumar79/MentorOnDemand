@@ -62,7 +62,7 @@
                                     <ng-container matColumnDef="action">
                                         <th mat-header-cell class="table-header col-w2" *matHeaderCellDef>Action</th>
                                         <td mat-cell *matCellDef="let row; let element" class="table-data col-w2">
-                                            <button mat-raised-button [color]="element.mentorStatus ? 'warn' : 'accent'" (click)="onBlock(row)" [title]="element.mentorStatus ? 'Block' : 'Activate'"><i class="fa fa-ban fa-lg"></i></button>
+                                            <button mat-raised-button [color]="element.status ? 'warn' : 'accent'" (click)="onBlock(row)" [title]="element.status ? 'Block' : 'Activate'"><i class="fa {{element.status ? 'fa-ban' : 'fa-check'}} fa-lg"></i></button>
                                             <button mat-raised-button color="primary" (click)="onInfo(row)" title="Profile"><i class="fa fa-info-circle fa-lg"></i></button>
                                         </td>
                                     </ng-container>

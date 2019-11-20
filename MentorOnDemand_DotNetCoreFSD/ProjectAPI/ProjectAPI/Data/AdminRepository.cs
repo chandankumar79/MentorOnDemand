@@ -100,6 +100,30 @@ namespace ProjectAPI.Data
             }
         }
 
+        public IEnumerable<AdminGetPaymentsDTO> GetPayments()
+        {
+            try
+            {
+                var payments = from payment in context.Payments
+                               join user in context.MODUsers on payment.User equals user
+                               select new AdminGetPaymentsDTO
+                               {
+                                   PaymentId = payment.PaymentId,
+                                   DateOfTransaction = payment.DateOfTransaction,
+                                   Amount = payment.Amount,
+                                   TransactionType = payment.TransactionType,
+                                   UserEmail = user.Email,
+                                   UserName = $"{user.FirstName} {user.LastName}",
+                                   UserRole = context.UserRoles.SingleOrDefault(ur=> ur.UserId == user.Id).RoleId
+                               };
+                return payments;
+            }
+            catch (Exception e)
+            {
+                throw;
+            }
+        }
+
         public async Task<IEnumerable<UpdateUserDTO>> GetMentors()
         {
             try

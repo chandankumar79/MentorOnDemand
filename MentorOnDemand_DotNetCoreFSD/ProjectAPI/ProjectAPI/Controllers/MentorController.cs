@@ -92,6 +92,21 @@ namespace ProjectAPI.Controllers
             }
         }
 
+        // GET: api/Mentors
+        [HttpGet("getPayments/{email}")]
+        public IActionResult GetPayments(string email)
+        {
+            try
+            {
+                var payments = repository.GetPayments(email);
+                return Ok(new { Payments = payments });
+            }
+            catch (Exception e)
+            {
+                return BadRequest(new { e.InnerException.Message });
+            }
+        }
+
         // POST: api/Mentor/AddSkill
         [HttpPost("addSkill")]
         public IActionResult Post([FromBody] MentorSkillAddDTO addSkillDTO)

@@ -16,8 +16,8 @@ namespace ProjectAPI.DTO
         public int TechId { get; set; }
         [Required]
         public string Name { get; set; }
-        //public decimal Rating { get; set; }
-        //public int RatingsCount { get; set; }
+        public int BasicFee { get; set; }
+        public int Commission { get; set; }
         [Required]
         public int SkillSurcharge { get; set; }
         [Required]
@@ -26,6 +26,7 @@ namespace ProjectAPI.DTO
         public DateTime StartDate { get; set; }
         [Required]
         public DateTime EndDate { get; set; }
+        public int ActiveStudents { get; set; }
         [Required]
         public bool Status { get; set; }
     }

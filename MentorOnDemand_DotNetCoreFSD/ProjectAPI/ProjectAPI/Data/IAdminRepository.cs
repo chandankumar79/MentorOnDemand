@@ -11,6 +11,7 @@ namespace ProjectAPI.Data
     {
         public Task<bool> AddTechAsync(TechnologyDTO technologyDTO);
         public IEnumerable<Technology> GetTechnologies();
+        public IEnumerable<AdminGetPaymentsDTO> GetPayments();
         public Task<Technology> GetTechById(int id);
         public bool UpdateTech(UpdateTechDTO updatedTechDTO);
         public Task<bool> DeleteTechAsync(Technology technology);

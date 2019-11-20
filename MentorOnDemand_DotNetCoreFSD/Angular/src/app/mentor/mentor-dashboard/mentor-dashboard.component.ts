@@ -6,10 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./mentor-dashboard.component.scss']
 })
 export class MentorDashboardComponent implements OnInit {
-
+  withdrawStatus = false;
   constructor() { }
 
   ngOnInit() {
+  }
+
+  changeWithdrawalStatus(status) {
+    console.log(status);
+    this.withdrawStatus = status;
   }
 
 }

@@ -138,7 +138,7 @@ namespace ProjectAPI.Data
                                    TransactionType = payment.TransactionType,
                                    UserEmail = user.Email,
                                    UserName = $"{user.FirstName} {user.LastName}",
-                                   UserRole = context.UserRoles.SingleOrDefault(ur=> ur.UserId == user.Id).RoleId
+                                   UserRole = userManager.GetRolesAsync(user).Result.SingleOrDefault()
                                };
                 return payments;
             }

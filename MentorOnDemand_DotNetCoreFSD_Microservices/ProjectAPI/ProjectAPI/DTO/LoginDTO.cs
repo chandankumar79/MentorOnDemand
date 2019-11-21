@@ -13,8 +13,6 @@ namespace ProjectAPI.DTO
         public string Email { get; set; }
         [Required]
         [StringLength(100, ErrorMessage = "PASSWORD_MIN_LENGTH", MinimumLength = 6)]
-        public string Password { get; set; }
-        //[Required]
-        //public int Role { get; set; }
+        public string Password { get; set; }        
     }
 }

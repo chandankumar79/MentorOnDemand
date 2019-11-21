@@ -11,7 +11,6 @@ namespace ProjectAPI.DTO
         public string Email { get; set; }
         public string Name { get; set; }
         public int TechID { get; set; }
-        //public decimal Rating { get; set; }
         [Required]
         public int SkillSurcharge { get; set; } = 0; // Range = [0 - 100]
         [Required]

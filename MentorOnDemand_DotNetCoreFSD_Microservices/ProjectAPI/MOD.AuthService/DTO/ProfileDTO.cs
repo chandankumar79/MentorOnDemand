@@ -1,4 +1,4 @@
-﻿using MOD.AuthLibrary.Models;
+﻿using MOD.SharedLibrary.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;

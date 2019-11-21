@@ -1,24 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Documents\\GitHub\\MentorOnDemand\\MentorOnDemand\\MentorOnDemand_DotNetCoreFSD_Microservices\\ProjectAPI\\MOD.AuthLibrary\\MOD.AuthLibrary.csproj": {}
+    "C:\\Users\\hp\\Documents\\GitHub\\MentorOnDemand\\MentorOnDemand_DotNetCoreFSD_Microservices\\ProjectAPI\\MOD.AuthLibrary\\MOD.AuthLibrary.csproj": {}
   },
   "projects": {
-    "D:\\Documents\\GitHub\\MentorOnDemand\\MentorOnDemand\\MentorOnDemand_DotNetCoreFSD_Microservices\\ProjectAPI\\MOD.AuthLibrary\\MOD.AuthLibrary.csproj": {
+    "C:\\Users\\hp\\Documents\\GitHub\\MentorOnDemand\\MentorOnDemand_DotNetCoreFSD_Microservices\\ProjectAPI\\MOD.AuthLibrary\\MOD.AuthLibrary.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Documents\\GitHub\\MentorOnDemand\\MentorOnDemand\\MentorOnDemand_DotNetCoreFSD_Microservices\\ProjectAPI\\MOD.AuthLibrary\\MOD.AuthLibrary.csproj",
+        "projectUniqueName": "C:\\Users\\hp\\Documents\\GitHub\\MentorOnDemand\\MentorOnDemand_DotNetCoreFSD_Microservices\\ProjectAPI\\MOD.AuthLibrary\\MOD.AuthLibrary.csproj",
         "projectName": "MOD.AuthLibrary",
-        "projectPath": "D:\\Documents\\GitHub\\MentorOnDemand\\MentorOnDemand\\MentorOnDemand_DotNetCoreFSD_Microservices\\ProjectAPI\\MOD.AuthLibrary\\MOD.AuthLibrary.csproj",
-        "packagesPath": "C:\\Users\\Chandan Kumar\\.nuget\\packages\\",
-        "outputPath": "D:\\Documents\\GitHub\\MentorOnDemand\\MentorOnDemand\\MentorOnDemand_DotNetCoreFSD_Microservices\\ProjectAPI\\MOD.AuthLibrary\\obj\\",
+        "projectPath": "C:\\Users\\hp\\Documents\\GitHub\\MentorOnDemand\\MentorOnDemand_DotNetCoreFSD_Microservices\\ProjectAPI\\MOD.AuthLibrary\\MOD.AuthLibrary.csproj",
+        "packagesPath": "C:\\Users\\hp\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\hp\\Documents\\GitHub\\MentorOnDemand\\MentorOnDemand_DotNetCoreFSD_Microservices\\ProjectAPI\\MOD.AuthLibrary\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\Chandan Kumar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\hp\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -59,27 +58,31 @@
               "target": "Package",
               "version": "[3.0.0, )"
             },
-            "Microsoft.EntityFrameworkCore": {
-              "target": "Package",
-              "version": "[3.0.1, )"
-            },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[3.0.1, )"
+              "version": "[3.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer.Design": {
+              "target": "Package",
+              "version": "[1.1.6, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[3.0.1, )"
+              "version": "[3.0.0, )"
             },
-            "Microsoft.Extensions.Logging.Debug": {
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
-              "version": "[3.0.1, )"
+              "version": "[3.0.0, )"
             },
             "NSwag.SwaggerGeneration.AspNetCore": {
               "target": "Package",
               "version": "[12.3.0, )"
+            },
+            "ServiceStack.Interfaces": {
+              "target": "Package",
+              "version": "[5.7.0, )"
             },
             "Swashbuckle.AspNetCore.Swagger": {
               "target": "Package",

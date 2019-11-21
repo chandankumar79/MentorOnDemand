@@ -12,7 +12,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 using MOD.AuthService.DTO;
-using MOD.AuthLibrary.Models;
+using MOD.SharedLibrary.Models;
 
 namespace MOD.AuthService.Controllers
 {

@@ -3233,6 +3233,30 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
+      },
+      "MOD.SharedLibrary/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.0",
+        "dependencies": {
+          "DataAnnotationsExtensions": "5.0.1.27",
+          "Microsoft.AspNetCore.Authentication.JwtBearer": "3.0.0",
+          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "3.0.0",
+          "Microsoft.AspNetCore.Mvc.NewtonsoftJson": "3.0.0",
+          "Microsoft.EntityFrameworkCore.SqlServer": "3.0.0",
+          "Microsoft.EntityFrameworkCore.SqlServer.Design": "1.1.6",
+          "Microsoft.VisualStudio.Web.CodeGeneration.Design": "3.0.0",
+          "ServiceStack.Interfaces": "5.7.0",
+          "System.IdentityModel.Tokens.Jwt": "5.6.0"
+        },
+        "compile": {
+          "bin/placeholder/MOD.SharedLibrary.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MOD.SharedLibrary.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
       }
     }
   },
@@ -9740,11 +9764,17 @@
         "system.xml.xmlserializer.4.3.0.nupkg.sha512",
         "system.xml.xmlserializer.nuspec"
       ]
+    },
+    "MOD.SharedLibrary/1.0.0": {
+      "type": "project",
+      "path": "../MOD.SharedLibrary/MOD.SharedLibrary.csproj",
+      "msbuildProject": "../MOD.SharedLibrary/MOD.SharedLibrary.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.0": [
       "DataAnnotationsExtensions >= 5.0.1.27",
+      "MOD.SharedLibrary >= 1.0.0",
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 3.0.0",
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 3.0.0",
       "Microsoft.AspNetCore.Mvc.NewtonsoftJson >= 3.0.0",
@@ -9761,23 +9791,25 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\hp\\.nuget\\packages\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
+    "C:\\Users\\Chandan Kumar\\.nuget\\packages\\": {},
+    "C:\\Microsoft\\Xamarin\\NuGet\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\hp\\Documents\\GitHub\\MentorOnDemand\\MentorOnDemand_DotNetCoreFSD_Microservices\\ProjectAPI\\MOD.AuthLibrary\\MOD.AuthLibrary.csproj",
+      "projectUniqueName": "D:\\Documents\\GitHub\\MentorOnDemand\\MentorOnDemand\\MentorOnDemand_DotNetCoreFSD_Microservices\\ProjectAPI\\MOD.AuthLibrary\\MOD.AuthLibrary.csproj",
       "projectName": "MOD.AuthLibrary",
-      "projectPath": "C:\\Users\\hp\\Documents\\GitHub\\MentorOnDemand\\MentorOnDemand_DotNetCoreFSD_Microservices\\ProjectAPI\\MOD.AuthLibrary\\MOD.AuthLibrary.csproj",
-      "packagesPath": "C:\\Users\\hp\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\hp\\Documents\\GitHub\\MentorOnDemand\\MentorOnDemand_DotNetCoreFSD_Microservices\\ProjectAPI\\MOD.AuthLibrary\\obj\\",
+      "projectPath": "D:\\Documents\\GitHub\\MentorOnDemand\\MentorOnDemand\\MentorOnDemand_DotNetCoreFSD_Microservices\\ProjectAPI\\MOD.AuthLibrary\\MOD.AuthLibrary.csproj",
+      "packagesPath": "C:\\Users\\Chandan Kumar\\.nuget\\packages\\",
+      "outputPath": "D:\\Documents\\GitHub\\MentorOnDemand\\MentorOnDemand\\MentorOnDemand_DotNetCoreFSD_Microservices\\ProjectAPI\\MOD.AuthLibrary\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Microsoft\\Xamarin\\NuGet\\"
+        "C:\\Microsoft\\Xamarin\\NuGet\\",
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\hp\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Chandan Kumar\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
@@ -9790,7 +9822,11 @@
       },
       "frameworks": {
         "netcoreapp3.0": {
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\Documents\\GitHub\\MentorOnDemand\\MentorOnDemand\\MentorOnDemand_DotNetCoreFSD_Microservices\\ProjectAPI\\MOD.SharedLibrary\\MOD.SharedLibrary.csproj": {
+              "projectPath": "D:\\Documents\\GitHub\\MentorOnDemand\\MentorOnDemand\\MentorOnDemand_DotNetCoreFSD_Microservices\\ProjectAPI\\MOD.SharedLibrary\\MOD.SharedLibrary.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

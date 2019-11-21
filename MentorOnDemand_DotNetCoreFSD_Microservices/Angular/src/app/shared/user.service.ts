@@ -18,20 +18,20 @@ export class UserService {
   constructor(private http: HttpClient, private router: Router) {}
 
   register(user) {
-    return this.http.post<any>(environment.apiBaseUrl + '/account/register', user);
+    return this.http.post<any>(environment.apiAuthServicesBaseUrl + '/account/register', user);
   }
 
   login(authCredentials) {
-    return this.http.post(environment.apiBaseUrl + '/account/login', authCredentials);
+    return this.http.post(environment.apiAuthServicesBaseUrl + '/account/login', authCredentials);
   }
 
   getUserProfile() {
-    return this.http.get(`${environment.apiBaseUrl}/account/getProfile?`+
-      `Email=${this.getUserEmail()}&Role=${this.getRole() == 'admin'? 1: this.getRole() == 'mentor'? 2: 3}`, this.noAuthHeader);
+    return this.http.get(`${environment.apiAuthServicesBaseUrl}/account/getProfile?` +
+      `Email=${this.getUserEmail()}&Role=${this.getRole() === 'admin' ? 1 : this.getRole() === 'mentor' ? 2 : 3}`, this.noAuthHeader);
   }
 
   updateUserProfile(userData) {
-    return this.http.put(`${environment.apiBaseUrl}/account/updateProfile`, userData);
+    return this.http.put(`${environment.apiAuthServicesBaseUrl}/account/updateProfile`, userData);
   }
 
   // Helper Methods
@@ -55,7 +55,7 @@ export class UserService {
   getRole() {
     return localStorage.getItem('role');
   }
-  
+
   getUserEmail() {
     return localStorage.getItem('userEmail');
   }
@@ -84,12 +84,12 @@ export class UserService {
   }
 
   logout() {
-    this.http.post(`${environment.apiBaseUrl}/account/logout`, null).subscribe(res => {
+    this.http.post(`${environment.apiAuthServicesBaseUrl}/account/logout`, null).subscribe(res => {
       this.clearLocalStorage();
       this.getLoggedInStatus.emit(false);
-      this.router.navigateByUrl('login');  
+      this.router.navigateByUrl('login');
     }, err => {
-      console.log(err);      
+      console.log(err.error.message);
     });
   }
 

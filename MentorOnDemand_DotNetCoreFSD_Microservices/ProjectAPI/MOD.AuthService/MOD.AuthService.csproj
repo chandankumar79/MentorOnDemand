@@ -34,7 +34,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\MOD.AuthLibrary\MOD.AuthLibrary.csproj" />
-    <ProjectReference Include="..\MOD.SharedLibrary\MOD.SharedLibrary.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,23 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\hp\\Documents\\GitHub\\MentorOnDemand\\MentorOnDemand_DotNetCoreFSD_Microservices\\ProjectAPI\\MOD.SharedLibrary\\MOD.SharedLibrary.csproj": {}
+    "D:\\Documents\\GitHub\\MentorOnDemand\\MentorOnDemand\\MentorOnDemand_DotNetCoreFSD_Microservices\\ProjectAPI\\MOD.SharedLibrary\\MOD.SharedLibrary.csproj": {}
   },
   "projects": {
-    "C:\\Users\\hp\\Documents\\GitHub\\MentorOnDemand\\MentorOnDemand_DotNetCoreFSD_Microservices\\ProjectAPI\\MOD.SharedLibrary\\MOD.SharedLibrary.csproj": {
+    "D:\\Documents\\GitHub\\MentorOnDemand\\MentorOnDemand\\MentorOnDemand_DotNetCoreFSD_Microservices\\ProjectAPI\\MOD.SharedLibrary\\MOD.SharedLibrary.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\hp\\Documents\\GitHub\\MentorOnDemand\\MentorOnDemand_DotNetCoreFSD_Microservices\\ProjectAPI\\MOD.SharedLibrary\\MOD.SharedLibrary.csproj",
+        "projectUniqueName": "D:\\Documents\\GitHub\\MentorOnDemand\\MentorOnDemand\\MentorOnDemand_DotNetCoreFSD_Microservices\\ProjectAPI\\MOD.SharedLibrary\\MOD.SharedLibrary.csproj",
         "projectName": "MOD.SharedLibrary",
-        "projectPath": "C:\\Users\\hp\\Documents\\GitHub\\MentorOnDemand\\MentorOnDemand_DotNetCoreFSD_Microservices\\ProjectAPI\\MOD.SharedLibrary\\MOD.SharedLibrary.csproj",
-        "packagesPath": "C:\\Users\\hp\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\hp\\Documents\\GitHub\\MentorOnDemand\\MentorOnDemand_DotNetCoreFSD_Microservices\\ProjectAPI\\MOD.SharedLibrary\\obj\\",
+        "projectPath": "D:\\Documents\\GitHub\\MentorOnDemand\\MentorOnDemand\\MentorOnDemand_DotNetCoreFSD_Microservices\\ProjectAPI\\MOD.SharedLibrary\\MOD.SharedLibrary.csproj",
+        "packagesPath": "C:\\Users\\Chandan Kumar\\.nuget\\packages\\",
+        "outputPath": "D:\\Documents\\GitHub\\MentorOnDemand\\MentorOnDemand\\MentorOnDemand_DotNetCoreFSD_Microservices\\ProjectAPI\\MOD.SharedLibrary\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\hp\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Chandan Kumar\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],

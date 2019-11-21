@@ -18,3 +18,6 @@ C:\Users\hp\Documents\GitHub\MentorOnDemand\MentorOnDemand_DotNetCoreFSD_Microse
 C:\Users\hp\Documents\GitHub\MentorOnDemand\MentorOnDemand_DotNetCoreFSD_Microservices\ProjectAPI\MOD.AuthLibrary\obj\Debug\netcoreapp3.0\MOD.AuthLibrary.csprojAssemblyReference.cache
 C:\Users\hp\Documents\GitHub\MentorOnDemand\MentorOnDemand_DotNetCoreFSD_Microservices\ProjectAPI\MOD.AuthLibrary\bin\Debug\netcoreapp3.0\MOD.AuthLibrary.runtimeconfig.json
 C:\Users\hp\Documents\GitHub\MentorOnDemand\MentorOnDemand_DotNetCoreFSD_Microservices\ProjectAPI\MOD.AuthLibrary\bin\Debug\netcoreapp3.0\MOD.AuthLibrary.runtimeconfig.dev.json
+D:\Documents\GitHub\MentorOnDemand\MentorOnDemand\MentorOnDemand_DotNetCoreFSD_Microservices\ProjectAPI\MOD.AuthLibrary\bin\Debug\netcoreapp3.0\MOD.SharedLibrary.dll
+D:\Documents\GitHub\MentorOnDemand\MentorOnDemand\MentorOnDemand_DotNetCoreFSD_Microservices\ProjectAPI\MOD.AuthLibrary\bin\Debug\netcoreapp3.0\MOD.SharedLibrary.pdb
+D:\Documents\GitHub\MentorOnDemand\MentorOnDemand\MentorOnDemand_DotNetCoreFSD_Microservices\ProjectAPI\MOD.AuthLibrary\obj\Debug\netcoreapp3.0\MOD.AuthLibrary.csproj.CopyComplete

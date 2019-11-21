@@ -11,3 +11,16 @@ C:\Users\hp\Documents\GitHub\MentorOnDemand\MentorOnDemand_DotNetCoreFSD_Microse
 C:\Users\hp\Documents\GitHub\MentorOnDemand\MentorOnDemand_DotNetCoreFSD_Microservices\ProjectAPI\MOD.StudentLibrary\obj\Debug\netcoreapp3.0\MOD.StudentLibrary.csprojAssemblyReference.cache
 C:\Users\hp\Documents\GitHub\MentorOnDemand\MentorOnDemand_DotNetCoreFSD_Microservices\ProjectAPI\MOD.StudentLibrary\bin\Debug\netcoreapp3.0\MOD.StudentLibrary.runtimeconfig.json
 C:\Users\hp\Documents\GitHub\MentorOnDemand\MentorOnDemand_DotNetCoreFSD_Microservices\ProjectAPI\MOD.StudentLibrary\bin\Debug\netcoreapp3.0\MOD.StudentLibrary.runtimeconfig.dev.json
+D:\Documents\GitHub\MentorOnDemand\MentorOnDemand\MentorOnDemand_DotNetCoreFSD_Microservices\ProjectAPI\MOD.StudentLibrary\bin\Debug\netcoreapp3.0\MOD.StudentLibrary.deps.json
+D:\Documents\GitHub\MentorOnDemand\MentorOnDemand\MentorOnDemand_DotNetCoreFSD_Microservices\ProjectAPI\MOD.StudentLibrary\bin\Debug\netcoreapp3.0\MOD.StudentLibrary.runtimeconfig.json
+D:\Documents\GitHub\MentorOnDemand\MentorOnDemand\MentorOnDemand_DotNetCoreFSD_Microservices\ProjectAPI\MOD.StudentLibrary\bin\Debug\netcoreapp3.0\MOD.StudentLibrary.runtimeconfig.dev.json
+D:\Documents\GitHub\MentorOnDemand\MentorOnDemand\MentorOnDemand_DotNetCoreFSD_Microservices\ProjectAPI\MOD.StudentLibrary\bin\Debug\netcoreapp3.0\MOD.StudentLibrary.dll
+D:\Documents\GitHub\MentorOnDemand\MentorOnDemand\MentorOnDemand_DotNetCoreFSD_Microservices\ProjectAPI\MOD.StudentLibrary\bin\Debug\netcoreapp3.0\MOD.StudentLibrary.pdb
+D:\Documents\GitHub\MentorOnDemand\MentorOnDemand\MentorOnDemand_DotNetCoreFSD_Microservices\ProjectAPI\MOD.StudentLibrary\bin\Debug\netcoreapp3.0\MOD.SharedLibrary.dll
+D:\Documents\GitHub\MentorOnDemand\MentorOnDemand\MentorOnDemand_DotNetCoreFSD_Microservices\ProjectAPI\MOD.StudentLibrary\bin\Debug\netcoreapp3.0\MOD.SharedLibrary.pdb
+D:\Documents\GitHub\MentorOnDemand\MentorOnDemand\MentorOnDemand_DotNetCoreFSD_Microservices\ProjectAPI\MOD.StudentLibrary\obj\Debug\netcoreapp3.0\MOD.StudentLibrary.csprojAssemblyReference.cache
+D:\Documents\GitHub\MentorOnDemand\MentorOnDemand\MentorOnDemand_DotNetCoreFSD_Microservices\ProjectAPI\MOD.StudentLibrary\obj\Debug\netcoreapp3.0\MOD.StudentLibrary.AssemblyInfoInputs.cache
+D:\Documents\GitHub\MentorOnDemand\MentorOnDemand\MentorOnDemand_DotNetCoreFSD_Microservices\ProjectAPI\MOD.StudentLibrary\obj\Debug\netcoreapp3.0\MOD.StudentLibrary.AssemblyInfo.cs
+D:\Documents\GitHub\MentorOnDemand\MentorOnDemand\MentorOnDemand_DotNetCoreFSD_Microservices\ProjectAPI\MOD.StudentLibrary\obj\Debug\netcoreapp3.0\MOD.StudentLibrary.csproj.CopyComplete
+D:\Documents\GitHub\MentorOnDemand\MentorOnDemand\MentorOnDemand_DotNetCoreFSD_Microservices\ProjectAPI\MOD.StudentLibrary\obj\Debug\netcoreapp3.0\MOD.StudentLibrary.dll
+D:\Documents\GitHub\MentorOnDemand\MentorOnDemand\MentorOnDemand_DotNetCoreFSD_Microservices\ProjectAPI\MOD.StudentLibrary\obj\Debug\netcoreapp3.0\MOD.StudentLibrary.pdb

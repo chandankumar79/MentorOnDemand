@@ -41,4 +41,8 @@
     <Folder Include="Models\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\MOD.SharedLibrary\MOD.SharedLibrary.csproj" />
+  </ItemGroup>
+
 </Project>

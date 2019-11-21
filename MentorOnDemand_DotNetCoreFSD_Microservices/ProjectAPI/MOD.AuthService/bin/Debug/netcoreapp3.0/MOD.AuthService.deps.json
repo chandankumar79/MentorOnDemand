@@ -26,7 +26,6 @@
         "dependencies": {
           "DataAnnotationsExtensions": "5.0.1.27",
           "MOD.AuthLibrary": "1.0.0",
-          "MOD.SharedLibrary": "1.0.0",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "3.0.0",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "3.0.0",
           "Microsoft.AspNetCore.Mvc.NewtonsoftJson": "3.0.0",
@@ -2585,6 +2584,7 @@
       "MOD.AuthLibrary/1.0.0": {
         "dependencies": {
           "DataAnnotationsExtensions": "5.0.1.27",
+          "MOD.SharedLibrary": "1.0.0",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "3.0.0",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "3.0.0",
           "Microsoft.AspNetCore.Mvc.NewtonsoftJson": "3.0.0",

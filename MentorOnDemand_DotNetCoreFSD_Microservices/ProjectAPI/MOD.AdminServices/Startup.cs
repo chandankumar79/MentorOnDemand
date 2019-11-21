@@ -36,7 +36,7 @@ namespace MOD.AdminServices
             services.AddCors();
 
             services.AddDbContext<AdminContext>(options =>
-                options.UseSqlServer(Configuration.GetConnectionString("SqlConnectionString")));
+                options.UseSqlServer(Configuration.GetConnectionString("SqlConnectionString"), x => x.MigrationsAssembly("MOD.AdminLibrary.Migrations")));
 
             services.AddControllers();
             services.AddScoped<IAdminRepository, AdminRepository>();

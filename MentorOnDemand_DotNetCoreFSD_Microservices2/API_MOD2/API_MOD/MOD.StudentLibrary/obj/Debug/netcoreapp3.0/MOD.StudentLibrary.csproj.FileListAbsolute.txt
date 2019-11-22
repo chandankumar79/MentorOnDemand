@@ -1,0 +1,13 @@
+D:\Documents\GitHub\MentorOnDemand\MentorOnDemand\MentorOnDemand_DotNetCoreFSD_Microservices\API_MOD\API_MOD\MOD.StudentLibrary\bin\Debug\netcoreapp3.0\MOD.StudentLibrary.deps.json
+D:\Documents\GitHub\MentorOnDemand\MentorOnDemand\MentorOnDemand_DotNetCoreFSD_Microservices\API_MOD\API_MOD\MOD.StudentLibrary\bin\Debug\netcoreapp3.0\MOD.StudentLibrary.dll
+D:\Documents\GitHub\MentorOnDemand\MentorOnDemand\MentorOnDemand_DotNetCoreFSD_Microservices\API_MOD\API_MOD\MOD.StudentLibrary\obj\Debug\netcoreapp3.0\MOD.StudentLibrary.csprojAssemblyReference.cache
+D:\Documents\GitHub\MentorOnDemand\MentorOnDemand\MentorOnDemand_DotNetCoreFSD_Microservices\API_MOD\API_MOD\MOD.StudentLibrary\obj\Debug\netcoreapp3.0\MOD.StudentLibrary.AssemblyInfoInputs.cache
+D:\Documents\GitHub\MentorOnDemand\MentorOnDemand\MentorOnDemand_DotNetCoreFSD_Microservices\API_MOD\API_MOD\MOD.StudentLibrary\obj\Debug\netcoreapp3.0\MOD.StudentLibrary.AssemblyInfo.cs
+D:\Documents\GitHub\MentorOnDemand\MentorOnDemand\MentorOnDemand_DotNetCoreFSD_Microservices\API_MOD\API_MOD\MOD.StudentLibrary\bin\Debug\netcoreapp3.0\MOD.StudentLibrary.runtimeconfig.json
+D:\Documents\GitHub\MentorOnDemand\MentorOnDemand\MentorOnDemand_DotNetCoreFSD_Microservices\API_MOD\API_MOD\MOD.StudentLibrary\bin\Debug\netcoreapp3.0\MOD.StudentLibrary.runtimeconfig.dev.json
+D:\Documents\GitHub\MentorOnDemand\MentorOnDemand\MentorOnDemand_DotNetCoreFSD_Microservices\API_MOD\API_MOD\MOD.StudentLibrary\bin\Debug\netcoreapp3.0\MOD.StudentLibrary.pdb
+D:\Documents\GitHub\MentorOnDemand\MentorOnDemand\MentorOnDemand_DotNetCoreFSD_Microservices\API_MOD\API_MOD\MOD.StudentLibrary\bin\Debug\netcoreapp3.0\MOD.SharedLibrary.dll
+D:\Documents\GitHub\MentorOnDemand\MentorOnDemand\MentorOnDemand_DotNetCoreFSD_Microservices\API_MOD\API_MOD\MOD.StudentLibrary\bin\Debug\netcoreapp3.0\MOD.SharedLibrary.pdb
+D:\Documents\GitHub\MentorOnDemand\MentorOnDemand\MentorOnDemand_DotNetCoreFSD_Microservices\API_MOD\API_MOD\MOD.StudentLibrary\obj\Debug\netcoreapp3.0\MOD.StudentLibrary.csproj.CopyComplete
+D:\Documents\GitHub\MentorOnDemand\MentorOnDemand\MentorOnDemand_DotNetCoreFSD_Microservices\API_MOD\API_MOD\MOD.StudentLibrary\obj\Debug\netcoreapp3.0\MOD.StudentLibrary.dll
+D:\Documents\GitHub\MentorOnDemand\MentorOnDemand\MentorOnDemand_DotNetCoreFSD_Microservices\API_MOD\API_MOD\MOD.StudentLibrary\obj\Debug\netcoreapp3.0\MOD.StudentLibrary.pdb

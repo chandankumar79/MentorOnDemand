@@ -1,0 +1,73 @@
+<section class="elementor-section">
+    <div class="elementor-container">
+        <div class="elementor-row">
+            <div class="elementor-column">
+                <div class="elementor-column-wrap">
+                    <div class="elementor-widget-wrap elementor-widget-center">
+                        <div class="elementor-widget">
+                            <div class="elementor-element shadow">
+                                <div class="table-top">
+                                    <h3>{{tableTitle}}</h3>
+                                </div>
+                                <mat-table class="elementor-table" [dataSource]="tableData" matSort>
+                                    <ng-container matColumnDef="courseId">
+                                        <mat-header-cell class="table-header" *matHeaderCellDef mat-sort-header [style.display]="'none'">Course Id</mat-header-cell>
+                                        <mat-cell *matCellDef="let element" class="table-data" [style.display]="'none'">{{element.courseId}}</mat-cell>
+                                    </ng-container>
+                                    <ng-container matColumnDef="course">
+                                        <mat-header-cell class="table-header" *matHeaderCellDef mat-sort-header>Course</mat-header-cell>
+                                        <mat-cell *matCellDef="let element" class="table-data">{{element.course}}</mat-cell>
+                                    </ng-container>
+                                    <ng-container matColumnDef="student">
+                                        <mat-header-cell class="table-header" *matHeaderCellDef mat-sort-header>Student</mat-header-cell>
+                                        <mat-cell *matCellDef="let element" class="table-data">{{element.student}}</mat-cell>
+                                    </ng-container>
+                                    <ng-container matColumnDef="startDate">
+                                        <mat-header-cell class="table-header" *matHeaderCellDef mat-sort-header>Start Date</mat-header-cell>
+                                        <mat-cell *matCellDef="let element" class="table-data">{{element.startDate | date:'dd MMM yyyy'}}</mat-cell>
+                                    </ng-container>
+                                    <ng-container matColumnDef="endDate">
+                                        <mat-header-cell class="table-header" *matHeaderCellDef mat-sort-header>End Date</mat-header-cell>
+                                        <mat-cell *matCellDef="let element" class="table-data">{{element.endDate | date:'dd MMM yyyy'}}</mat-cell>
+                                    </ng-container>
+                                    <ng-container matColumnDef="progress">
+                                        <mat-header-cell class="table-header" *matHeaderCellDef mat-sort-header>Progress</mat-header-cell>
+                                        <mat-cell *matCellDef="let element" class="table-data">{{element.progress}} %</mat-cell>
+                                    </ng-container>
+                                    <ng-container matColumnDef="status">
+                                        <mat-header-cell class="table-header" *matHeaderCellDef mat-sort-header>Status</mat-header-cell>
+                                        <mat-cell *matCellDef="let element" class="table-data">{{getStatusText(element.status)}}</mat-cell>
+                                    </ng-container>
+                                    <ng-container matColumnDef="action">
+                                        <mat-header-cell class="table-header" *matHeaderCellDef>Action</mat-header-cell>
+                                        <mat-cell *matCellDef="let row; let element" class="table-data">
+                                            <button mat-raised-button class="btn-success" (click)="onAccept(row)" *ngIf="element.status == 1">Accept</button>
+                                            <button mat-raised-button class="btn-danger" (click)="onReject(row)" *ngIf="element.status == 1">Reject</button>
+                                            <button mat-raised-button class="btn-dark" *ngIf="element.status != 1">No Action</button>
+                                        </mat-cell>
+                                    </ng-container>
+
+                                    <!-- TODO: implement paginator -->
+                                    <!-- <ng-container matColumnDef="loading ">
+                                            <mat-footer-cell *matFooterCellDef colspan="6 ">
+                                                Loading data...
+                                            </mat-footer-cell>
+                                        </ng-container> -->
+                                    <ng-container matColumnDef="noData">
+                                        <mat-footer-cell *matFooterCellDef colspan="6 ">
+                                            No data found.
+                                        </mat-footer-cell>
+                                    </ng-container>
+                                    <mat-header-row *matHeaderRowDef="notificationsList['tableHeader']"></mat-header-row>
+                                    <mat-row *matRowDef="let row; columns: notificationsList['tableHeader']; "></mat-row>
+                                    <!-- <mat-footer-row *matFooterRowDef="[ 'loading'] " [ngClass]="{ 'hide': tableData!=null} "></mat-footer-row> -->
+                                    <mat-footer-row *matFooterRowDef="[ 'noData'] " [ngClass]="{ 'hide': !(tableData!=null && tableData.filteredData.length==0)} "></mat-footer-row>
+                                </mat-table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

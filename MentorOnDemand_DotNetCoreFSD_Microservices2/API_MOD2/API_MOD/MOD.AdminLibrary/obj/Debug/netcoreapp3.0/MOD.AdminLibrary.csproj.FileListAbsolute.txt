@@ -1,0 +1,13 @@
+D:\Documents\GitHub\MentorOnDemand\MentorOnDemand\MentorOnDemand_DotNetCoreFSD_Microservices\API_MOD\API_MOD\MOD.AdminLibrary\obj\Debug\netcoreapp3.0\MOD.AdminLibrary.csprojAssemblyReference.cache
+D:\Documents\GitHub\MentorOnDemand\MentorOnDemand\MentorOnDemand_DotNetCoreFSD_Microservices\API_MOD\API_MOD\MOD.AdminLibrary\obj\Debug\netcoreapp3.0\MOD.AdminLibrary.AssemblyInfoInputs.cache
+D:\Documents\GitHub\MentorOnDemand\MentorOnDemand\MentorOnDemand_DotNetCoreFSD_Microservices\API_MOD\API_MOD\MOD.AdminLibrary\obj\Debug\netcoreapp3.0\MOD.AdminLibrary.AssemblyInfo.cs
+D:\Documents\GitHub\MentorOnDemand\MentorOnDemand\MentorOnDemand_DotNetCoreFSD_Microservices\API_MOD\API_MOD\MOD.AdminLibrary\bin\Debug\netcoreapp3.0\MOD.AdminLibrary.deps.json
+D:\Documents\GitHub\MentorOnDemand\MentorOnDemand\MentorOnDemand_DotNetCoreFSD_Microservices\API_MOD\API_MOD\MOD.AdminLibrary\bin\Debug\netcoreapp3.0\MOD.AdminLibrary.dll
+D:\Documents\GitHub\MentorOnDemand\MentorOnDemand\MentorOnDemand_DotNetCoreFSD_Microservices\API_MOD\API_MOD\MOD.AdminLibrary\bin\Debug\netcoreapp3.0\MOD.SharedLibrary.dll
+D:\Documents\GitHub\MentorOnDemand\MentorOnDemand\MentorOnDemand_DotNetCoreFSD_Microservices\API_MOD\API_MOD\MOD.AdminLibrary\bin\Debug\netcoreapp3.0\MOD.SharedLibrary.pdb
+D:\Documents\GitHub\MentorOnDemand\MentorOnDemand\MentorOnDemand_DotNetCoreFSD_Microservices\API_MOD\API_MOD\MOD.AdminLibrary\obj\Debug\netcoreapp3.0\MOD.AdminLibrary.csproj.CopyComplete
+D:\Documents\GitHub\MentorOnDemand\MentorOnDemand\MentorOnDemand_DotNetCoreFSD_Microservices\API_MOD\API_MOD\MOD.AdminLibrary\bin\Debug\netcoreapp3.0\MOD.AdminLibrary.pdb
+D:\Documents\GitHub\MentorOnDemand\MentorOnDemand\MentorOnDemand_DotNetCoreFSD_Microservices\API_MOD\API_MOD\MOD.AdminLibrary\obj\Debug\netcoreapp3.0\MOD.AdminLibrary.dll
+D:\Documents\GitHub\MentorOnDemand\MentorOnDemand\MentorOnDemand_DotNetCoreFSD_Microservices\API_MOD\API_MOD\MOD.AdminLibrary\obj\Debug\netcoreapp3.0\MOD.AdminLibrary.pdb
+D:\Documents\GitHub\MentorOnDemand\MentorOnDemand\MentorOnDemand_DotNetCoreFSD_Microservices\API_MOD\API_MOD\MOD.AdminLibrary\bin\Debug\netcoreapp3.0\MOD.AdminLibrary.runtimeconfig.json
+D:\Documents\GitHub\MentorOnDemand\MentorOnDemand\MentorOnDemand_DotNetCoreFSD_Microservices\API_MOD\API_MOD\MOD.AdminLibrary\bin\Debug\netcoreapp3.0\MOD.AdminLibrary.runtimeconfig.dev.json

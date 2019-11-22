@@ -25,7 +25,7 @@
                                     </ng-container>
                                     <ng-container matColumnDef="userRole">
                                         <mat-header-cell class="table-header" *matHeaderCellDef mat-sort-header>User Type</mat-header-cell>
-                                        <mat-cell *matCellDef="let element" class="table-data">{{element.userRole == 1? 'Admin': element.userRole == 2? 'Mentor': 'Student'}}</mat-cell>
+                                        <mat-cell *matCellDef="let element" class="table-data">{{element.userRole}}</mat-cell>
                                     </ng-container>
                                     <ng-container matColumnDef="dateOfTransaction">
                                         <mat-header-cell class="table-header" *matHeaderCellDef mat-sort-header>Date of Transaction</mat-header-cell>

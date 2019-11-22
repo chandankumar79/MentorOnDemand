@@ -1,0 +1,10 @@
+C:\Users\hp\Documents\GitHub\MentorOnDemand\MentorOnDemand_DotNetCoreFSD_Microservices\MOD_API\MOD_API\MOD.SharedLibrary\bin\Debug\netcoreapp3.0\MOD.SharedLibrary.deps.json
+C:\Users\hp\Documents\GitHub\MentorOnDemand\MentorOnDemand_DotNetCoreFSD_Microservices\MOD_API\MOD_API\MOD.SharedLibrary\bin\Debug\netcoreapp3.0\MOD.SharedLibrary.dll
+C:\Users\hp\Documents\GitHub\MentorOnDemand\MentorOnDemand_DotNetCoreFSD_Microservices\MOD_API\MOD_API\MOD.SharedLibrary\obj\Debug\netcoreapp3.0\MOD.SharedLibrary.csprojAssemblyReference.cache
+C:\Users\hp\Documents\GitHub\MentorOnDemand\MentorOnDemand_DotNetCoreFSD_Microservices\MOD_API\MOD_API\MOD.SharedLibrary\obj\Debug\netcoreapp3.0\MOD.SharedLibrary.AssemblyInfoInputs.cache
+C:\Users\hp\Documents\GitHub\MentorOnDemand\MentorOnDemand_DotNetCoreFSD_Microservices\MOD_API\MOD_API\MOD.SharedLibrary\obj\Debug\netcoreapp3.0\MOD.SharedLibrary.AssemblyInfo.cs
+C:\Users\hp\Documents\GitHub\MentorOnDemand\MentorOnDemand_DotNetCoreFSD_Microservices\MOD_API\MOD_API\MOD.SharedLibrary\bin\Debug\netcoreapp3.0\MOD.SharedLibrary.runtimeconfig.json
+C:\Users\hp\Documents\GitHub\MentorOnDemand\MentorOnDemand_DotNetCoreFSD_Microservices\MOD_API\MOD_API\MOD.SharedLibrary\bin\Debug\netcoreapp3.0\MOD.SharedLibrary.runtimeconfig.dev.json
+C:\Users\hp\Documents\GitHub\MentorOnDemand\MentorOnDemand_DotNetCoreFSD_Microservices\MOD_API\MOD_API\MOD.SharedLibrary\bin\Debug\netcoreapp3.0\MOD.SharedLibrary.pdb
+C:\Users\hp\Documents\GitHub\MentorOnDemand\MentorOnDemand_DotNetCoreFSD_Microservices\MOD_API\MOD_API\MOD.SharedLibrary\obj\Debug\netcoreapp3.0\MOD.SharedLibrary.dll
+C:\Users\hp\Documents\GitHub\MentorOnDemand\MentorOnDemand_DotNetCoreFSD_Microservices\MOD_API\MOD_API\MOD.SharedLibrary\obj\Debug\netcoreapp3.0\MOD.SharedLibrary.pdb

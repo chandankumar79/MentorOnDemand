@@ -15,7 +15,7 @@ namespace MOD.AuthLibrary.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "3.0.1")
+                .HasAnnotation("ProductVersion", "3.0.0")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
@@ -49,21 +49,21 @@ namespace MOD.AuthLibrary.Migrations
                         new
                         {
                             Id = "1",
-                            ConcurrencyStamp = "2ec2dbc7-8ca9-47a3-859a-24289d73136a",
+                            ConcurrencyStamp = "87603f27-609c-41d0-9809-ae107905c075",
                             Name = "Admin",
                             NormalizedName = "Admin"
                         },
                         new
                         {
                             Id = "2",
-                            ConcurrencyStamp = "129ef4ec-1450-44e1-9489-246c91156761",
+                            ConcurrencyStamp = "e82d0223-7d21-455e-b927-f6de48524caa",
                             Name = "Mentor",
                             NormalizedName = "Mentor"
                         },
                         new
                         {
                             Id = "3",
-                            ConcurrencyStamp = "86b1dfdf-9302-468c-b09e-deec67938f45",
+                            ConcurrencyStamp = "16fc2ca4-b402-475f-b9c8-6f2aef0b9ea8",
                             Name = "Student",
                             NormalizedName = "Student"
                         });

@@ -14,6 +14,8 @@
   <ItemGroup>
     <Compile Include="Migrations\20191121103700_InitialMigration_AuthService.cs" />
     <Compile Include="Migrations\20191121103700_InitialMigration_AuthService.designer.cs" />
+    <Compile Include="Migrations\20191122043119_IM_Auth.cs" />
+    <Compile Include="Migrations\20191122043119_IM_Auth.designer.cs" />
     <Compile Include="Migrations\MODContextModelSnapshot.cs" />
   </ItemGroup>
 
@@ -33,7 +35,6 @@
     <PackageReference Include="ServiceStack.Interfaces" Version="5.7.0" />
     <PackageReference Include="Swashbuckle.AspNetCore.Swagger" Version="4.0.1" />
     <PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="4.0.1" />
-    <PackageReference Include="Swashbuckle.Core" Version="5.6.0" />
     <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="5.6.0" />
   </ItemGroup>
 

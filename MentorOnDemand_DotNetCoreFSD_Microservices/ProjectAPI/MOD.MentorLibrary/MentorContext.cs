@@ -1,5 +1,6 @@
 ﻿using JetBrains.Annotations;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using MOD.SharedLibrary.Models;
 using System;
@@ -9,7 +10,7 @@ using System.Text;
 
 namespace MOD.MentorLibrary
 {
-    public class MentorContext: DbContext
+    public class MentorContext: IdentityDbContext
     {
         public MentorContext([NotNullAttribute] DbContextOptions options) : base(options)
         {

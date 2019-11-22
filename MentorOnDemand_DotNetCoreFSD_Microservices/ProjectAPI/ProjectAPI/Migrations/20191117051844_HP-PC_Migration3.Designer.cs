@@ -10,7 +10,7 @@ using ProjectAPI.Data;
 namespace ProjectAPI.Migrations
 {
     [DbContext(typeof(ProjectContext))]
-    [Migration("20191117051844_HP-PC_Migration3")]
+    [Migration("20191117051844_DESKTOP-E5PD3UC_Migration3")]
     partial class HPPC_Migration3
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

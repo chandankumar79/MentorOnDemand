@@ -1,0 +1,13 @@
+C:\Users\hp\Documents\GitHub\MentorOnDemand\MentorOnDemand_DotNetCoreFSD_Microservices\MOD_API\MOD_API\MOD.AuthLibrary\bin\Debug\netcoreapp3.0\MOD.AuthLibrary.deps.json
+C:\Users\hp\Documents\GitHub\MentorOnDemand\MentorOnDemand_DotNetCoreFSD_Microservices\MOD_API\MOD_API\MOD.AuthLibrary\bin\Debug\netcoreapp3.0\MOD.AuthLibrary.dll
+C:\Users\hp\Documents\GitHub\MentorOnDemand\MentorOnDemand_DotNetCoreFSD_Microservices\MOD_API\MOD_API\MOD.AuthLibrary\obj\Debug\netcoreapp3.0\MOD.AuthLibrary.csprojAssemblyReference.cache
+C:\Users\hp\Documents\GitHub\MentorOnDemand\MentorOnDemand_DotNetCoreFSD_Microservices\MOD_API\MOD_API\MOD.AuthLibrary\obj\Debug\netcoreapp3.0\MOD.AuthLibrary.AssemblyInfoInputs.cache
+C:\Users\hp\Documents\GitHub\MentorOnDemand\MentorOnDemand_DotNetCoreFSD_Microservices\MOD_API\MOD_API\MOD.AuthLibrary\obj\Debug\netcoreapp3.0\MOD.AuthLibrary.AssemblyInfo.cs
+C:\Users\hp\Documents\GitHub\MentorOnDemand\MentorOnDemand_DotNetCoreFSD_Microservices\MOD_API\MOD_API\MOD.AuthLibrary\bin\Debug\netcoreapp3.0\MOD.SharedLibrary.dll
+C:\Users\hp\Documents\GitHub\MentorOnDemand\MentorOnDemand_DotNetCoreFSD_Microservices\MOD_API\MOD_API\MOD.AuthLibrary\bin\Debug\netcoreapp3.0\MOD.AuthLibrary.runtimeconfig.json
+C:\Users\hp\Documents\GitHub\MentorOnDemand\MentorOnDemand_DotNetCoreFSD_Microservices\MOD_API\MOD_API\MOD.AuthLibrary\bin\Debug\netcoreapp3.0\MOD.AuthLibrary.runtimeconfig.dev.json
+C:\Users\hp\Documents\GitHub\MentorOnDemand\MentorOnDemand_DotNetCoreFSD_Microservices\MOD_API\MOD_API\MOD.AuthLibrary\bin\Debug\netcoreapp3.0\MOD.AuthLibrary.pdb
+C:\Users\hp\Documents\GitHub\MentorOnDemand\MentorOnDemand_DotNetCoreFSD_Microservices\MOD_API\MOD_API\MOD.AuthLibrary\bin\Debug\netcoreapp3.0\MOD.SharedLibrary.pdb
+C:\Users\hp\Documents\GitHub\MentorOnDemand\MentorOnDemand_DotNetCoreFSD_Microservices\MOD_API\MOD_API\MOD.AuthLibrary\obj\Debug\netcoreapp3.0\MOD.AuthLibrary.csproj.CopyComplete
+C:\Users\hp\Documents\GitHub\MentorOnDemand\MentorOnDemand_DotNetCoreFSD_Microservices\MOD_API\MOD_API\MOD.AuthLibrary\obj\Debug\netcoreapp3.0\MOD.AuthLibrary.dll
+C:\Users\hp\Documents\GitHub\MentorOnDemand\MentorOnDemand_DotNetCoreFSD_Microservices\MOD_API\MOD_API\MOD.AuthLibrary\obj\Debug\netcoreapp3.0\MOD.AuthLibrary.pdb

@@ -12,7 +12,7 @@ namespace MOD.StudentService.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    //[Authorize(Roles = "Student")]
+    [Authorize(Roles = "Student")]
     public class StudentController : ControllerBase
     {
         IStudentRepository repository;

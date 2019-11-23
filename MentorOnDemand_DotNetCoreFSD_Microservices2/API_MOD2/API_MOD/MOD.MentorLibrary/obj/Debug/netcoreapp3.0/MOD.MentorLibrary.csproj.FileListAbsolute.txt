@@ -11,3 +11,16 @@ D:\Documents\GitHub\MentorOnDemand\MentorOnDemand\MentorOnDemand_DotNetCoreFSD_M
 D:\Documents\GitHub\MentorOnDemand\MentorOnDemand\MentorOnDemand_DotNetCoreFSD_Microservices\API_MOD\API_MOD\MOD.MentorLibrary\obj\Debug\netcoreapp3.0\MOD.MentorLibrary.csproj.CopyComplete
 D:\Documents\GitHub\MentorOnDemand\MentorOnDemand\MentorOnDemand_DotNetCoreFSD_Microservices\API_MOD\API_MOD\MOD.MentorLibrary\obj\Debug\netcoreapp3.0\MOD.MentorLibrary.dll
 D:\Documents\GitHub\MentorOnDemand\MentorOnDemand\MentorOnDemand_DotNetCoreFSD_Microservices\API_MOD\API_MOD\MOD.MentorLibrary\obj\Debug\netcoreapp3.0\MOD.MentorLibrary.pdb
+C:\Users\hp\Documents\GitHub\MentorOnDemand\MentorOnDemand_DotNetCoreFSD_Microservices2\API_MOD2\API_MOD\MOD.MentorLibrary\bin\Debug\netcoreapp3.0\MOD.MentorLibrary.deps.json
+C:\Users\hp\Documents\GitHub\MentorOnDemand\MentorOnDemand_DotNetCoreFSD_Microservices2\API_MOD2\API_MOD\MOD.MentorLibrary\bin\Debug\netcoreapp3.0\MOD.MentorLibrary.runtimeconfig.json
+C:\Users\hp\Documents\GitHub\MentorOnDemand\MentorOnDemand_DotNetCoreFSD_Microservices2\API_MOD2\API_MOD\MOD.MentorLibrary\bin\Debug\netcoreapp3.0\MOD.MentorLibrary.runtimeconfig.dev.json
+C:\Users\hp\Documents\GitHub\MentorOnDemand\MentorOnDemand_DotNetCoreFSD_Microservices2\API_MOD2\API_MOD\MOD.MentorLibrary\bin\Debug\netcoreapp3.0\MOD.MentorLibrary.dll
+C:\Users\hp\Documents\GitHub\MentorOnDemand\MentorOnDemand_DotNetCoreFSD_Microservices2\API_MOD2\API_MOD\MOD.MentorLibrary\bin\Debug\netcoreapp3.0\MOD.MentorLibrary.pdb
+C:\Users\hp\Documents\GitHub\MentorOnDemand\MentorOnDemand_DotNetCoreFSD_Microservices2\API_MOD2\API_MOD\MOD.MentorLibrary\bin\Debug\netcoreapp3.0\MOD.SharedLibrary.dll
+C:\Users\hp\Documents\GitHub\MentorOnDemand\MentorOnDemand_DotNetCoreFSD_Microservices2\API_MOD2\API_MOD\MOD.MentorLibrary\bin\Debug\netcoreapp3.0\MOD.SharedLibrary.pdb
+C:\Users\hp\Documents\GitHub\MentorOnDemand\MentorOnDemand_DotNetCoreFSD_Microservices2\API_MOD2\API_MOD\MOD.MentorLibrary\obj\Debug\netcoreapp3.0\MOD.MentorLibrary.csprojAssemblyReference.cache
+C:\Users\hp\Documents\GitHub\MentorOnDemand\MentorOnDemand_DotNetCoreFSD_Microservices2\API_MOD2\API_MOD\MOD.MentorLibrary\obj\Debug\netcoreapp3.0\MOD.MentorLibrary.AssemblyInfoInputs.cache
+C:\Users\hp\Documents\GitHub\MentorOnDemand\MentorOnDemand_DotNetCoreFSD_Microservices2\API_MOD2\API_MOD\MOD.MentorLibrary\obj\Debug\netcoreapp3.0\MOD.MentorLibrary.AssemblyInfo.cs
+C:\Users\hp\Documents\GitHub\MentorOnDemand\MentorOnDemand_DotNetCoreFSD_Microservices2\API_MOD2\API_MOD\MOD.MentorLibrary\obj\Debug\netcoreapp3.0\MOD.MentorLibrary.csproj.CopyComplete
+C:\Users\hp\Documents\GitHub\MentorOnDemand\MentorOnDemand_DotNetCoreFSD_Microservices2\API_MOD2\API_MOD\MOD.MentorLibrary\obj\Debug\netcoreapp3.0\MOD.MentorLibrary.dll
+C:\Users\hp\Documents\GitHub\MentorOnDemand\MentorOnDemand_DotNetCoreFSD_Microservices2\API_MOD2\API_MOD\MOD.MentorLibrary\obj\Debug\netcoreapp3.0\MOD.MentorLibrary.pdb

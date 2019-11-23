@@ -188,21 +188,21 @@ namespace MOD.AdminLibrary.Migrations
                         new
                         {
                             Id = "1",
-                            ConcurrencyStamp = "2686413a-8368-4ab6-9074-ee78a96f296e",
+                            ConcurrencyStamp = "532638eb-4cdb-4bc0-8f28-42dded107834",
                             Name = "Admin",
                             NormalizedName = "Admin"
                         },
                         new
                         {
                             Id = "2",
-                            ConcurrencyStamp = "976c8618-2669-40b4-b61e-002bdc0fc7ca",
+                            ConcurrencyStamp = "7c6af8d5-a51c-4c77-9853-f8bff30ed18d",
                             Name = "Mentor",
                             NormalizedName = "Mentor"
                         },
                         new
                         {
                             Id = "3",
-                            ConcurrencyStamp = "0b00703f-f20b-47f7-96a6-384e9187d383",
+                            ConcurrencyStamp = "a31ac37a-6b67-49c1-85b7-a8be1cfe0934",
                             Name = "Student",
                             NormalizedName = "Student"
                         });

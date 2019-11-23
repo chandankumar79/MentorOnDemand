@@ -41,6 +41,12 @@ namespace MOD.StudentServices
             services.AddDbContext<StudentContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("SqlConnectionString")));
 
+            services.AddControllers();
+            services.AddIdentity<MODUser, IdentityRole>()
+                .AddEntityFrameworkStores<StudentContext>()
+                .AddDefaultTokenProviders();
+            services.AddScoped<IStudentRepository, StudentRepository>();
+
             // JWT
             JwtSecurityTokenHandler.DefaultInboundClaimTypeMap.Clear();
             services.AddAuthentication(options =>
@@ -65,13 +71,6 @@ namespace MOD.StudentServices
             services.AddMvc(option => option.EnableEndpointRouting = false)
                     .SetCompatibilityVersion(CompatibilityVersion.Version_3_0)
                     .AddNewtonsoftJson(opt => opt.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore);
-
-            services.AddControllers();
-            services.AddIdentity<MODUser, IdentityRole>()
-                .AddEntityFrameworkStores<StudentContext>()
-                .AddDefaultTokenProviders();
-            services.AddScoped<IStudentRepository, StudentRepository>();
-
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -40,6 +40,12 @@ namespace MOD.MentorServices
 
             services.AddDbContext<MentorContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("SqlConnectionString")));
+            
+            services.AddControllers();
+            services.AddIdentity<MODUser, IdentityRole>()
+                .AddEntityFrameworkStores<MentorContext>()
+                .AddDefaultTokenProviders();
+            services.AddScoped<IMentorRepository, MentorRepository>();
 
             // JWT
             JwtSecurityTokenHandler.DefaultInboundClaimTypeMap.Clear();
@@ -65,12 +71,6 @@ namespace MOD.MentorServices
             services.AddMvc(option => option.EnableEndpointRouting = false)
                     .SetCompatibilityVersion(CompatibilityVersion.Version_3_0)
                     .AddNewtonsoftJson(opt => opt.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore);
-
-            services.AddControllers();
-            services.AddIdentity<MODUser, IdentityRole>()
-                .AddEntityFrameworkStores<MentorContext>()
-                .AddDefaultTokenProviders();
-            services.AddScoped<IMentorRepository, MentorRepository>();
 
         }
 

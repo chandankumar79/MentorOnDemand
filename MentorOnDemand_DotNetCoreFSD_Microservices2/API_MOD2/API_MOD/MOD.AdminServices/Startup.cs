@@ -40,6 +40,11 @@ namespace MOD.AdminServices
 
             services.AddDbContext<AdminContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("SqlConnectionString")));
+            services.AddControllers();
+            services.AddIdentity<MODUser, IdentityRole>()
+                .AddEntityFrameworkStores<AdminContext>()
+                .AddDefaultTokenProviders();
+            services.AddScoped<IAdminRepository, AdminRepository>();
 
             // JWT
             JwtSecurityTokenHandler.DefaultInboundClaimTypeMap.Clear();
@@ -66,11 +71,7 @@ namespace MOD.AdminServices
                     .SetCompatibilityVersion(CompatibilityVersion.Version_3_0)
                     .AddNewtonsoftJson(opt => opt.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore);
 
-            services.AddControllers();
-            services.AddIdentity<MODUser, IdentityRole>()
-                .AddEntityFrameworkStores<AdminContext>()
-                .AddDefaultTokenProviders();
-            services.AddScoped<IAdminRepository, AdminRepository>();
+            
 
         }
 

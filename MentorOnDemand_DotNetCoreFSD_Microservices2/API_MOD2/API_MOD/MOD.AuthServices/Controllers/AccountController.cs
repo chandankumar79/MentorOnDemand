@@ -99,7 +99,7 @@ namespace MOD.AuthService.Controllers
 
         [Route("logout")]
         [HttpPost]
-        //[Authorize]
+        [Authorize]
         public async Task<IActionResult> Logout()
         {
             try
@@ -110,7 +110,7 @@ namespace MOD.AuthService.Controllers
             {
                 return StatusCode(StatusCodes.Status500InternalServerError, "Logout Failed!");
             }
-            return Ok();
+            return Ok(new { Messsage = "Logout successful!" });
         }
 
         [Route("register")]

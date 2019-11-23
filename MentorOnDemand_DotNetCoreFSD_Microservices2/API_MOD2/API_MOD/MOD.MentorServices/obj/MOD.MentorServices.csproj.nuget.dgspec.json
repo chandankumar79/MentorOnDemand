@@ -1,24 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Documents\\GitHub\\MentorOnDemand\\MentorOnDemand\\MentorOnDemand_DotNetCoreFSD_Microservices\\API_MOD\\API_MOD\\MOD.MentorServices\\MOD.MentorServices.csproj": {}
+    "C:\\Users\\hp\\Documents\\GitHub\\MentorOnDemand\\MentorOnDemand_DotNetCoreFSD_Microservices2\\API_MOD2\\API_MOD\\MOD.MentorServices\\MOD.MentorServices.csproj": {}
   },
   "projects": {
-    "D:\\Documents\\GitHub\\MentorOnDemand\\MentorOnDemand\\MentorOnDemand_DotNetCoreFSD_Microservices\\API_MOD\\API_MOD\\MOD.MentorLibrary\\MOD.MentorLibrary.csproj": {
+    "C:\\Users\\hp\\Documents\\GitHub\\MentorOnDemand\\MentorOnDemand_DotNetCoreFSD_Microservices2\\API_MOD2\\API_MOD\\MOD.MentorLibrary\\MOD.MentorLibrary.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Documents\\GitHub\\MentorOnDemand\\MentorOnDemand\\MentorOnDemand_DotNetCoreFSD_Microservices\\API_MOD\\API_MOD\\MOD.MentorLibrary\\MOD.MentorLibrary.csproj",
+        "projectUniqueName": "C:\\Users\\hp\\Documents\\GitHub\\MentorOnDemand\\MentorOnDemand_DotNetCoreFSD_Microservices2\\API_MOD2\\API_MOD\\MOD.MentorLibrary\\MOD.MentorLibrary.csproj",
         "projectName": "MOD.MentorLibrary",
-        "projectPath": "D:\\Documents\\GitHub\\MentorOnDemand\\MentorOnDemand\\MentorOnDemand_DotNetCoreFSD_Microservices\\API_MOD\\API_MOD\\MOD.MentorLibrary\\MOD.MentorLibrary.csproj",
-        "packagesPath": "C:\\Users\\Chandan Kumar\\.nuget\\packages\\",
-        "outputPath": "D:\\Documents\\GitHub\\MentorOnDemand\\MentorOnDemand\\MentorOnDemand_DotNetCoreFSD_Microservices\\API_MOD\\API_MOD\\MOD.MentorLibrary\\obj\\",
+        "projectPath": "C:\\Users\\hp\\Documents\\GitHub\\MentorOnDemand\\MentorOnDemand_DotNetCoreFSD_Microservices2\\API_MOD2\\API_MOD\\MOD.MentorLibrary\\MOD.MentorLibrary.csproj",
+        "packagesPath": "C:\\Users\\hp\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\hp\\Documents\\GitHub\\MentorOnDemand\\MentorOnDemand_DotNetCoreFSD_Microservices2\\API_MOD2\\API_MOD\\MOD.MentorLibrary\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\Chandan Kumar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\hp\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -32,8 +31,8 @@
         "frameworks": {
           "netcoreapp3.0": {
             "projectReferences": {
-              "D:\\Documents\\GitHub\\MentorOnDemand\\MentorOnDemand\\MentorOnDemand_DotNetCoreFSD_Microservices\\API_MOD\\API_MOD\\MOD.SharedLibrary\\MOD.SharedLibrary.csproj": {
-                "projectPath": "D:\\Documents\\GitHub\\MentorOnDemand\\MentorOnDemand\\MentorOnDemand_DotNetCoreFSD_Microservices\\API_MOD\\API_MOD\\MOD.SharedLibrary\\MOD.SharedLibrary.csproj"
+              "C:\\Users\\hp\\Documents\\GitHub\\MentorOnDemand\\MentorOnDemand_DotNetCoreFSD_Microservices2\\API_MOD2\\API_MOD\\MOD.SharedLibrary\\MOD.SharedLibrary.csproj": {
+                "projectPath": "C:\\Users\\hp\\Documents\\GitHub\\MentorOnDemand\\MentorOnDemand_DotNetCoreFSD_Microservices2\\API_MOD2\\API_MOD\\MOD.SharedLibrary\\MOD.SharedLibrary.csproj"
               }
             }
           }
@@ -128,21 +127,20 @@
         }
       }
     },
-    "D:\\Documents\\GitHub\\MentorOnDemand\\MentorOnDemand\\MentorOnDemand_DotNetCoreFSD_Microservices\\API_MOD\\API_MOD\\MOD.MentorServices\\MOD.MentorServices.csproj": {
+    "C:\\Users\\hp\\Documents\\GitHub\\MentorOnDemand\\MentorOnDemand_DotNetCoreFSD_Microservices2\\API_MOD2\\API_MOD\\MOD.MentorServices\\MOD.MentorServices.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Documents\\GitHub\\MentorOnDemand\\MentorOnDemand\\MentorOnDemand_DotNetCoreFSD_Microservices\\API_MOD\\API_MOD\\MOD.MentorServices\\MOD.MentorServices.csproj",
+        "projectUniqueName": "C:\\Users\\hp\\Documents\\GitHub\\MentorOnDemand\\MentorOnDemand_DotNetCoreFSD_Microservices2\\API_MOD2\\API_MOD\\MOD.MentorServices\\MOD.MentorServices.csproj",
         "projectName": "MOD.MentorServices",
-        "projectPath": "D:\\Documents\\GitHub\\MentorOnDemand\\MentorOnDemand\\MentorOnDemand_DotNetCoreFSD_Microservices\\API_MOD\\API_MOD\\MOD.MentorServices\\MOD.MentorServices.csproj",
-        "packagesPath": "C:\\Users\\Chandan Kumar\\.nuget\\packages\\",
-        "outputPath": "D:\\Documents\\GitHub\\MentorOnDemand\\MentorOnDemand\\MentorOnDemand_DotNetCoreFSD_Microservices\\API_MOD\\API_MOD\\MOD.MentorServices\\obj\\",
+        "projectPath": "C:\\Users\\hp\\Documents\\GitHub\\MentorOnDemand\\MentorOnDemand_DotNetCoreFSD_Microservices2\\API_MOD2\\API_MOD\\MOD.MentorServices\\MOD.MentorServices.csproj",
+        "packagesPath": "C:\\Users\\hp\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\hp\\Documents\\GitHub\\MentorOnDemand\\MentorOnDemand_DotNetCoreFSD_Microservices2\\API_MOD2\\API_MOD\\MOD.MentorServices\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\Chandan Kumar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\hp\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -156,8 +154,8 @@
         "frameworks": {
           "netcoreapp3.0": {
             "projectReferences": {
-              "D:\\Documents\\GitHub\\MentorOnDemand\\MentorOnDemand\\MentorOnDemand_DotNetCoreFSD_Microservices\\API_MOD\\API_MOD\\MOD.MentorLibrary\\MOD.MentorLibrary.csproj": {
-                "projectPath": "D:\\Documents\\GitHub\\MentorOnDemand\\MentorOnDemand\\MentorOnDemand_DotNetCoreFSD_Microservices\\API_MOD\\API_MOD\\MOD.MentorLibrary\\MOD.MentorLibrary.csproj"
+              "C:\\Users\\hp\\Documents\\GitHub\\MentorOnDemand\\MentorOnDemand_DotNetCoreFSD_Microservices2\\API_MOD2\\API_MOD\\MOD.MentorLibrary\\MOD.MentorLibrary.csproj": {
+                "projectPath": "C:\\Users\\hp\\Documents\\GitHub\\MentorOnDemand\\MentorOnDemand_DotNetCoreFSD_Microservices2\\API_MOD2\\API_MOD\\MOD.MentorLibrary\\MOD.MentorLibrary.csproj"
               }
             }
           }
@@ -252,21 +250,20 @@
         }
       }
     },
-    "D:\\Documents\\GitHub\\MentorOnDemand\\MentorOnDemand\\MentorOnDemand_DotNetCoreFSD_Microservices\\API_MOD\\API_MOD\\MOD.SharedLibrary\\MOD.SharedLibrary.csproj": {
+    "C:\\Users\\hp\\Documents\\GitHub\\MentorOnDemand\\MentorOnDemand_DotNetCoreFSD_Microservices2\\API_MOD2\\API_MOD\\MOD.SharedLibrary\\MOD.SharedLibrary.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Documents\\GitHub\\MentorOnDemand\\MentorOnDemand\\MentorOnDemand_DotNetCoreFSD_Microservices\\API_MOD\\API_MOD\\MOD.SharedLibrary\\MOD.SharedLibrary.csproj",
+        "projectUniqueName": "C:\\Users\\hp\\Documents\\GitHub\\MentorOnDemand\\MentorOnDemand_DotNetCoreFSD_Microservices2\\API_MOD2\\API_MOD\\MOD.SharedLibrary\\MOD.SharedLibrary.csproj",
         "projectName": "MOD.SharedLibrary",
-        "projectPath": "D:\\Documents\\GitHub\\MentorOnDemand\\MentorOnDemand\\MentorOnDemand_DotNetCoreFSD_Microservices\\API_MOD\\API_MOD\\MOD.SharedLibrary\\MOD.SharedLibrary.csproj",
-        "packagesPath": "C:\\Users\\Chandan Kumar\\.nuget\\packages\\",
-        "outputPath": "D:\\Documents\\GitHub\\MentorOnDemand\\MentorOnDemand\\MentorOnDemand_DotNetCoreFSD_Microservices\\API_MOD\\API_MOD\\MOD.SharedLibrary\\obj\\",
+        "projectPath": "C:\\Users\\hp\\Documents\\GitHub\\MentorOnDemand\\MentorOnDemand_DotNetCoreFSD_Microservices2\\API_MOD2\\API_MOD\\MOD.SharedLibrary\\MOD.SharedLibrary.csproj",
+        "packagesPath": "C:\\Users\\hp\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\hp\\Documents\\GitHub\\MentorOnDemand\\MentorOnDemand_DotNetCoreFSD_Microservices2\\API_MOD2\\API_MOD\\MOD.SharedLibrary\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\Chandan Kumar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\hp\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],

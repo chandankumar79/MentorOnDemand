@@ -52,7 +52,7 @@ export class LoginComponent implements OnInit {
         this.router.navigateByUrl('/home');   // TODO: change required here
       },
       err => {
-        this.displaySnackbar(err.error.message);
+        this.displaySnackbar('Unauthorized: Email or password is incorrect');
       }
     );
   }

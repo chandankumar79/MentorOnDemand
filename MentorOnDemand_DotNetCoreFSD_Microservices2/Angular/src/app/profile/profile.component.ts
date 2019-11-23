@@ -46,12 +46,9 @@ export class ProfileComponent implements OnInit {
 
   onSave() {
     this.editable = false;
-    // TODO: save data to database
     this.profileForm.value.gender = this.gender;
-    console.log(this.profileForm.value)
     this.userService.updateUserProfile(this.profileForm.value).subscribe(
       res => {
-        console.log(res);
         this.getUserData();
       },
       err => {
@@ -73,7 +70,7 @@ export class ProfileComponent implements OnInit {
   getUserData() {
     this.userService.getUserProfile().subscribe(
       res => {
-        console.log(res);
+        // console.log(res);
         const user = res['user'];
         this.profileForm.controls.firstName.setValue(user.firstName);
         this.profileForm.controls.lastName.setValue(user.lastName);

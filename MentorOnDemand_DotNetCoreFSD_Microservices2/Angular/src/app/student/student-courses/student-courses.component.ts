@@ -38,7 +38,7 @@ export class StudentCoursesComponent implements OnInit {
   getTableData() {
     this.dataService.studentGetMyCourses().subscribe(
       res => {
-        console.log(res);
+        // console.log(res);
         // tslint:disable-next-line: no-string-literal
         const studentCourses = res['courses'];
         this.tableData = new MatTableDataSource(studentCourses);
@@ -56,16 +56,16 @@ export class StudentCoursesComponent implements OnInit {
       data: { course }
     });
     dialogRef.afterClosed().subscribe(stars => {
-      console.log('dialog closed');
-      console.log(stars);
+      // console.log('dialog closed');
+      // console.log(stars);
       if (stars != null) {
         this.dataService.studentRateMentor(course.courseId, stars).subscribe(
           res => {
             this.displaySnackbar(res['message']);
-            console.log(res);
+            // console.log(res);
             this.getTableData();
           }, err => {
-            console.log(err);
+            // console.log(err);
             this.displaySnackbar(err.error.message);
           }
         );
@@ -76,22 +76,22 @@ export class StudentCoursesComponent implements OnInit {
   onPay(course) {
     const paymentId = uuid.v4();
     this.dataService.studentCoursePayment(course.courseId, paymentId).subscribe(res => {
-      console.log(res);
+      // console.log(res);
       this.displaySnackbar(res['message']);
       this.getTableData();
     }, err => {
-      console.log(err);
+      // console.log(err);
       this.displaySnackbar(err.error.message);
     });
   }
 
   onCancel(course) {
     this.dataService.studentCourseCancel(course.courseId).subscribe(res => {
-      console.log(res);
+      // console.log(res);
       this.displaySnackbar(res['message']);
       this.getTableData();
     }, err => {
-      console.log(err);
+      // console.log(err);
       this.displaySnackbar(err.error.message);
     });
   }
@@ -102,8 +102,8 @@ export class StudentCoursesComponent implements OnInit {
       data: { course }
     });
     dialogRef.afterClosed().subscribe(progress => {
-      console.log('dialog closed');
-      console.log(progress);
+      // console.log('dialog closed');
+      // console.log(progress);
       if (progress != null) {
         this.dataService.studentSetProgress(course.courseId, progress).subscribe(
           res => {
@@ -112,7 +112,7 @@ export class StudentCoursesComponent implements OnInit {
             this.displaySnackbar(message, 'green');
             this.getTableData();
           }, err => {
-            console.log(err.error.message);
+            // console.log(err.error.message);
             const message = err.error.message;
             this.displaySnackbar(message, 'red');
           }

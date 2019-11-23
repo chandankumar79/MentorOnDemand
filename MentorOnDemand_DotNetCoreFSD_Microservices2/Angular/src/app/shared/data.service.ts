@@ -13,163 +13,164 @@ export class DataService {
 
   // done
   adminAddTech(tech) {
-    return this.http.post(`${environment.apiAdminServicesBaseUrl}/admin/addTech`, tech);
+    return this.http.post(`${environment.apiAdminServicesBaseUrl}/addTech`, tech);
   }
 
   // done
   adminUpdateTech(tech) {
-    return this.http.put(`${environment.apiAdminServicesBaseUrl}/admin/updateTech/${tech.techId}`, tech);
+    return this.http.put(`${environment.apiAdminServicesBaseUrl}/updateTech/${tech.techId}`, tech);
   }
 
   // done
   getTechById(techId) {
-    return this.http.get(`${environment.apiAdminServicesBaseUrl}/admin/getTechById/${techId}`);
+    return this.http.get(`${environment.apiAdminServicesBaseUrl}/getTechById/${techId}`);
   }
 
   // done
   adminGetTechnologies() {
-    return this.http.get(`${environment.apiAdminServicesBaseUrl}/admin/getTechnologies`);
+    
+    return this.http.get(`${environment.apiAdminServicesBaseUrl}/getTechnologies`);
   }
 
   // done
   adminGetStudents() {
-    return this.http.get(`${environment.apiAdminServicesBaseUrl}/admin/getStudents`);
+    return this.http.get(`${environment.apiAdminServicesBaseUrl}/getStudents`);
   }
 
   adminGetStudentProfile(student) {
-    return this.http.post(`${environment.apiAdminServicesBaseUrl}/admin/getStudentProfile`, student);
+    return this.http.post(`${environment.apiAdminServicesBaseUrl}/getStudentProfile`, student);
   }
 
   // done
   adminGetMentors() {
-    return this.http.get(`${environment.apiAdminServicesBaseUrl}/admin/getMentors`);
+    return this.http.get(`${environment.apiAdminServicesBaseUrl}/getMentors`);
   }
 
   adminGetMentorProfile(mentor) {
-    return this.http.post(`${environment.apiAdminServicesBaseUrl}/admin/getMentorProfile`, mentor);
+    return this.http.post(`${environment.apiAdminServicesBaseUrl}/getMentorProfile`, mentor);
   }
 
   adminGetPayments() {
-    return this.http.get(`${environment.apiAdminServicesBaseUrl}/admin/getPayments`);
+    return this.http.get(`${environment.apiAdminServicesBaseUrl}/getPayments`);
   }
 
   // done
   adminUpdateUser(user) {
-    return this.http.put(`${environment.apiAdminServicesBaseUrl}/admin/updateUser`, user);
+    return this.http.put(`${environment.apiAdminServicesBaseUrl}/updateUser`, user);
   }
 
   getAdminDashboardData() {
-    return this.http.get(`${environment.apiAdminServicesBaseUrl}/admin/getDashboardData`);
+    return this.http.get(`${environment.apiAdminServicesBaseUrl}/getDashboardData`);
   }
 
   // * ======== mentor actions ======= *
 
   // homepage request
   _getCourses() {
-    return this.http.get(`${environment.apiMentorServicesBaseUrl}/mentor/getTechnologies`);
+    return this.http.get(`${environment.apiMentorServicesBaseUrl}/getTechnologies`);
   }
 
   // done
   mentorGetTechnologies() {
-    return this.http.get(`${environment.apiMentorServicesBaseUrl}/mentor/getTechnologies`);
+    return this.http.get(`${environment.apiMentorServicesBaseUrl}/getTechnologies`);
   }
 
   // done
   mentorAddSkill(skill) {
-    return this.http.post(`${environment.apiMentorServicesBaseUrl}/mentor/addSkill`, skill);
+    return this.http.post(`${environment.apiMentorServicesBaseUrl}/addSkill`, skill);
   }
 
   // done
   mentorUpdateSkill(skill) {
-    return this.http.put(`${environment.apiMentorServicesBaseUrl}/mentor/updateSkill`, skill);
+    return this.http.put(`${environment.apiMentorServicesBaseUrl}/updateSkill`, skill);
   }
 
   // done
   mentorDeleteSkill(course) {
     const skillId = course.skillId;
     return this.http.delete(
-      `${environment.apiMentorServicesBaseUrl}/mentor/deleteSkill?skillId=${skillId}&&email=${this.userService.getUserEmail()}`);
+      `${environment.apiMentorServicesBaseUrl}/deleteSkill?skillId=${skillId}&&email=${this.userService.getUserEmail()}`);
   }
 
   // done
   mentorGetSkillData(techId) {
     return this.http.get(
-      `${environment.apiMentorServicesBaseUrl}/mentor/getSkillData?email=${this.userService.getUserEmail()}&techId=${techId}`);
+      `${environment.apiMentorServicesBaseUrl}/getSkillData?email=${this.userService.getUserEmail()}&techId=${techId}`);
   }
 
   // done
   mentorGetSkills() {
-    return this.http.get(`${environment.apiMentorServicesBaseUrl}/mentor/getSkills/${this.userService.getUserEmail()}`);
+    return this.http.get(`${environment.apiMentorServicesBaseUrl}/getSkills/${this.userService.getUserEmail()}`);
   }
 
   // done
   getMentorNotifications(): any {
-    return this.http.get(`${environment.apiMentorServicesBaseUrl}/mentor/getMentorNotifications/${this.userService.getUserEmail()}`);
+    return this.http.get(`${environment.apiMentorServicesBaseUrl}/getMentorNotifications/${this.userService.getUserEmail()}`);
   }
 
   // done
   mentorUpdateRequestStatus(course, status) {
     const data = { email: this.userService.getUserEmail(), courseId: course.courseId,  status };
-    return this.http.post(`${environment.apiMentorServicesBaseUrl}/mentor/updateCourseStatus`, data);
+    return this.http.post(`${environment.apiMentorServicesBaseUrl}/updateCourseStatus`, data);
   }
 
   mentorGetPayments() {
-    return this.http.get(`${environment.apiMentorServicesBaseUrl}/mentor/getPayments/${this.userService.getUserEmail()}`);
+    return this.http.get(`${environment.apiMentorServicesBaseUrl}/getPayments/${this.userService.getUserEmail()}`);
   }
 
   // * ======== student actions ======= *
   // done
   studentGetTechnologies() {
-    return this.http.get(`${environment.apiStudentServicesBaseUrl}/student/getTechnologies`);
+    return this.http.get(`${environment.apiStudentServicesBaseUrl}/getTechnologies`);
   }
   // done
   studentAddCourse(skillId) {
     const addCourse = { email: this.userService.getUserEmail(), skillId };
-    return this.http.post(`${environment.apiStudentServicesBaseUrl}/student/addCourse`, addCourse);
+    return this.http.post(`${environment.apiStudentServicesBaseUrl}/addCourse`, addCourse);
   }
 
   // done
   studentCoursePayment(courseId, paymentId) {
     const course = { email: this.userService.getUserEmail(), courseId, paymentId };
-    return this.http.put(`${environment.apiStudentServicesBaseUrl}/student/updateCoursePayment`, course);
+    return this.http.put(`${environment.apiStudentServicesBaseUrl}/updateCoursePayment`, course);
   }
 
   // done
   studentCourseCancel(courseId) {
     return this.http.put(
-      `${environment.apiStudentServicesBaseUrl}/student/updateCourseCancel/${this.userService.getUserEmail()}`, courseId);
+      `${environment.apiStudentServicesBaseUrl}/updateCourseCancel/${this.userService.getUserEmail()}`, courseId);
   }
 
   // done
   studentRateMentor(courseId, rating) {
     const course = { email: this.userService.getUserEmail(), courseId, rating };
-    return this.http.put(`${environment.apiStudentServicesBaseUrl}/student/updateMentorRating`, course);
+    return this.http.put(`${environment.apiStudentServicesBaseUrl}/updateMentorRating`, course);
   }
 
   // done
   studentSetProgress(courseId, progress) {
     const course = { email: this.userService.getUserEmail(), courseId, progress };
-    return this.http.put(`${environment.apiStudentServicesBaseUrl}/student/updateCourseProgress`, course);
+    return this.http.put(`${environment.apiStudentServicesBaseUrl}/updateCourseProgress`, course);
   }
 
   // done
   studentGetMyCourses() {
-    return this.http.get(`${environment.apiStudentServicesBaseUrl}/student/getCourses/${this.userService.getUserEmail()}`);
+    return this.http.get(`${environment.apiStudentServicesBaseUrl}/getCourses/${this.userService.getUserEmail()}`);
   }
 
   // done
   studentGetCourseMentors(techId) {
-    return this.http.get(`${environment.apiStudentServicesBaseUrl}/student/getCourseMentors/${techId}`);
+    return this.http.get(`${environment.apiStudentServicesBaseUrl}/getCourseMentors/${techId}`);
   }
 
   // done
   studentGetPayments() {
-    return this.http.get(`${environment.apiStudentServicesBaseUrl}/student/getPayments/${this.userService.getUserEmail()}`);
+    return this.http.get(`${environment.apiStudentServicesBaseUrl}/getPayments/${this.userService.getUserEmail()}`);
   }
 
   // done
   searchCourses(searchFields) {
-    return this.http.get(`${environment.apiStudentServicesBaseUrl}/student/search/${searchFields}`);
+    return this.http.get(`${environment.apiStudentServicesBaseUrl}/search/${searchFields}`);
   }
 
 }

@@ -18,20 +18,20 @@ export class UserService {
   constructor(private http: HttpClient, private router: Router) {}
 
   register(user) {
-    return this.http.post<any>(environment.apiAuthServicesBaseUrl + '/account/register', user);
+    return this.http.post<any>(environment.apiAuthServicesBaseUrl + '/register', user);
   }
 
   login(authCredentials) {
-    return this.http.post(environment.apiAuthServicesBaseUrl + '/account/login', authCredentials);
+    return this.http.post(environment.apiAuthServicesBaseUrl + '/login', authCredentials);
   }
 
   getUserProfile() {
-    return this.http.get(`${environment.apiAuthServicesBaseUrl}/account/getProfile?` +
+    return this.http.get(`${environment.apiAuthServicesBaseUrl}/getProfile?` +
       `Email=${this.getUserEmail()}&Role=${this.getRole() === 'admin' ? 1 : this.getRole() === 'mentor' ? 2 : 3}`, this.noAuthHeader);
   }
 
   updateUserProfile(userData) {
-    return this.http.put(`${environment.apiAuthServicesBaseUrl}/account/updateProfile`, userData);
+    return this.http.put(`${environment.apiAuthServicesBaseUrl}/updateProfile`, userData);
   }
 
   // Helper Methods
@@ -84,7 +84,7 @@ export class UserService {
   }
 
   logout() {
-    this.http.post(`${environment.apiAuthServicesBaseUrl}/account/logout`, null).subscribe(res => {
+    this.http.post(`${environment.apiAuthServicesBaseUrl}/logout`, null).subscribe(res => {
       this.clearLocalStorage();
       this.getLoggedInStatus.emit(false);
       this.router.navigateByUrl('login');

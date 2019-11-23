@@ -26,7 +26,7 @@ export class HomeComponent implements OnInit {
   getCourses() {
     this.dataService.studentGetTechnologies().subscribe(
       res => {
-        console.log(res);
+        // console.log(res);
         this.courses = res['courses'];
       },
       err => {
@@ -43,13 +43,13 @@ export class HomeComponent implements OnInit {
     });
 
     dialogRef.afterClosed().subscribe(res => {
-      console.log('res-dialog ' + JSON.stringify(res));
+      // console.log('res-dialog ' + JSON.stringify(res));
       if(res != null) {
         if(res.status == 403) {
           this.displaySnackbar('Forbidden: You must be logged in as a student to apply for courses.', 'red');
         }  
         else if (res.message != null) {
-          this.displaySnackbar(res.message);
+          this.displaySnackbar(res.error.message);
         }
       }
     });

@@ -13,7 +13,7 @@ namespace MOD.MentorServices.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    //[Authorize(Roles = "Mentor")]
+    [Authorize(Roles = "Mentor")]
     public class MentorController : ControllerBase
     {
         IMentorRepository repository;

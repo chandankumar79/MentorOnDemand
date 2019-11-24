@@ -1,23 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\hp\\Documents\\GitHub\\MentorOnDemand\\MentorOnDemand_DotNetCoreFSD_Microservices2\\API_MOD2\\API_MOD\\MOD.AuthServices\\MOD.AuthServices.csproj": {}
+    "D:\\Documents\\GitHub\\MentorOnDemand\\MentorOnDemand\\MentorOnDemand_DotNetCoreFSD_Microservices2\\API_MOD2\\API_MOD\\MOD.AuthServices\\MOD.AuthServices.csproj": {}
   },
   "projects": {
-    "C:\\Users\\hp\\Documents\\GitHub\\MentorOnDemand\\MentorOnDemand_DotNetCoreFSD_Microservices2\\API_MOD2\\API_MOD\\MOD.AuthLibrary\\MOD.AuthLibrary.csproj": {
+    "D:\\Documents\\GitHub\\MentorOnDemand\\MentorOnDemand\\MentorOnDemand_DotNetCoreFSD_Microservices2\\API_MOD2\\API_MOD\\MOD.AuthLibrary\\MOD.AuthLibrary.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\hp\\Documents\\GitHub\\MentorOnDemand\\MentorOnDemand_DotNetCoreFSD_Microservices2\\API_MOD2\\API_MOD\\MOD.AuthLibrary\\MOD.AuthLibrary.csproj",
+        "projectUniqueName": "D:\\Documents\\GitHub\\MentorOnDemand\\MentorOnDemand\\MentorOnDemand_DotNetCoreFSD_Microservices2\\API_MOD2\\API_MOD\\MOD.AuthLibrary\\MOD.AuthLibrary.csproj",
         "projectName": "MOD.AuthLibrary",
-        "projectPath": "C:\\Users\\hp\\Documents\\GitHub\\MentorOnDemand\\MentorOnDemand_DotNetCoreFSD_Microservices2\\API_MOD2\\API_MOD\\MOD.AuthLibrary\\MOD.AuthLibrary.csproj",
-        "packagesPath": "C:\\Users\\hp\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\hp\\Documents\\GitHub\\MentorOnDemand\\MentorOnDemand_DotNetCoreFSD_Microservices2\\API_MOD2\\API_MOD\\MOD.AuthLibrary\\obj\\",
+        "projectPath": "D:\\Documents\\GitHub\\MentorOnDemand\\MentorOnDemand\\MentorOnDemand_DotNetCoreFSD_Microservices2\\API_MOD2\\API_MOD\\MOD.AuthLibrary\\MOD.AuthLibrary.csproj",
+        "packagesPath": "C:\\Users\\Chandan Kumar\\.nuget\\packages\\",
+        "outputPath": "D:\\Documents\\GitHub\\MentorOnDemand\\MentorOnDemand\\MentorOnDemand_DotNetCoreFSD_Microservices2\\API_MOD2\\API_MOD\\MOD.AuthLibrary\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\hp\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Chandan Kumar\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -31,8 +32,8 @@
         "frameworks": {
           "netcoreapp3.0": {
             "projectReferences": {
-              "C:\\Users\\hp\\Documents\\GitHub\\MentorOnDemand\\MentorOnDemand_DotNetCoreFSD_Microservices2\\API_MOD2\\API_MOD\\MOD.SharedLibrary\\MOD.SharedLibrary.csproj": {
-                "projectPath": "C:\\Users\\hp\\Documents\\GitHub\\MentorOnDemand\\MentorOnDemand_DotNetCoreFSD_Microservices2\\API_MOD2\\API_MOD\\MOD.SharedLibrary\\MOD.SharedLibrary.csproj"
+              "D:\\Documents\\GitHub\\MentorOnDemand\\MentorOnDemand\\MentorOnDemand_DotNetCoreFSD_Microservices2\\API_MOD2\\API_MOD\\MOD.SharedLibrary\\MOD.SharedLibrary.csproj": {
+                "projectPath": "D:\\Documents\\GitHub\\MentorOnDemand\\MentorOnDemand\\MentorOnDemand_DotNetCoreFSD_Microservices2\\API_MOD2\\API_MOD\\MOD.SharedLibrary\\MOD.SharedLibrary.csproj"
               }
             }
           }
@@ -127,20 +128,21 @@
         }
       }
     },
-    "C:\\Users\\hp\\Documents\\GitHub\\MentorOnDemand\\MentorOnDemand_DotNetCoreFSD_Microservices2\\API_MOD2\\API_MOD\\MOD.AuthServices\\MOD.AuthServices.csproj": {
+    "D:\\Documents\\GitHub\\MentorOnDemand\\MentorOnDemand\\MentorOnDemand_DotNetCoreFSD_Microservices2\\API_MOD2\\API_MOD\\MOD.AuthServices\\MOD.AuthServices.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\hp\\Documents\\GitHub\\MentorOnDemand\\MentorOnDemand_DotNetCoreFSD_Microservices2\\API_MOD2\\API_MOD\\MOD.AuthServices\\MOD.AuthServices.csproj",
+        "projectUniqueName": "D:\\Documents\\GitHub\\MentorOnDemand\\MentorOnDemand\\MentorOnDemand_DotNetCoreFSD_Microservices2\\API_MOD2\\API_MOD\\MOD.AuthServices\\MOD.AuthServices.csproj",
         "projectName": "MOD.AuthServices",
-        "projectPath": "C:\\Users\\hp\\Documents\\GitHub\\MentorOnDemand\\MentorOnDemand_DotNetCoreFSD_Microservices2\\API_MOD2\\API_MOD\\MOD.AuthServices\\MOD.AuthServices.csproj",
-        "packagesPath": "C:\\Users\\hp\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\hp\\Documents\\GitHub\\MentorOnDemand\\MentorOnDemand_DotNetCoreFSD_Microservices2\\API_MOD2\\API_MOD\\MOD.AuthServices\\obj\\",
+        "projectPath": "D:\\Documents\\GitHub\\MentorOnDemand\\MentorOnDemand\\MentorOnDemand_DotNetCoreFSD_Microservices2\\API_MOD2\\API_MOD\\MOD.AuthServices\\MOD.AuthServices.csproj",
+        "packagesPath": "C:\\Users\\Chandan Kumar\\.nuget\\packages\\",
+        "outputPath": "D:\\Documents\\GitHub\\MentorOnDemand\\MentorOnDemand\\MentorOnDemand_DotNetCoreFSD_Microservices2\\API_MOD2\\API_MOD\\MOD.AuthServices\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\hp\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Chandan Kumar\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -154,8 +156,8 @@
         "frameworks": {
           "netcoreapp3.0": {
             "projectReferences": {
-              "C:\\Users\\hp\\Documents\\GitHub\\MentorOnDemand\\MentorOnDemand_DotNetCoreFSD_Microservices2\\API_MOD2\\API_MOD\\MOD.AuthLibrary\\MOD.AuthLibrary.csproj": {
-                "projectPath": "C:\\Users\\hp\\Documents\\GitHub\\MentorOnDemand\\MentorOnDemand_DotNetCoreFSD_Microservices2\\API_MOD2\\API_MOD\\MOD.AuthLibrary\\MOD.AuthLibrary.csproj"
+              "D:\\Documents\\GitHub\\MentorOnDemand\\MentorOnDemand\\MentorOnDemand_DotNetCoreFSD_Microservices2\\API_MOD2\\API_MOD\\MOD.AuthLibrary\\MOD.AuthLibrary.csproj": {
+                "projectPath": "D:\\Documents\\GitHub\\MentorOnDemand\\MentorOnDemand\\MentorOnDemand_DotNetCoreFSD_Microservices2\\API_MOD2\\API_MOD\\MOD.AuthLibrary\\MOD.AuthLibrary.csproj"
               }
             }
           }
@@ -250,20 +252,21 @@
         }
       }
     },
-    "C:\\Users\\hp\\Documents\\GitHub\\MentorOnDemand\\MentorOnDemand_DotNetCoreFSD_Microservices2\\API_MOD2\\API_MOD\\MOD.SharedLibrary\\MOD.SharedLibrary.csproj": {
+    "D:\\Documents\\GitHub\\MentorOnDemand\\MentorOnDemand\\MentorOnDemand_DotNetCoreFSD_Microservices2\\API_MOD2\\API_MOD\\MOD.SharedLibrary\\MOD.SharedLibrary.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\hp\\Documents\\GitHub\\MentorOnDemand\\MentorOnDemand_DotNetCoreFSD_Microservices2\\API_MOD2\\API_MOD\\MOD.SharedLibrary\\MOD.SharedLibrary.csproj",
+        "projectUniqueName": "D:\\Documents\\GitHub\\MentorOnDemand\\MentorOnDemand\\MentorOnDemand_DotNetCoreFSD_Microservices2\\API_MOD2\\API_MOD\\MOD.SharedLibrary\\MOD.SharedLibrary.csproj",
         "projectName": "MOD.SharedLibrary",
-        "projectPath": "C:\\Users\\hp\\Documents\\GitHub\\MentorOnDemand\\MentorOnDemand_DotNetCoreFSD_Microservices2\\API_MOD2\\API_MOD\\MOD.SharedLibrary\\MOD.SharedLibrary.csproj",
-        "packagesPath": "C:\\Users\\hp\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\hp\\Documents\\GitHub\\MentorOnDemand\\MentorOnDemand_DotNetCoreFSD_Microservices2\\API_MOD2\\API_MOD\\MOD.SharedLibrary\\obj\\",
+        "projectPath": "D:\\Documents\\GitHub\\MentorOnDemand\\MentorOnDemand\\MentorOnDemand_DotNetCoreFSD_Microservices2\\API_MOD2\\API_MOD\\MOD.SharedLibrary\\MOD.SharedLibrary.csproj",
+        "packagesPath": "C:\\Users\\Chandan Kumar\\.nuget\\packages\\",
+        "outputPath": "D:\\Documents\\GitHub\\MentorOnDemand\\MentorOnDemand\\MentorOnDemand_DotNetCoreFSD_Microservices2\\API_MOD2\\API_MOD\\MOD.SharedLibrary\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\hp\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Chandan Kumar\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],

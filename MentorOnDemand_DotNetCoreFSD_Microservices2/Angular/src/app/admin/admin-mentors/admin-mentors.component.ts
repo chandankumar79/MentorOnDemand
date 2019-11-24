@@ -37,7 +37,7 @@ export class AdminMentorsComponent implements OnInit {
         const mentors = res['mentors'];
         this.tableData = new MatTableDataSource(mentors);
         this.tableData.sort = this.sort;
-        console.log(this.tableData);
+        // console.log(this.tableData);
       },
       err => {
         console.log('AdminMentors | error: ' + JSON.stringify(err));
@@ -57,11 +57,11 @@ export class AdminMentorsComponent implements OnInit {
   // }
 
   onBlock(mentor) {
-    mentor.status = !mentor.status;    
-    console.log(mentor);
+    mentor.status = !mentor.status;
+    // console.log(mentor);
     this.dataService.adminUpdateUser(mentor).subscribe(
       res => {
-        console.log(res);
+        // console.log(res);
         this.getMentorData();
       },
       err => {

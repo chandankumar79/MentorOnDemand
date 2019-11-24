@@ -14,3 +14,11 @@ C:\Users\hp\Documents\GitHub\MentorOnDemand\MentorOnDemand_DotNetCoreFSD_Microse
 C:\Users\hp\Documents\GitHub\MentorOnDemand\MentorOnDemand_DotNetCoreFSD_Microservices2\API_MOD2\API_MOD\MOD.SharedLibrary\obj\Debug\netcoreapp3.0\MOD.SharedLibrary.AssemblyInfo.cs
 C:\Users\hp\Documents\GitHub\MentorOnDemand\MentorOnDemand_DotNetCoreFSD_Microservices2\API_MOD2\API_MOD\MOD.SharedLibrary\obj\Debug\netcoreapp3.0\MOD.SharedLibrary.dll
 C:\Users\hp\Documents\GitHub\MentorOnDemand\MentorOnDemand_DotNetCoreFSD_Microservices2\API_MOD2\API_MOD\MOD.SharedLibrary\obj\Debug\netcoreapp3.0\MOD.SharedLibrary.pdb
+D:\Documents\GitHub\MentorOnDemand\MentorOnDemand\MentorOnDemand_DotNetCoreFSD_Microservices2\API_MOD2\API_MOD\MOD.SharedLibrary\bin\Debug\netcoreapp3.0\MOD.SharedLibrary.deps.json
+D:\Documents\GitHub\MentorOnDemand\MentorOnDemand\MentorOnDemand_DotNetCoreFSD_Microservices2\API_MOD2\API_MOD\MOD.SharedLibrary\bin\Debug\netcoreapp3.0\MOD.SharedLibrary.dll
+D:\Documents\GitHub\MentorOnDemand\MentorOnDemand\MentorOnDemand_DotNetCoreFSD_Microservices2\API_MOD2\API_MOD\MOD.SharedLibrary\bin\Debug\netcoreapp3.0\MOD.SharedLibrary.pdb
+D:\Documents\GitHub\MentorOnDemand\MentorOnDemand\MentorOnDemand_DotNetCoreFSD_Microservices2\API_MOD2\API_MOD\MOD.SharedLibrary\obj\Debug\netcoreapp3.0\MOD.SharedLibrary.csprojAssemblyReference.cache
+D:\Documents\GitHub\MentorOnDemand\MentorOnDemand\MentorOnDemand_DotNetCoreFSD_Microservices2\API_MOD2\API_MOD\MOD.SharedLibrary\obj\Debug\netcoreapp3.0\MOD.SharedLibrary.AssemblyInfoInputs.cache
+D:\Documents\GitHub\MentorOnDemand\MentorOnDemand\MentorOnDemand_DotNetCoreFSD_Microservices2\API_MOD2\API_MOD\MOD.SharedLibrary\obj\Debug\netcoreapp3.0\MOD.SharedLibrary.AssemblyInfo.cs
+D:\Documents\GitHub\MentorOnDemand\MentorOnDemand\MentorOnDemand_DotNetCoreFSD_Microservices2\API_MOD2\API_MOD\MOD.SharedLibrary\obj\Debug\netcoreapp3.0\MOD.SharedLibrary.dll
+D:\Documents\GitHub\MentorOnDemand\MentorOnDemand\MentorOnDemand_DotNetCoreFSD_Microservices2\API_MOD2\API_MOD\MOD.SharedLibrary\obj\Debug\netcoreapp3.0\MOD.SharedLibrary.pdb

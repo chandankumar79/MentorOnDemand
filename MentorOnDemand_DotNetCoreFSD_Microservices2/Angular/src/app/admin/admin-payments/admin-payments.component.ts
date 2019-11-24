@@ -28,11 +28,9 @@ export class AdminPaymentsComponent implements OnInit {
   getTableData() {
     this.dataService.adminGetPayments().subscribe(
       res => {
-        // console.log(res);
         // tslint:disable-next-line: no-string-literal
         this.tableData = new MatTableDataSource(res['payments']);
         this.tableData.sort = this.sort;
-        console.log(this.tableData);
       },
       err => {
         console.log(err);

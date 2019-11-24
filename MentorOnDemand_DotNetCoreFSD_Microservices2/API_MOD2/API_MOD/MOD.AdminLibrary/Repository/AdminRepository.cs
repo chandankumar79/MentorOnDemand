@@ -138,7 +138,7 @@ namespace MOD.AdminLibrary.Repository
                                    TransactionType = payment.TransactionType,
                                    UserEmail = user.Email,
                                    UserName = $"{user.FirstName} {user.LastName}",
-                                   UserRole = userManager.GetRolesAsync(user).Result.SingleOrDefault()
+                                   UserRole = context.UserRoles.SingleOrDefault(ur => ur.UserId == user.Id).RoleId
                                };
                 return payments;
             }

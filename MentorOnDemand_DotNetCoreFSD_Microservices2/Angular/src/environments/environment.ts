@@ -5,10 +5,10 @@
 export const environment = {
   production: false,
   apiBaseUrl: 'https://localhost:44384/api',
-  apiAuthServicesBaseUrl: 'https://localhost:44300/authservice',
-  apiAdminServicesBaseUrl: 'https://localhost:44300/adminservice',
-  apiMentorServicesBaseUrl: 'https://localhost:44300/mentorservice',
-  apiStudentServicesBaseUrl: 'https://localhost:44300/studentservice'
+  apiAuthServicesBaseUrl: 'https://localhost:9095/authservice',
+  apiAdminServicesBaseUrl: 'https://localhost:9095/adminservice',
+  apiMentorServicesBaseUrl: 'https://localhost:9095/mentorservice',
+  apiStudentServicesBaseUrl: 'https://localhost:9095/studentservice'
 };
 
 /*

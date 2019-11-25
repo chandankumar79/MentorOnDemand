@@ -267,7 +267,6 @@ C:\Users\hp\Documents\GitHub\MentorOnDemand\MentorOnDemand_DotNetCoreFSD_Microse
 C:\Users\hp\Documents\GitHub\MentorOnDemand\MentorOnDemand_DotNetCoreFSD_Microservices2\API_MOD2\API_MOD\MOD.StudentServices\obj\Debug\netcoreapp3.0\MOD.StudentServices.csprojAssemblyReference.cache
 C:\Users\hp\Documents\GitHub\MentorOnDemand\MentorOnDemand_DotNetCoreFSD_Microservices2\API_MOD2\API_MOD\MOD.StudentServices\obj\Debug\netcoreapp3.0\staticwebassets\MOD.StudentServices.StaticWebAssets.Manifest.cache
 C:\Users\hp\Documents\GitHub\MentorOnDemand\MentorOnDemand_DotNetCoreFSD_Microservices2\API_MOD2\API_MOD\MOD.StudentServices\obj\Debug\netcoreapp3.0\staticwebassets\MOD.StudentServices.StaticWebAssets.xml
-C:\Users\hp\Documents\GitHub\MentorOnDemand\MentorOnDemand_DotNetCoreFSD_Microservices2\API_MOD2\API_MOD\MOD.StudentServices\obj\Debug\netcoreapp3.0\MOD.StudentServices.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\hp\Documents\GitHub\MentorOnDemand\MentorOnDemand_DotNetCoreFSD_Microservices2\API_MOD2\API_MOD\MOD.StudentServices\obj\Debug\netcoreapp3.0\MOD.StudentServices.AssemblyInfoInputs.cache
 C:\Users\hp\Documents\GitHub\MentorOnDemand\MentorOnDemand_DotNetCoreFSD_Microservices2\API_MOD2\API_MOD\MOD.StudentServices\obj\Debug\netcoreapp3.0\MOD.StudentServices.AssemblyInfo.cs
 C:\Users\hp\Documents\GitHub\MentorOnDemand\MentorOnDemand_DotNetCoreFSD_Microservices2\API_MOD2\API_MOD\MOD.StudentServices\obj\Debug\netcoreapp3.0\MOD.StudentServices.RazorTargetAssemblyInfo.cache
@@ -412,3 +411,4 @@ D:\Documents\GitHub\MentorOnDemand\MentorOnDemand\MentorOnDemand_DotNetCoreFSD_M
 D:\Documents\GitHub\MentorOnDemand\MentorOnDemand\MentorOnDemand_DotNetCoreFSD_Microservices2\API_MOD2\API_MOD\MOD.StudentServices\obj\Debug\netcoreapp3.0\MOD.StudentServices.csproj.CopyComplete
 D:\Documents\GitHub\MentorOnDemand\MentorOnDemand\MentorOnDemand_DotNetCoreFSD_Microservices2\API_MOD2\API_MOD\MOD.StudentServices\obj\Debug\netcoreapp3.0\MOD.StudentServices.dll
 D:\Documents\GitHub\MentorOnDemand\MentorOnDemand\MentorOnDemand_DotNetCoreFSD_Microservices2\API_MOD2\API_MOD\MOD.StudentServices\obj\Debug\netcoreapp3.0\MOD.StudentServices.pdb
+C:\Users\hp\Documents\GitHub\MentorOnDemand\MentorOnDemand_DotNetCoreFSD_Microservices2\API_MOD2\API_MOD\MOD.StudentServices\obj\Debug\netcoreapp3.0\MOD.StudentServices.MvcApplicationPartsAssemblyInfo.cache
